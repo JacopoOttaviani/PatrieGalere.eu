@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>PatrieGalere.eu — Morti in carcere in Italia</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:100%;height:100%;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;overflow:hidden}
+#map{position:absolute;inset:0;z-index:0}
+
+/* Header */
+#header{
+  position:absolute;top:0;left:0;right:0;z-index:1000;
+  background:rgba(10,12,20,0.88);
+  backdrop-filter:blur(8px);
+  color:#fff;
+  display:flex;align-items:center;gap:12px;
+  padding:10px 16px;
+}
+#header h1{font-size:1.1rem;font-weight:700;letter-spacing:-0.02em;white-space:nowrap}
+#header h1 span{color:#e74c3c}
+#header p{font-size:0.72rem;color:#adb5bd;flex:1}
+#total-badge{
+  background:#e74c3c;color:#fff;
+  border-radius:20px;padding:4px 12px;
+  font-size:0.78rem;font-weight:700;white-space:nowrap;
+}
+#total-badge span{font-weight:400;opacity:.8}
+
+/* Controls toggle */
+#ctrl-btn{
+  position:absolute;bottom:24px;left:12px;z-index:1000;
+  background:#1a1d2e;color:#fff;border:none;
+  border-radius:8px;padding:9px 14px;font-size:0.82rem;
+  cursor:pointer;display:flex;align-items:center;gap:6px;
+  box-shadow:0 2px 8px rgba(0,0,0,.35);
+  transition:background .2s;
+}
+#ctrl-btn:hover{background:#2c3150}
+#ctrl-btn svg{width:16px;height:16px;fill:#fff;flex-shrink:0}
+
+/* Controls panel */
+#controls{
+  position:absolute;bottom:68px;left:12px;z-index:1000;
+  background:rgba(10,12,20,0.92);
+  backdrop-filter:blur(8px);
+  border-radius:12px;
+  padding:14px 16px;
+  color:#fff;
+  width:220px;
+  box-shadow:0 4px 20px rgba(0,0,0,.4);
+  display:none;
+  max-height:calc(100vh - 120px);
+  overflow-y:auto;
+}
+#controls.open{display:block}
+#controls h3{font-size:0.78rem;text-transform:uppercase;letter-spacing:.08em;color:#6c757d;margin-bottom:10px}
+.cat-item{
+  display:flex;align-items:center;gap:8px;
+  padding:5px 0;cursor:pointer;user-select:none;
+}
+.cat-item input{display:none}
+.cat-dot{
+  width:14px;height:14px;border-radius:50%;flex-shrink:0;
+  border:2px solid transparent;
+  transition:border-color .15s, opacity .15s;
+}
+.cat-item.inactive .cat-dot{opacity:0.3}
+.cat-item.inactive .cat-label{opacity:0.4}
+.cat-label{font-size:0.83rem;flex:1}
+.cat-count{font-size:0.75rem;color:#6c757d}
+#reset-btn{
+  width:100%;margin-top:10px;padding:7px;
+  background:#2c3150;color:#fff;border:none;
+  border-radius:6px;font-size:0.8rem;cursor:pointer;
+  transition:background .2s;
+}
+#reset-btn:hover{background:#3d4778}
+
+/* Legend */
+#legend{
+  position:absolute;bottom:24px;right:12px;z-index:1000;
+  background:rgba(10,12,20,0.88);
+  backdrop-filter:blur(8px);
+  border-radius:10px;padding:10px 14px;color:#fff;
+  font-size:0.72rem;
+  box-shadow:0 2px 10px rgba(0,0,0,.35);
+}
+#legend p{color:#6c757d;margin-bottom:6px;font-size:0.68rem;text-transform:uppercase;letter-spacing:.06em}
+.legend-row{display:flex;align-items:center;gap:8px;margin:3px 0}
+.legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.legend-label{font-size:0.75rem}
+
+/* Popup */
+.leaflet-popup-content-wrapper{
+  background:#1a1d2e!important;
+  border-radius:12px!important;
+  padding:0!important;
+  box-shadow:0 8px 30px rgba(0,0,0,.5)!important;
+  color:#fff!important;
+  min-width:220px;
+}
+.leaflet-popup-tip{background:#1a1d2e!important}
+.leaflet-popup-content{margin:0!important;width:auto!important}
+.popup-inner{padding:14px 16px}
+.popup-name{font-size:0.95rem;font-weight:700;margin-bottom:2px;line-height:1.2}
+.popup-total{font-size:0.78rem;color:#adb5bd;margin-bottom:12px}
+.popup-total strong{color:#e74c3c;font-size:1.1rem}
+.popup-row{display:flex;align-items:center;gap:8px;margin:5px 0}
+.popup-swatch{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.popup-cat{font-size:0.78rem;flex:1;color:#dee2e6}
+.popup-bar-wrap{width:70px;height:5px;background:#2c3150;border-radius:3px;overflow:hidden}
+.popup-bar-fill{height:100%;border-radius:3px}
+.popup-n{font-size:0.78rem;color:#adb5bd;min-width:24px;text-align:right}
+.popup-pct{font-size:0.7rem;color:#6c757d;min-width:32px;text-align:right}
+
+/* Mobile adjustments */
+@media(max-width:600px){
+  #header{padding:8px 12px}
+  #header p{display:none}
+  #header h1{font-size:1rem}
+  #controls{width:calc(100vw - 24px);bottom:72px}
+  #legend{right:auto;left:50%;transform:translateX(-50%);bottom:72px;white-space:nowrap}
+}
+
+/* Footer */
+#footer{
+  position:absolute;bottom:8px;left:50%;transform:translateX(-50%);
+  z-index:1000;
+  font-size:0.68rem;color:rgba(255,255,255,0.6);
+  white-space:nowrap;pointer-events:none;
+  background:rgba(10,12,20,0.78);
+  backdrop-filter:blur(6px);
+  border-radius:6px;
+  padding:4px 10px;
+}
+#footer a{color:rgba(255,255,255,0.8);text-decoration:none;pointer-events:all}
+#footer a:hover{color:#fff}
+
+/* Donut marker */
+.marker-svg{overflow:visible!important;cursor:pointer}
+.marker-svg path,.marker-svg circle{stroke:rgba(255,255,255,0.6);stroke-width:0.8px}
+.marker-svg text{pointer-events:none;font-family:inherit}
+
+/* Overview button */
+#overview-btn{
+  position:absolute;bottom:24px;left:100px;z-index:1000;
+  background:#1a1d2e;color:#fff;border:none;
+  border-radius:8px;padding:9px 14px;font-size:0.82rem;
+  cursor:pointer;display:flex;align-items:center;gap:6px;
+  box-shadow:0 2px 8px rgba(0,0,0,.35);
+  transition:background .2s;
+}
+#overview-btn:hover,#overview-btn.active{background:#2c3150}
+#overview-btn svg{width:16px;height:16px;flex-shrink:0}
+
+/* Sul progetto button */
+#progetto-btn{
+  position:absolute;bottom:24px;left:232px;z-index:1000;
+  background:#1a1d2e;color:#fff;border:none;
+  border-radius:8px;padding:9px 14px;font-size:0.82rem;
+  cursor:pointer;display:flex;align-items:center;gap:6px;
+  box-shadow:0 2px 8px rgba(0,0,0,.35);
+  transition:background .2s;
+}
+#progetto-btn:hover,#progetto-btn.active{background:#2c3150}
+#progetto-btn svg{width:16px;height:16px;flex-shrink:0}
+
+/* Overview panel */
+#overview-panel{
+  position:absolute;top:50px;left:0;bottom:68px;
+  width:300px;z-index:999;
+  background:rgba(10,12,20,0.96);
+  backdrop-filter:blur(12px);
+  transform:translateX(-100%);
+  transition:transform .3s cubic-bezier(.4,0,.2,1);
+  overflow-y:auto;overflow-x:hidden;
+  box-shadow:6px 0 24px rgba(0,0,0,.5);
+}
+#overview-panel.open{transform:translateX(0)}
+.ov-header{
+  padding:14px 16px 12px;
+  display:flex;align-items:center;justify-content:space-between;
+  border-bottom:1px solid #2c3150;
+  position:sticky;top:0;z-index:1;
+  background:rgba(10,12,20,0.98);
+}
+.ov-header h3{
+  font-size:0.8rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.08em;color:#fff;
+}
+.ov-close{
+  background:none;border:none;color:#6c757d;
+  font-size:1.4rem;line-height:1;cursor:pointer;
+  padding:0 4px;transition:color .15s;
+}
+.ov-close:hover{color:#fff}
+.ov-section{
+  padding:14px 16px 18px;
+  border-bottom:1px solid #13151f;
+}
+.ov-section:last-child{border-bottom:none;padding-bottom:28px}
+.ov-section-title{
+  font-size:0.68rem;text-transform:uppercase;letter-spacing:.08em;
+  color:#6c757d;margin-bottom:12px;
+}
+#wrap-donut{height:210px;position:relative}
+#wrap-bar{height:222px;position:relative}
+#wrap-line{height:196px;position:relative}
+
+/* Sul progetto panel */
+#progetto-panel{
+  position:absolute;top:50px;left:0;bottom:68px;
+  width:300px;z-index:999;
+  background:rgba(10,12,20,0.96);
+  backdrop-filter:blur(12px);
+  transform:translateX(-100%);
+  transition:transform .3s cubic-bezier(.4,0,.2,1);
+  overflow-y:auto;overflow-x:hidden;
+  box-shadow:6px 0 24px rgba(0,0,0,.5);
+}
+#progetto-panel.open{transform:translateX(0)}
+.pg-header{
+  padding:14px 16px 12px;
+  display:flex;align-items:center;justify-content:space-between;
+  border-bottom:1px solid #2c3150;
+  position:sticky;top:0;z-index:1;
+  background:rgba(10,12,20,0.98);
+}
+.pg-header h3{
+  font-size:0.8rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.08em;color:#fff;
+}
+.pg-close{
+  background:none;border:none;color:#6c757d;
+  font-size:1.4rem;line-height:1;cursor:pointer;
+  padding:0 4px;transition:color .15s;
+}
+.pg-close:hover{color:#fff}
+.pg-body{
+  padding:18px 16px 28px;
+  font-size:0.85rem;line-height:1.65;color:#c8cfd8;
+}
+.pg-body a{color:#7eb8f7;text-decoration:none}
+.pg-body a:hover{color:#a8d0ff;text-decoration:underline}
+.pg-body p{margin-bottom:12px}
+.pg-body p:last-child{margin-bottom:0}
+
+@media(max-width:600px){
+  #overview-btn{left:auto;right:12px}
+  #progetto-btn{left:auto;right:130px}
+  #overview-panel{width:100%;top:48px;bottom:72px}
+  #progetto-panel{width:100%;top:48px;bottom:72px}
+}
+</style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<div id="footer">Made with 💙 by <a href="https://www.linkedin.com/in/jacopo-ottaviani/" target="_blank" rel="noopener">Jacopo Ottaviani</a></div>
+
+<div id="header">
+  <h1>Patrie<span>Galere</span>.eu</h1>
+  <p>Mappa dei decessi in carcere in Italia <span style="opacity:.55">· 2002–2026</span></p>
+  <div id="total-badge"><span>decessi: </span><span id="death-count">2504</span></div>
+</div>
+
+<button id="ctrl-btn" onclick="toggleControls()">
+  <svg viewBox="0 0 20 20"><path d="M3 5h14M3 10h14M3 15h14" stroke="#fff" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>
+  Filtri
+</button>
+
+<button id="overview-btn" onclick="toggleOverview()">
+  <svg viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <polyline points="1,14 5,8 9,10 14,4 19,1" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  Panoramica
+</button>
+
+<button id="progetto-btn" onclick="toggleProgetto()">
+  <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="10" cy="10" r="8.5" stroke="#fff" stroke-width="1.6"/>
+    <line x1="10" y1="9" x2="10" y2="14" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/>
+    <circle cx="10" cy="6.5" r="1" fill="#fff"/>
+  </svg>
+  Sul progetto
+</button>
+
+<div id="overview-panel">
+  <div class="ov-header">
+    <h3>Panoramica</h3>
+    <button class="ov-close" onclick="toggleOverview()">×</button>
+  </div>
+  <div class="ov-section">
+    <div class="ov-section-title">Causa di morte</div>
+    <div id="wrap-donut"><canvas id="chart-donut"></canvas></div>
+  </div>
+  <div class="ov-section">
+    <div class="ov-section-title">Top 10 istituti per decessi</div>
+    <div id="wrap-bar"><canvas id="chart-bar"></canvas></div>
+  </div>
+  <div class="ov-section">
+    <div class="ov-section-title">Decessi per anno</div>
+    <div id="wrap-line"><canvas id="chart-line"></canvas></div>
+  </div>
+</div>
+
+<div id="progetto-panel">
+  <div class="pg-header">
+    <h3>Sul progetto</h3>
+    <button class="pg-close" onclick="toggleProgetto()">×</button>
+  </div>
+  <div class="pg-body">
+    <p>Un progetto open source fatto da <a href="https://www.linkedin.com/in/jacopo-ottaviani/" target="_blank" rel="noopener">Jacopo Ottaviani</a> basato sui dati di <a href="https://www.ristretti.org" target="_blank" rel="noopener">Ristretti Orizzonti</a>.</p>
+    <p>Il progetto iniziale fu programmato a mano nel lontano 2011, pubblicato sul Fatto Quotidiano e identificato come il primo progetto di data journalism italiano.</p>
+    <p>Oggi, il progetto è riproposto con tecnologie nuove e un design rivisto, ma sempre aderente ai principi degli open data e della tecnologia civica.</p>
+  </div>
+</div>
+
+<div id="controls">
+  <h3>Causa di morte</h3>
+  <div id="cat-list"></div>
+  <button id="reset-btn" onclick="resetFilters()">Mostra tutto</button>
+  <div style="margin-top:12px;padding-top:10px;border-top:1px solid #2c3150">
+    <h3 style="margin-bottom:8px">Dimensione marker</h3>
+    <div style="font-size:0.72rem;color:#6c757d;line-height:1.5">
+      Proporzionale al numero totale di decessi nell'istituto.
+    </div>
+  </div>
+</div>
+
+<div id="legend">
+  <p>Causa di morte</p>
+  <div id="legend-items"></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js"></script>
+<script>
+// ─── Data ───────────────────────────────────────────────────────────────────
+const PRISONS = [{"name":"Napoli Poggioreale","lat":40.861,"lng":14.289,"total":105,"categories":{"Suicidio":46,"Da accertare":23,"Malattia":35,"Omicidio":1}},{"name":"Roma Rebibbia","lat":41.95,"lng":12.546,"total":101,"categories":{"Suicidio":51,"Malattia":29,"Overdose":3,"Omicidio":3,"Da accertare":15}},{"name":"Cagliari","lat":39.224,"lng":9.122,"total":61,"categories":{"Suicidio":38,"Malattia":8,"Da accertare":12,"Sciopero della fame":1,"Overdose":2}},{"name":"Torino","lat":45.071,"lng":7.686,"total":61,"categories":{"Suicidio":36,"Da accertare":11,"Malattia":14}},{"name":"Roma Regina Coeli","lat":41.897,"lng":12.464,"total":61,"categories":{"Da accertare":18,"Suicidio":28,"Malattia":13,"Incidente":1,"Overdose":1}},{"name":"Napoli Secondigliano","lat":40.906,"lng":14.26,"total":56,"categories":{"Da accertare":11,"Malattia":22,"Suicidio":20,"Omicidio":2,"Overdose":1}},{"name":"Milano San Vittore","lat":45.461,"lng":9.168,"total":53,"categories":{"Suicidio":30,"Da accertare":11,"Overdose":3,"Malattia":8,"Soffocamento":1}},{"name":"Lecce","lat":40.352,"lng":18.174,"total":52,"categories":{"Da accertare":13,"Suicidio":27,"Malattia":11,"Sciopero della fame":1}},{"name":"Parma","lat":44.801,"lng":10.328,"total":51,"categories":{"Suicidio":17,"Malattia":26,"Da accertare":8}},{"name":"Padova Reclusione","lat":45.407,"lng":11.868,"total":48,"categories":{"Malattia":12,"Suicidio":21,"Da accertare":14,"Overdose":1}},{"name":"Milano Opera","lat":45.379,"lng":9.217,"total":47,"categories":{"Malattia":22,"Da accertare":3,"Omicidio":2,"Suicidio":20}},{"name":"Genova Marassi","lat":44.407,"lng":8.96,"total":41,"categories":{"Suicidio":21,"Da accertare":14,"Omicidio":1,"Malattia":5}},{"name":"Bologna","lat":44.494,"lng":11.342,"total":40,"categories":{"Da accertare":18,"Suicidio":17,"Malattia":4,"Overdose":1}},{"name":"Teramo","lat":42.659,"lng":13.704,"total":37,"categories":{"Suicidio":18,"Malattia":4,"Da accertare":15}},{"name":"Viterbo","lat":42.417,"lng":12.105,"total":36,"categories":{"Malattia":9,"Suicidio":16,"Da accertare":8,"Omicidio":2,"Overdose":1}},{"name":"Verona","lat":45.438,"lng":10.992,"total":36,"categories":{"Suicidio":25,"Overdose":1,"Da accertare":7,"Malattia":3}},{"name":"Santa Maria C.V. (CE)","lat":41.071,"lng":14.257,"total":35,"categories":{"Suicidio":17,"Da accertare":5,"Malattia":13}},{"name":"Palermo Pagliarelli","lat":38.086,"lng":13.369,"total":35,"categories":{"Suicidio":20,"Malattia":8,"Da accertare":7}},{"name":"Firenze Sollicciano","lat":43.76,"lng":11.19,"total":29,"categories":{"Malattia":1,"Suicidio":19,"Da accertare":9}},{"name":"Sassari","lat":40.726,"lng":8.556,"total":29,"categories":{"Malattia":5,"Da accertare":6,"Suicidio":14,"Overdose":3,"Omicidio":1}},{"name":"Taranto","lat":40.464,"lng":17.247,"total":29,"categories":{"Suicidio":14,"Malattia":10,"Da accertare":5}},{"name":"Firenze","lat":43.769,"lng":11.256,"total":29,"categories":{"Da accertare":9,"Overdose":4,"Suicidio":15,"Malattia":1}},{"name":"Como","lat":45.81,"lng":9.085,"total":28,"categories":{"Suicidio":20,"Da accertare":4,"Overdose":2,"Malattia":2}},{"name":"Salerno","lat":40.68,"lng":14.759,"total":28,"categories":{"Da accertare":8,"Suicidio":10,"Omicidio":1,"Malattia":8,"Overdose":1}},{"name":"Pavia","lat":45.185,"lng":9.16,"total":27,"categories":{"Suicidio":19,"Da accertare":4,"Malattia":2,"Overdose":1,"Omicidio":1}},{"name":"Monza","lat":45.584,"lng":9.274,"total":27,"categories":{"Da accertare":6,"Suicidio":19,"Malattia":2}},{"name":"Foggia","lat":41.462,"lng":15.544,"total":27,"categories":{"Suicidio":19,"Da accertare":4,"Malattia":3,"Omicidio":1}},{"name":"Livorno","lat":43.548,"lng":10.31,"total":26,"categories":{"Da accertare":9,"Suicidio":13,"Malattia":4}},{"name":"Frosinone","lat":41.64,"lng":13.351,"total":25,"categories":{"Malattia":6,"Suicidio":12,"Da accertare":7}},{"name":"Avellino","lat":40.914,"lng":14.79,"total":24,"categories":{"Da accertare":8,"Suicidio":9,"Omicidio":1,"Malattia":5,"Overdose":1}},{"name":"Sulmona (AQ)","lat":42.046,"lng":13.924,"total":23,"categories":{"Malattia":7,"Suicidio":11,"Da accertare":4,"Overdose":1}},{"name":"Prato","lat":43.88,"lng":11.097,"total":23,"categories":{"Malattia":2,"Da accertare":5,"Suicidio":16}},{"name":"Siracusa","lat":37.075,"lng":15.287,"total":23,"categories":{"Suicidio":18,"Malattia":3,"Da accertare":2}},{"name":"OPG Aversa (CE)","lat":40.973,"lng":14.203,"total":23,"categories":{"Da accertare":5,"Suicidio":13,"Omicidio":2,"Malattia":3}},{"name":"Modena","lat":44.648,"lng":10.925,"total":22,"categories":{"Suicidio":12,"Da accertare":9,"Malattia":1}},{"name":"Perugia","lat":43.11,"lng":12.389,"total":22,"categories":{"Da accertare":8,"Suicidio":10,"Overdose":2,"Malattia":2}},{"name":"Pisa","lat":43.72,"lng":10.401,"total":22,"categories":{"Da accertare":7,"Suicidio":8,"Malattia":7}},{"name":"Benevento","lat":41.13,"lng":14.782,"total":21,"categories":{"Suicidio":12,"Malattia":7,"Da accertare":2}},{"name":"Civitavecchia (RM)","lat":42.094,"lng":11.797,"total":21,"categories":{"Da accertare":8,"Malattia":1,"Suicidio":10,"Overdose":2}},{"name":"Terni","lat":42.562,"lng":12.641,"total":21,"categories":{"Suicidio":14,"Malattia":6,"Da accertare":1}},{"name":"Bergamo","lat":45.695,"lng":9.67,"total":19,"categories":{"Suicidio":11,"Da accertare":5,"Malattia":2,"Omicidio":1}},{"name":"Velletri (RM)","lat":41.686,"lng":12.781,"total":19,"categories":{"Omicidio":1,"Malattia":6,"Suicidio":8,"Da accertare":3,"Overdose":1}},{"name":"Busto Arsizio (VA)","lat":45.611,"lng":8.852,"total":18,"categories":{"Suicidio":12,"Malattia":3,"Da accertare":2,"Overdose":1}},{"name":"Catanzaro","lat":38.91,"lng":16.587,"total":18,"categories":{"Da accertare":4,"Malattia":9,"Suicidio":5}},{"name":"Bollate (MI)","lat":45.556,"lng":9.12,"total":17,"categories":{"Malattia":8,"Da accertare":1,"Suicidio":8}},{"name":"Ancona Montacuto","lat":43.616,"lng":13.517,"total":17,"categories":{"Da accertare":6,"Malattia":4,"Suicidio":7}},{"name":"Ferrara","lat":44.835,"lng":11.62,"total":15,"categories":{"Malattia":4,"Da accertare":3,"Suicidio":7,"Overdose":1}},{"name":"Reggio Emilia","lat":44.699,"lng":10.631,"total":15,"categories":{"Suicidio":12,"Da accertare":3}},{"name":"Pescara","lat":42.458,"lng":14.215,"total":15,"categories":{"Malattia":1,"Suicidio":8,"Da accertare":6}},{"name":"Bari","lat":41.117,"lng":16.871,"total":15,"categories":{"Suicidio":9,"Omicidio":1,"Malattia":5}},{"name":"Messina","lat":38.194,"lng":15.556,"total":15,"categories":{"Da accertare":4,"Suicidio":8,"Malattia":3}},{"name":"Piacenza","lat":45.052,"lng":9.693,"total":15,"categories":{"Suicidio":12,"Da accertare":1,"Overdose":2}},{"name":"Cremona","lat":45.133,"lng":10.022,"total":14,"categories":{"Suicidio":10,"Da accertare":3,"Malattia":1}},{"name":"Trieste","lat":45.649,"lng":13.777,"total":14,"categories":{"Suicidio":5,"Overdose":1,"Da accertare":6,"Malattia":2}},{"name":"Augusta (SR)","lat":37.235,"lng":15.221,"total":13,"categories":{"Da accertare":5,"Malattia":2,"Suicidio":6}},{"name":"OPG Reggio Emilia","lat":44.699,"lng":10.631,"total":13,"categories":{"Suicidio":6,"Da accertare":6,"Malattia":1}},{"name":"Brescia","lat":45.538,"lng":10.22,"total":13,"categories":{"Suicidio":8,"Da accertare":3,"Malattia":2}},{"name":"Cuneo","lat":44.387,"lng":7.543,"total":13,"categories":{"Suicidio":6,"Da accertare":4,"Malattia":3}},{"name":"Palermo Ucciardone","lat":38.126,"lng":13.355,"total":13,"categories":{"Malattia":3,"Suicidio":7,"Da accertare":3}},{"name":"Pesaro","lat":43.911,"lng":12.913,"total":13,"categories":{"Da accertare":5,"Suicidio":7,"Malattia":1}},{"name":"Venezia S.M. Maggiore","lat":45.439,"lng":12.331,"total":12,"categories":{"Da accertare":6,"Suicidio":4,"Malattia":2}},{"name":"Ivrea (TO)","lat":45.467,"lng":7.874,"total":12,"categories":{"Da accertare":2,"Malattia":2,"Suicidio":8}},{"name":"Reggio Calabria","lat":38.111,"lng":15.661,"total":12,"categories":{"Suicidio":8,"Da accertare":1,"Malattia":3}},{"name":"Vibo Valentia","lat":38.674,"lng":16.1,"total":11,"categories":{"Suicidio":9,"Da accertare":1,"Malattia":1}},{"name":"La Spezia","lat":44.103,"lng":9.824,"total":11,"categories":{"Suicidio":7,"Da accertare":4}},{"name":"Biella","lat":45.562,"lng":8.053,"total":11,"categories":{"Suicidio":8,"Da accertare":3}},{"name":"Trento","lat":46.068,"lng":11.121,"total":11,"categories":{"Suicidio":8,"Da accertare":2,"Malattia":1}},{"name":"Udine","lat":46.063,"lng":13.235,"total":11,"categories":{"Suicidio":6,"Da accertare":2,"Malattia":3}},{"name":"Carinola (CE)","lat":41.177,"lng":14.05,"total":10,"categories":{"Da accertare":2,"Suicidio":6,"Malattia":2}},{"name":"Vigevano (PV)","lat":45.314,"lng":8.862,"total":10,"categories":{"Suicidio":6,"Malattia":2,"Da accertare":1,"Overdose":1}},{"name":"Vicenza","lat":45.548,"lng":11.535,"total":10,"categories":{"Suicidio":10}},{"name":"Trani (BA)","lat":41.278,"lng":16.415,"total":10,"categories":{"Suicidio":5,"Da accertare":5}},{"name":"Castrovillari (CS)","lat":39.814,"lng":16.201,"total":10,"categories":{"Suicidio":9,"Da accertare":1}},{"name":"Alessandria","lat":44.914,"lng":8.615,"total":10,"categories":{"Malattia":2,"Da accertare":4,"Suicidio":4}},{"name":"Agrigento","lat":37.31,"lng":13.578,"total":9,"categories":{"Suicidio":6,"Da accertare":2,"Malattia":1}},{"name":"Ascoli Piceno","lat":42.854,"lng":13.574,"total":9,"categories":{"Da accertare":3,"Suicidio":6}},{"name":"Barcellona P.G. (Me)","lat":38.115,"lng":15.213,"total":9,"categories":{"Suicidio":8,"Da accertare":1}},{"name":"Saluzzo (CN)","lat":44.644,"lng":7.491,"total":9,"categories":{"Malattia":5,"Suicidio":3,"Da accertare":1}},{"name":"Imperia","lat":43.889,"lng":8.026,"total":9,"categories":{"Suicidio":4,"Da accertare":5}},{"name":"Caltanissetta","lat":37.49,"lng":14.061,"total":9,"categories":{"Suicidio":7,"Malattia":2}},{"name":"Sanremo (IM)","lat":43.817,"lng":7.776,"total":9,"categories":{"Da accertare":4,"Suicidio":3,"Malattia":2}},{"name":"Padova Circondariale","lat":45.407,"lng":11.868,"total":9,"categories":{"Da accertare":3,"Omicidio":1,"Suicidio":5}},{"name":"OPG Barcellona P.G. (ME)","lat":38.115,"lng":15.213,"total":9,"categories":{"Suicidio":7,"Da accertare":1,"Malattia":1}},{"name":"Vasto (Ch)","lat":42.114,"lng":14.706,"total":8,"categories":{"Malattia":2,"Suicidio":5,"Da accertare":1}},{"name":"Brindisi","lat":40.641,"lng":17.942,"total":8,"categories":{"Suicidio":5,"Malattia":3}},{"name":"Massa Carrara","lat":44.036,"lng":10.138,"total":8,"categories":{"Suicidio":6,"Malattia":1,"Da accertare":1}},{"name":"Rieti","lat":42.402,"lng":12.857,"total":8,"categories":{"Suicidio":1,"Malattia":2,"Da accertare":5}},{"name":"Venezia","lat":45.437,"lng":12.332,"total":8,"categories":{"Suicidio":7,"Da accertare":1}},{"name":"Novara","lat":45.447,"lng":8.621,"total":8,"categories":{"Suicidio":5,"Malattia":2,"Da accertare":1}},{"name":"Rossano (CS)","lat":39.578,"lng":16.637,"total":8,"categories":{"Suicidio":6,"Malattia":1,"Da accertare":1}},{"name":"Catania","lat":37.502,"lng":15.09,"total":8,"categories":{"Malattia":4,"Da accertare":1,"Suicidio":3}},{"name":"Ancona","lat":43.616,"lng":13.517,"total":8,"categories":{"Suicidio":6,"Da accertare":2}},{"name":"Campobasso","lat":41.561,"lng":14.656,"total":7,"categories":{"Malattia":2,"Da accertare":4,"Suicidio":1}},{"name":"Belluno","lat":46.14,"lng":12.216,"total":7,"categories":{"Suicidio":7}},{"name":"Trapani","lat":38.018,"lng":12.514,"total":7,"categories":{"Suicidio":2,"Malattia":3,"Da accertare":2}},{"name":"Treviso","lat":45.671,"lng":12.242,"total":7,"categories":{"Da accertare":2,"Suicidio":3,"Malattia":2}},{"name":"Forlì","lat":44.222,"lng":12.041,"total":7,"categories":{"Da accertare":2,"Suicidio":3,"Malattia":2}},{"name":"Caltagirone (CT)","lat":37.237,"lng":14.519,"total":7,"categories":{"Suicidio":3,"Omicidio":2,"Da accertare":1,"Malattia":1}},{"name":"Tolmezzo (UD)","lat":46.397,"lng":13.01,"total":7,"categories":{"Malattia":4,"Suicidio":3}},{"name":"Cosenza","lat":39.307,"lng":16.251,"total":7,"categories":{"Da accertare":1,"Malattia":2,"Suicidio":4}},{"name":"Spoleto (Pg)","lat":42.734,"lng":12.738,"total":7,"categories":{"Suicidio":5,"Da accertare":1,"Malattia":1}},{"name":"Latina","lat":41.467,"lng":12.904,"total":6,"categories":{"Da accertare":2,"Suicidio":4}},{"name":"Paola (CS)","lat":39.361,"lng":16.041,"total":6,"categories":{"Suicidio":6}},{"name":"Voghera (PV)","lat":44.993,"lng":9.012,"total":6,"categories":{"Malattia":2,"Suicidio":4}},{"name":"Ravenna","lat":44.418,"lng":12.203,"total":6,"categories":{"Suicidio":6}},{"name":"Oristano","lat":39.908,"lng":8.594,"total":6,"categories":{"Da accertare":1,"Suicidio":3,"Malattia":2}},{"name":"Genova","lat":44.407,"lng":8.934,"total":6,"categories":{"Malattia":2,"Da accertare":2,"Suicidio":2}},{"name":"Porto Azzurro (LI)","lat":42.764,"lng":10.399,"total":6,"categories":{"Suicidio":2,"Malattia":2,"Da accertare":1,"Omicidio":1}},{"name":"Lucca","lat":43.843,"lng":10.508,"total":6,"categories":{"Malattia":1,"Suicidio":4,"Da accertare":1}},{"name":"Venezia Giudecca","lat":45.427,"lng":12.327,"total":5,"categories":{"Suicidio":2,"Malattia":2,"Da accertare":1}},{"name":"Asti","lat":44.9,"lng":8.206,"total":5,"categories":{"Suicidio":4,"Malattia":1}},{"name":"Cassino (FR)","lat":41.491,"lng":13.833,"total":5,"categories":{"Da accertare":3,"Malattia":2}},{"name":"Catania Piazza Lanza","lat":37.502,"lng":15.09,"total":5,"categories":{"Suicidio":4,"Malattia":1}},{"name":"Lodi","lat":45.314,"lng":9.502,"total":5,"categories":{"Da accertare":2,"Suicidio":3}},{"name":"Ragusa","lat":36.928,"lng":14.741,"total":5,"categories":{"Suicidio":3,"Da accertare":1,"Omicidio":1}},{"name":"Lanciano (CH)","lat":42.231,"lng":14.389,"total":5,"categories":{"Suicidio":2,"Malattia":3}},{"name":"OPG Castiglione (MN)","lat":45.391,"lng":10.722,"total":5,"categories":{"Suicidio":3,"Da accertare":2}},{"name":"Vercelli","lat":45.328,"lng":8.424,"total":5,"categories":{"Suicidio":5}},{"name":"OPG Montelupo (FI)","lat":43.73,"lng":11.025,"total":5,"categories":{"Suicidio":2,"Malattia":2,"Omicidio":1}},{"name":"Lucera (Fg)","lat":41.507,"lng":15.335,"total":4,"categories":{"Suicidio":4}},{"name":"Gorgona (LI)","lat":43.431,"lng":9.9,"total":4,"categories":{"Suicidio":1,"Da accertare":1,"Omicidio":2}},{"name":"Genova Pontedecimo","lat":44.476,"lng":8.886,"total":4,"categories":{"Malattia":1,"Suicidio":3}},{"name":"Chieti","lat":42.351,"lng":14.167,"total":4,"categories":{"Malattia":2,"Suicidio":1,"Da accertare":1}},{"name":"Crotone","lat":39.081,"lng":17.122,"total":4,"categories":{"Suicidio":3,"Omicidio":1}},{"name":"Bolzano","lat":46.498,"lng":11.354,"total":4,"categories":{"Suicidio":3,"Overdose":1}},{"name":"Fossombrone (PU)","lat":43.688,"lng":12.81,"total":4,"categories":{"Suicidio":3,"Malattia":1}},{"name":"Catania Bicocca","lat":37.502,"lng":15.09,"total":4,"categories":{"Suicidio":4}},{"name":"Milano Questura","lat":45.464,"lng":9.19,"total":4,"categories":{"Suicidio":1,"Da accertare":2,"Malattia":1}},{"name":"OPG Napoli","lat":40.863,"lng":14.271,"total":4,"categories":{"Suicidio":3,"Da accertare":1}},{"name":"Palmi (RC)","lat":38.362,"lng":15.847,"total":4,"categories":{"Suicidio":2,"Malattia":2}},{"name":"L’Aquila","lat":42.351,"lng":13.4,"total":4,"categories":{"Suicidio":3,"Malattia":1}},{"name":"Spoleto","lat":42.734,"lng":12.738,"total":4,"categories":{"Suicidio":3,"Malattia":1}},{"name":"Alessandria Casa Reclusione","lat":44.914,"lng":8.615,"total":3,"categories":{"Da accertare":1,"Suicidio":2}},{"name":"Aosta","lat":45.737,"lng":7.315,"total":3,"categories":{"Suicidio":1,"Malattia":2}},{"name":"Melfi (Pz)","lat":40.996,"lng":15.649,"total":3,"categories":{"Suicidio":2,"Malattia":1}},{"name":"Mantova","lat":45.156,"lng":10.792,"total":3,"categories":{"Suicidio":2,"Da accertare":1}},{"name":"Varese","lat":45.82,"lng":8.826,"total":3,"categories":{"Suicidio":2,"Malattia":1}},{"name":"San Gimignano (SI)","lat":43.468,"lng":11.043,"total":3,"categories":{"Suicidio":2,"Omicidio":1}},{"name":"Termini Imerese (Pa)","lat":37.984,"lng":13.697,"total":3,"categories":{"Suicidio":2,"Da accertare":1}},{"name":"Rimini","lat":44.059,"lng":12.565,"total":3,"categories":{"Suicidio":2,"Da accertare":1}},{"name":"Sondrio","lat":46.17,"lng":9.876,"total":3,"categories":{"Suicidio":3}},{"name":"Isili (NU)","lat":39.744,"lng":9.104,"total":3,"categories":{"Suicidio":1,"Da accertare":2}},{"name":"Caserta","lat":41.073,"lng":14.333,"total":3,"categories":{"Suicidio":1,"Malattia":1,"Da accertare":1}},{"name":"Larino (CB)","lat":41.797,"lng":14.914,"total":3,"categories":{"Malattia":2,"Suicidio":1}},{"name":"Fermo (AP)","lat":43.16,"lng":13.716,"total":3,"categories":{"Suicidio":3}},{"name":"Siena","lat":43.319,"lng":11.331,"total":3,"categories":{"Suicidio":1,"Da accertare":1,"Malattia":1}},{"name":"Aversa (Ce)","lat":40.973,"lng":14.203,"total":3,"categories":{"Malattia":1,"Suicidio":2}},{"name":"Pordenone","lat":45.956,"lng":12.66,"total":3,"categories":{"Malattia":1,"Suicidio":1,"Da accertare":1}},{"name":"Alba (CN)","lat":44.699,"lng":8.035,"total":3,"categories":{"Suicidio":2,"Da accertare":1}},{"name":"Firenze Solliccianino","lat":43.76,"lng":11.19,"total":3,"categories":{"Malattia":1,"Suicidio":1,"Overdose":1}},{"name":"Isernia","lat":41.593,"lng":14.231,"total":3,"categories":{"Omicidio":1,"Malattia":1,"Overdose":1}},{"name":"Nuoro","lat":40.321,"lng":9.33,"total":3,"categories":{"Malattia":1,"Da accertare":1,"Suicidio":1}},{"name":"Spoleto (PG)","lat":42.734,"lng":12.738,"total":3,"categories":{"Suicidio":3}},{"name":"Iglesias (CA)","lat":39.305,"lng":8.538,"total":3,"categories":{"Suicidio":3}},{"name":"Ariano Irpino (Av)","lat":41.155,"lng":15.089,"total":3,"categories":{"Suicidio":2,"Da accertare":1}},{"name":"Gela (CL)","lat":37.074,"lng":14.253,"total":2,"categories":{"Suicidio":2}},{"name":"Pistoia","lat":43.93,"lng":10.917,"total":2,"categories":{"Suicidio":2}},{"name":"REMS San Nicola Baronia (Av)","lat":41.006,"lng":15.145,"total":2,"categories":{"Omicidio":1,"Suicidio":1}},{"name":"Gorizia","lat":45.94,"lng":13.621,"total":2,"categories":{"Da accertare":1,"Suicidio":1}},{"name":"Roma","lat":41.902,"lng":12.496,"total":2,"categories":{"Suicidio":1,"Da accertare":1}},{"name":"Reggio Calabria Arghillà","lat":38.143,"lng":15.636,"total":2,"categories":{"Suicidio":1,"Malattia":1}},{"name":"L'Aquila","lat":42.351,"lng":13.4,"total":2,"categories":{"Malattia":2}},{"name":"Arienzo (Ce)","lat":41.024,"lng":14.464,"total":2,"categories":{"Da accertare":1,"Suicidio":1}},{"name":"CPR Gradisca d'Isonzo","lat":45.891,"lng":13.499,"total":2,"categories":{"Da accertare":2}},{"name":"Enna","lat":37.566,"lng":14.279,"total":2,"categories":{"Suicidio":2}},{"name":"San Severo (FG)","lat":41.688,"lng":15.381,"total":2,"categories":{"Malattia":1,"Suicidio":1}},{"name":"Noto (SR)","lat":36.891,"lng":15.068,"total":2,"categories":{"Malattia":1,"Suicidio":1}},{"name":"Napoli (domiciliari)","lat":40.851,"lng":14.268,"total":2,"categories":{"Suicidio":2}},{"name":"Giarre (Ct)","lat":37.728,"lng":15.183,"total":2,"categories":{"Da accertare":1,"Suicidio":1}},{"name":"Alghero","lat":40.558,"lng":8.319,"total":2,"categories":{"Suicidio":2}},{"name":"Castelfranco C.L. (Mo)","lat":44.602,"lng":11.05,"total":2,"categories":{"Suicidio":1,"Da accertare":1}},{"name":"Macomer (NU)","lat":40.266,"lng":8.768,"total":2,"categories":{"Suicidio":2}},{"name":"Firenze (Questura)","lat":43.769,"lng":11.256,"total":2,"categories":{"Da accertare":1,"Suicidio":1}},{"name":"Rovereto (TN)","lat":45.891,"lng":11.043,"total":2,"categories":{"Suicidio":2}},{"name":"Roma Cie","lat":41.902,"lng":12.496,"total":2,"categories":{"Suicidio":1,"Da accertare":1}},{"name":"Modena Cie","lat":44.648,"lng":10.925,"total":2,"categories":{"Suicidio":2}},{"name":"Brucoli (SR)","lat":37.289,"lng":15.19,"total":2,"categories":{"Suicidio":1,"Da accertare":1}},{"name":"Orvieto (TR)","lat":42.717,"lng":12.108,"total":2,"categories":{"Suicidio":2}},{"name":"Is Arenas (CA)","lat":39.744,"lng":8.488,"total":2,"categories":{"Suicidio":1,"Overdose":1}},{"name":"Treviso (IPM)","lat":45.671,"lng":12.242,"total":1,"categories":{"Suicidio":1}},{"name":"Bari (CARA)","lat":41.117,"lng":16.871,"total":1,"categories":{"Da accertare":1}},{"name":"Palazzo San Gervasio (Pz)","lat":40.928,"lng":15.979,"total":1,"categories":{"Da accertare":1}},{"name":"Potenza","lat":40.641,"lng":15.8,"total":1,"categories":{"Suicidio":1}},{"name":"Tempio Pausania","lat":40.899,"lng":9.102,"total":1,"categories":{"Suicidio":1}},{"name":"Chiavari (Ge)","lat":44.317,"lng":9.323,"total":1,"categories":{"Suicidio":1}},{"name":"Brescia Verziano","lat":45.492,"lng":10.151,"total":1,"categories":{"Suicidio":1}},{"name":"Albenga (Ge)","lat":44.049,"lng":8.213,"total":1,"categories":{"Da accertare":1}},{"name":"Milano (Questura)","lat":45.464,"lng":9.19,"total":1,"categories":{"Suicidio":1}},{"name":"Palermo (domiciliari)","lat":38.116,"lng":13.362,"total":1,"categories":{"Suicidio":1}},{"name":"Salerno (domiciliari)","lat":40.68,"lng":14.759,"total":1,"categories":{"Suicidio":1}},{"name":"Roma (Rems)","lat":41.902,"lng":12.496,"total":1,"categories":{"Suicidio":1}},{"name":"Arezzo","lat":43.464,"lng":11.88,"total":1,"categories":{"Suicidio":1}},{"name":"Napoli (Ospedale)","lat":40.851,"lng":14.268,"total":1,"categories":{"Suicidio":1}},{"name":"Treviso (domiciliari)","lat":45.671,"lng":12.242,"total":1,"categories":{"Suicidio":1}},{"name":"Bologna (Questura)","lat":44.494,"lng":11.342,"total":1,"categories":{"Suicidio":1}},{"name":"Verona (semilibertà)","lat":45.438,"lng":10.992,"total":1,"categories":{"Suicidio":1}},{"name":"Verona (REMS)","lat":45.438,"lng":10.992,"total":1,"categories":{"Suicidio":1}},{"name":"Volterra (Pi)","lat":43.401,"lng":10.862,"total":1,"categories":{"Da accertare":1}},{"name":"Grosseto","lat":42.764,"lng":11.114,"total":1,"categories":{"Suicidio":1}},{"name":"Sciacca (Ag)","lat":37.508,"lng":13.086,"total":1,"categories":{"Suicidio":1}},{"name":"Taranto (permesso)","lat":40.464,"lng":17.247,"total":1,"categories":{"Suicidio":1}},{"name":"S. Angelo d. L. (Av)","lat":40.926,"lng":15.177,"total":1,"categories":{"Suicidio":1}},{"name":"Foggia (comunità)","lat":41.462,"lng":15.544,"total":1,"categories":{"Omicidio":1}},{"name":"Roma (Ospedale)","lat":41.902,"lng":12.496,"total":1,"categories":{"Suicidio":1}},{"name":"Napoli (Caserma CC)","lat":40.851,"lng":14.268,"total":1,"categories":{"Suicidio":1}},{"name":"Trieste (Commissariato)","lat":45.649,"lng":13.777,"total":1,"categories":{"Suicidio":1}},{"name":"Bologna (Cie)","lat":44.494,"lng":11.342,"total":1,"categories":{"Overdose":1}},{"name":"Viterbo (Osp. Belcolle)","lat":42.417,"lng":12.105,"total":1,"categories":{"Da accertare":1}},{"name":"Genova (domicil.)","lat":44.407,"lng":8.934,"total":1,"categories":{"Suicidio":1}},{"name":"Lanciano (domicil.)","lat":42.231,"lng":14.389,"total":1,"categories":{"Suicidio":1}},{"name":"Roma (domicil.)","lat":41.902,"lng":12.496,"total":1,"categories":{"Malattia":1}},{"name":"Massa","lat":44.036,"lng":10.138,"total":1,"categories":{"Da accertare":1}},{"name":"Altamura (BA)","lat":40.826,"lng":16.553,"total":1,"categories":{"Suicidio":1}},{"name":"Milano Cie","lat":45.47,"lng":9.08,"total":1,"categories":{"Suicidio":1}},{"name":"Firenze Ipm","lat":43.769,"lng":11.256,"total":1,"categories":{"Suicidio":1}},{"name":"Mamone (NU)","lat":40.45,"lng":9.42,"total":1,"categories":{"Suicidio":1}},{"name":"Bari Ipm","lat":41.117,"lng":16.871,"total":1,"categories":{"Suicidio":1}},{"name":"Marsala (TP)","lat":37.8,"lng":12.438,"total":1,"categories":{"Suicidio":1}},{"name":"Caltanissetta Cie","lat":37.49,"lng":14.061,"total":1,"categories":{"Malattia":1}},{"name":"Torino Cie","lat":45.071,"lng":7.686,"total":1,"categories":{"Malattia":1}},{"name":"Locri (RC)","lat":38.236,"lng":16.263,"total":1,"categories":{"Malattia":1}},{"name":"Lamezia Terme Cie","lat":38.974,"lng":16.329,"total":1,"categories":{"Suicidio":1}},{"name":"Massa Marittima (GR)","lat":43.049,"lng":10.887,"total":1,"categories":{"Suicidio":1}},{"name":"Rovigo","lat":45.07,"lng":11.787,"total":1,"categories":{"Suicidio":1}},{"name":"Volterra (SI)","lat":43.401,"lng":10.862,"total":1,"categories":{"Suicidio":1}},{"name":"Empoli (FI)","lat":43.716,"lng":10.95,"total":1,"categories":{"Da accertare":1}},{"name":"Lamezia","lat":38.974,"lng":16.329,"total":1,"categories":{"Suicidio":1}},{"name":"Barletta (BA)","lat":41.317,"lng":16.283,"total":1,"categories":{"Da accertare":1}},{"name":"Ipm Casal del Marmo (RM)","lat":41.942,"lng":12.414,"total":1,"categories":{"Suicidio":1}},{"name":"Camerino (MC)","lat":43.139,"lng":13.069,"total":1,"categories":{"Suicidio":1}},{"name":"Ipm Casal Del Marmo (RM)","lat":41.942,"lng":12.414,"total":1,"categories":{"Suicidio":1}},{"name":"Roma Questura","lat":41.902,"lng":12.496,"total":1,"categories":{"Da accertare":1}},{"name":"Pozzuoli (NA)","lat":40.823,"lng":14.118,"total":1,"categories":{"Da accertare":1}},{"name":"Avezzano (AQ)","lat":42.027,"lng":13.424,"total":1,"categories":{"Suicidio":1}},{"name":"Caltanisssetta","lat":37.49,"lng":14.061,"total":1,"categories":{"Suicidio":1}},{"name":"Crotone (Cie)","lat":39.081,"lng":17.122,"total":1,"categories":{"Da accertare":1}},{"name":"Mamone (Nu)","lat":40.45,"lng":9.42,"total":1,"categories":{"Da accertare":1}},{"name":"Napoli","lat":40.851,"lng":14.268,"total":1,"categories":{"Da accertare":1}},{"name":"Pozzuoli (Na)","lat":40.823,"lng":14.118,"total":1,"categories":{"Malattia":1}},{"name":"Vasto","lat":42.114,"lng":14.706,"total":1,"categories":{"Da accertare":1}}];
+
+const COLORS = {
+  'Suicidio':            '#e74c3c',
+  'Malattia':            '#3498db',
+  'Da accertare':        '#95a5a6',
+  'Overdose':            '#e67e22',
+  'Omicidio':            '#9b59b6',
+  'Sciopero della fame': '#f1c40f',
+  'Incidente':           '#1abc9c',
+  'Soffocamento':        '#e91e63'
+};
+
+const CAT_LABELS = Object.keys(COLORS);
+
+// ─── State ──────────────────────────────────────────────────────────────────
+let activeCategories = new Set(CAT_LABELS);
+let markerMap = {}; // name → {marker, prison}
+let clusterGroup;
+
+// ─── Map init ───────────────────────────────────────────────────────────────
+const map = L.map('map', {
+  center: [42.3, 12.8],
+  zoom: 6,
+  minZoom: 6,
+  zoomControl: false,
+  preferCanvas: false
+});
+
+L.control.zoom({position: 'topright'}).addTo(map);
+
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a> | Dati: <a href="https://www.ristretti.it">Ristretti Orizzonti</a>',
+  subdomains: 'abcd',
+  maxZoom: 18
+}).addTo(map);
+
+// ─── Dark mask over non-Italy areas ──────────────────────────────────────────
+fetch('italy.geojson')
+  .then(r => r.json())
+  .then(data => {
+    const geom = data.geometry || data;
+    const worldBox = [[-180,-90],[180,-90],[180,90],[-180,90],[-180,-90]];
+    let holes = [];
+    if (geom.type === 'Polygon') {
+      holes = [geom.coordinates[0]];
+    } else if (geom.type === 'MultiPolygon') {
+      holes = geom.coordinates.map(poly => poly[0]);
+    }
+    const mask = {
+      type: 'Feature',
+      geometry: { type: 'Polygon', coordinates: [worldBox, ...holes] },
+      properties: {}
+    };
+    L.geoJSON(mask, {
+      style: { fillColor: '#0d0f1a', fillOpacity: 0.45, fillRule: 'evenodd', color: 'none', weight: 0 }
+    }).addTo(map);
+  });
+
+// ─── SVG donut generator ─────────────────────────────────────────────────────
+function polar(cx, cy, r, deg) {
+  const rad = (deg - 90) * Math.PI / 180;
+  return [cx + r * Math.cos(rad), cy + r * Math.sin(rad)];
+}
+
+function makeSVG(categories, total, size) {
+  const r = size / 2;
+  const cx = r, cy = r;
+  const outerR = r - 1;
+  const innerR = outerR * 0.48;
+  
+  const entries = Object.entries(categories)
+    .filter(([,v]) => v > 0)
+    .sort((a,b) => CAT_LABELS.indexOf(a[0]) - CAT_LABELS.indexOf(b[0]));
+
+  let slices = '';
+  
+  if (entries.length === 0) return '';
+  
+  if (entries.length === 1) {
+    const col = COLORS[entries[0][0]] || '#999';
+    slices = `<circle cx="${cx}" cy="${cy}" r="${outerR}" fill="${col}" stroke="rgba(255,255,255,.7)" stroke-width="1"/>`;
+  } else {
+    let startDeg = 0;
+    for (const [cat, count] of entries) {
+      const sweep = (count / total) * 360;
+      const endDeg = startDeg + sweep;
+      const [x1,y1] = polar(cx, cy, outerR, startDeg);
+      const [x2,y2] = polar(cx, cy, outerR, endDeg);
+      const large = sweep > 180 ? 1 : 0;
+      const col = COLORS[cat] || '#999';
+      slices += `<path d="M${cx} ${cy} L${x1.toFixed(2)} ${y1.toFixed(2)} A${outerR} ${outerR} 0 ${large} 1 ${x2.toFixed(2)} ${y2.toFixed(2)} Z" fill="${col}"/>`;
+      startDeg = endDeg;
+    }
+  }
+
+  // Donut hole
+  slices += `<circle cx="${cx}" cy="${cy}" r="${innerR}" fill="#1a1d2e"/>`;
+
+  // Total text
+  const fsize = total >= 1000 ? innerR * 0.55 : total >= 100 ? innerR * 0.62 : innerR * 0.72;
+  slices += `<text x="${cx}" y="${cy}" text-anchor="middle" dominant-baseline="central" font-size="${fsize.toFixed(1)}" font-weight="700" fill="#fff" style="font-family:-apple-system,sans-serif">${total}</text>`;
+
+  return `<svg class="marker-svg" width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" xmlns="http://www.w3.org/2000/svg">${slices}</svg>`;
+}
+
+function markerSize(total, isCluster) {
+  const max = isCluster ? 84 : 68;
+  return Math.max(30, Math.min(max, Math.round(Math.sqrt(total) * 7)));
+}
+
+function createIcon(categories, total, isCluster) {
+  const sz = markerSize(total, isCluster);
+  const svg = makeSVG(categories, total, sz);
+  return L.divIcon({
+    html: svg,
+    className: '',
+    iconSize: [sz, sz],
+    iconAnchor: [sz/2, sz/2],
+    popupAnchor: [0, -sz/2 - 4]
+  });
+}
+
+// ─── Popup content ───────────────────────────────────────────────────────────
+function makePopup(prison) {
+  const total = prison.total;
+  const sorted = Object.entries(prison.categories)
+    .sort((a,b) => b[1] - a[1]);
+
+  let rows = sorted.map(([cat, n]) => {
+    const col = COLORS[cat] || '#999';
+    const pct = Math.round(n / total * 100);
+    return `<div class="popup-row">
+      <span class="popup-swatch" style="background:${col}"></span>
+      <span class="popup-cat">${cat}</span>
+      <div class="popup-bar-wrap"><div class="popup-bar-fill" style="width:${pct}%;background:${col}"></div></div>
+      <span class="popup-n">${n}</span>
+      <span class="popup-pct">${pct}%</span>
+    </div>`;
+  }).join('');
+
+  return `<div class="popup-inner">
+    <div class="popup-name">${prison.name}</div>
+    <div class="popup-total">Totale: <strong>${total}</strong> decessi</div>
+    ${rows}
+  </div>`;
+}
+
+// ─── Cluster group ───────────────────────────────────────────────────────────
+clusterGroup = L.markerClusterGroup({
+  maxClusterRadius: 70,
+  disableClusteringAtZoom: 12,
+  spiderfyOnMaxZoom: true,
+  showCoverageOnHover: false,
+  zoomToBoundsOnClick: true,
+  spiderLegPolylineOptions: { weight: 1.5, color: '#aaa', opacity: 0.5 },
+  iconCreateFunction: function(cluster) {
+    const children = cluster.getAllChildMarkers();
+    const aggCats = {};
+    let aggTotal = 0;
+    for (const m of children) {
+      if (m._filteredCats) {
+        for (const [cat, n] of Object.entries(m._filteredCats)) {
+          aggCats[cat] = (aggCats[cat] || 0) + n;
+          aggTotal += n;
+        }
+      }
+    }
+    return createIcon(aggCats, aggTotal, true);
+  }
+});
+
+// ─── Build markers ───────────────────────────────────────────────────────────
+for (const prison of PRISONS) {
+  if (!prison.lat || !prison.lng) continue;
+  const marker = L.marker([prison.lat, prison.lng], {
+    icon: createIcon(prison.categories, prison.total)
+  });
+  marker._prison = prison;
+  marker._filteredCats = {...prison.categories};
+  marker._filteredTotal = prison.total;
+  marker.bindPopup(makePopup(prison), {maxWidth: 280, minWidth: 220});
+  clusterGroup.addLayer(marker);
+  markerMap[prison.name] = {marker, prison};
+}
+map.addLayer(clusterGroup);
+
+// ─── Category filter UI ──────────────────────────────────────────────────────
+function buildCatUI() {
+  // Compute global totals per category
+  const globalTotals = {};
+  for (const p of PRISONS) {
+    for (const [cat, n] of Object.entries(p.categories)) {
+      globalTotals[cat] = (globalTotals[cat] || 0) + n;
+    }
+  }
+
+  const list = document.getElementById('cat-list');
+  const legendEl = document.getElementById('legend-items');
+
+  for (const cat of CAT_LABELS) {
+    if (!(cat in globalTotals)) continue;
+    const col = COLORS[cat];
+    const count = globalTotals[cat];
+
+    // Filter panel item
+    const item = document.createElement('div');
+    item.className = 'cat-item';
+    item.dataset.cat = cat;
+    item.innerHTML = `<div class="cat-dot" style="background:${col}"></div>
+      <span class="cat-label">${cat}</span>
+      <span class="cat-count">${count}</span>`;
+    item.onclick = () => toggleCategory(cat, item);
+    list.appendChild(item);
+
+    // Legend item
+    const leg = document.createElement('div');
+    leg.className = 'legend-row';
+    leg.innerHTML = `<div class="legend-dot" style="background:${col}"></div><span class="legend-label">${cat}</span>`;
+    legendEl.appendChild(leg);
+  }
+}
+
+function toggleCategory(cat, el) {
+  if (activeCategories.has(cat)) {
+    if (activeCategories.size === 1) return; // keep at least one
+    activeCategories.delete(cat);
+    el.classList.add('inactive');
+  } else {
+    activeCategories.add(cat);
+    el.classList.remove('inactive');
+  }
+  updateMarkers();
+}
+
+function resetFilters() {
+  activeCategories = new Set(CAT_LABELS);
+  document.querySelectorAll('.cat-item').forEach(el => el.classList.remove('inactive'));
+  updateMarkers();
+}
+
+function updateMarkers() {
+  clusterGroup.clearLayers();
+  let totalDeaths = 0;
+  for (const {marker, prison} of Object.values(markerMap)) {
+    const filteredCats = {};
+    let filteredTotal = 0;
+    for (const [cat, n] of Object.entries(prison.categories)) {
+      if (activeCategories.has(cat)) {
+        filteredCats[cat] = n;
+        filteredTotal += n;
+      }
+    }
+    marker._filteredCats = filteredCats;
+    marker._filteredTotal = filteredTotal;
+    if (filteredTotal > 0) {
+      marker.setIcon(createIcon(filteredCats, filteredTotal));
+      clusterGroup.addLayer(marker);
+      totalDeaths += filteredTotal;
+    }
+  }
+  document.getElementById('death-count').textContent = totalDeaths.toLocaleString('it');
+}
+
+function toggleControls() {
+  document.getElementById('controls').classList.toggle('open');
+}
+
+function toggleProgetto() {
+  const panel = document.getElementById('progetto-panel');
+  const btn   = document.getElementById('progetto-btn');
+  const isOpen = panel.classList.toggle('open');
+  btn.classList.toggle('active', isOpen);
+  if (isOpen) {
+    document.getElementById('overview-panel').classList.remove('open');
+    document.getElementById('overview-btn').classList.remove('active');
+    document.getElementById('controls').classList.remove('open');
+  }
+}
+
+// Close panel when clicking map
+map.on('click', () => {
+  document.getElementById('controls').classList.remove('open');
+  document.getElementById('overview-panel').classList.remove('open');
+  document.getElementById('overview-btn').classList.remove('active');
+  document.getElementById('progetto-panel').classList.remove('open');
+  document.getElementById('progetto-btn').classList.remove('active');
+});
+
+// Init
+buildCatUI();
+
+// Count total initially
+let initTotal = 0;
+for (const p of PRISONS) initTotal += p.total;
+document.getElementById('death-count').textContent = initTotal.toLocaleString('it');
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+// ─── Overview panel ──────────────────────────────────────────────────────────
+let chartsReady = false;
+
+function toggleOverview() {
+  const panel = document.getElementById('overview-panel');
+  const btn   = document.getElementById('overview-btn');
+  const isOpen = panel.classList.toggle('open');
+  btn.classList.toggle('active', isOpen);
+  document.getElementById('controls').classList.remove('open');
+  if (isOpen) {
+    document.getElementById('progetto-panel').classList.remove('open');
+    document.getElementById('progetto-btn').classList.remove('active');
+  }
+  if (isOpen && !chartsReady) { buildCharts(); chartsReady = true; }
+}
+
+function buildCharts() {
+  Chart.defaults.color = '#8a93a8';
+  Chart.defaults.font.family = "-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif";
+  Chart.defaults.font.size = 11;
+
+  const tooltipDefaults = {
+    backgroundColor: '#1a1d2e',
+    borderColor: '#2c3150',
+    borderWidth: 1,
+    padding: 10,
+    titleColor: '#fff',
+    bodyColor: '#adb5bd',
+  };
+
+  // ── 1. Donut: cause totals ─────────────────────────────────────────────────
+  const causeTotals = {};
+  for (const p of PRISONS) {
+    for (const [cat, n] of Object.entries(p.categories)) {
+      causeTotals[cat] = (causeTotals[cat] || 0) + n;
+    }
+  }
+  const causeLabels = CAT_LABELS.filter(c => c in causeTotals);
+  const grand = causeLabels.reduce((s, c) => s + causeTotals[c], 0);
+
+  new Chart(document.getElementById('chart-donut'), {
+    type: 'doughnut',
+    data: {
+      labels: causeLabels,
+      datasets: [{
+        data: causeLabels.map(c => causeTotals[c]),
+        backgroundColor: causeLabels.map(c => COLORS[c]),
+        borderColor: '#0a0c14',
+        borderWidth: 2,
+        hoverBorderWidth: 3,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      cutout: '60%',
+      plugins: {
+        legend: {
+          position: 'bottom',
+          labels: { padding: 8, boxWidth: 10, boxHeight: 10, color: '#adb5bd', font: { size: 10.5 } }
+        },
+        tooltip: {
+          ...tooltipDefaults,
+          callbacks: {
+            label: ctx => ` ${ctx.label}: ${ctx.parsed} (${Math.round(ctx.parsed / grand * 100)}%)`
+          }
+        }
+      }
+    }
+  });
+
+  // ── 2. Horizontal bar: top 10 prisons ─────────────────────────────────────
+  const top10 = [...PRISONS].sort((a, b) => b.total - a.total).slice(0, 10);
+  const domCat = p => Object.entries(p.categories).sort((a, b) => b[1] - a[1])[0][0];
+
+  new Chart(document.getElementById('chart-bar'), {
+    type: 'bar',
+    data: {
+      labels: top10.map(p => p.name.length > 24 ? p.name.slice(0, 22) + '…' : p.name),
+      datasets: [{
+        data: top10.map(p => p.total),
+        backgroundColor: top10.map(p => COLORS[domCat(p)] + 'bb'),
+        borderColor:     top10.map(p => COLORS[domCat(p)]),
+        borderWidth: 1,
+        borderRadius: 3,
+        borderSkipped: false,
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          ...tooltipDefaults,
+          callbacks: { label: ctx => ` ${ctx.parsed.x} decessi` }
+        }
+      },
+      scales: {
+        x: {
+          grid: { color: '#1a1d2e' },
+          ticks: { color: '#6c757d', maxTicksLimit: 5 },
+          border: { display: false }
+        },
+        y: {
+          grid: { display: false },
+          ticks: { color: '#adb5bd', font: { size: 10.5 } },
+          border: { display: false }
+        }
+      }
+    }
+  });
+
+  // ── 3. Line: deaths per year ───────────────────────────────────────────────
+  const YEARLY = [
+    {y:2002,tot:68,sui:36},{y:2003,tot:63,sui:43},
+    {y:2004,tot:97,sui:54},{y:2005,tot:105,sui:55},
+    {y:2006,tot:74,sui:49},{y:2007,tot:80,sui:43},
+    {y:2008,tot:88,sui:36},{y:2009,tot:112,sui:72},
+    {y:2010,tot:102,sui:66},{y:2011,tot:110,sui:56},
+    {y:2012,tot:111,sui:60},{y:2013,tot:100,sui:49},
+    {y:2014,tot:78,sui:44},{y:2015,tot:90,sui:43},
+    {y:2016,tot:75,sui:39},{y:2017,tot:92,sui:52},
+    {y:2018,tot:120,sui:67},{y:2019,tot:95,sui:52},
+    {y:2020,tot:116,sui:53},{y:2021,tot:100,sui:48},
+    {y:2022,tot:141,sui:83},{y:2023,tot:135,sui:69},
+    {y:2024,tot:152,sui:90},{y:2025,tot:153,sui:80},
+  ];
+
+  new Chart(document.getElementById('chart-line'), {
+    type: 'line',
+    data: {
+      labels: YEARLY.map(d => d.y),
+      datasets: [
+        {
+          label: 'Totale',
+          data: YEARLY.map(d => d.tot),
+          borderColor: '#adb5bd',
+          backgroundColor: 'rgba(173,181,189,0.07)',
+          fill: true, tension: 0.35,
+          pointRadius: 2, pointHoverRadius: 5, borderWidth: 2,
+        },
+        {
+          label: 'Suicidi',
+          data: YEARLY.map(d => d.sui),
+          borderColor: '#e74c3c',
+          backgroundColor: 'rgba(231,76,60,0.10)',
+          fill: true, tension: 0.35,
+          pointRadius: 2, pointHoverRadius: 5, borderWidth: 2,
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: {
+          position: 'bottom',
+          labels: { padding: 10, boxWidth: 22, boxHeight: 2, color: '#adb5bd', font: { size: 10.5 } }
+        },
+        tooltip: { ...tooltipDefaults }
+      },
+      scales: {
+        x: {
+          grid: { display: false },
+          ticks: {
+            color: '#6c757d', maxRotation: 0,
+            callback: (_, i) => YEARLY[i].y % 4 === 0 ? YEARLY[i].y : ''
+          },
+          border: { display: false }
+        },
+        y: {
+          grid: { color: '#1a1d2e' },
+          ticks: { color: '#6c757d', maxTicksLimit: 5 },
+          border: { display: false }, min: 0
+        }
+      }
+    }
+  });
+}
+</script>
+</body>
+</html>
