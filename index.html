@@ -169,91 +169,68 @@ html,body{width:100%;height:100%;font-family:-apple-system,BlinkMacSystemFont,'S
 #progetto-btn:hover,#progetto-btn.active{background:#2c3150}
 #progetto-btn svg{width:16px;height:16px;flex-shrink:0}
 
-/* Overview panel */
-#overview-panel{
-  position:absolute;top:50px;left:0;bottom:68px;
-  width:300px;z-index:999;
+/* Shared sidebar base */
+#overview-panel,#progetto-panel{
+  position:absolute;top:50px;left:12px;bottom:68px;
+  width:380px;z-index:999;
   background:rgba(10,12,20,0.96);
   backdrop-filter:blur(12px);
   transform:translateX(-100%);
   transition:transform .3s cubic-bezier(.4,0,.2,1);
   overflow-y:auto;overflow-x:hidden;
-  box-shadow:6px 0 24px rgba(0,0,0,.5);
+  box-shadow:8px 0 28px rgba(0,0,0,.55);
+  border-radius:12px;
 }
-#overview-panel.open{transform:translateX(0)}
-.ov-header{
-  padding:14px 16px 12px;
+#overview-panel.open,#progetto-panel.open{transform:translateX(0)}
+
+/* Shared header */
+.ov-header,.pg-header{
+  padding:16px 16px 14px;
   display:flex;align-items:center;justify-content:space-between;
   border-bottom:1px solid #2c3150;
   position:sticky;top:0;z-index:1;
   background:rgba(10,12,20,0.98);
 }
-.ov-header h3{
+.ov-header h3,.pg-header h3{
   font-size:0.8rem;font-weight:700;
   text-transform:uppercase;letter-spacing:.08em;color:#fff;
 }
-.ov-close{
+.ov-close,.pg-close{
   background:none;border:none;color:#6c757d;
   font-size:1.4rem;line-height:1;cursor:pointer;
   padding:0 4px;transition:color .15s;
 }
-.ov-close:hover{color:#fff}
+.ov-close:hover,.pg-close:hover{color:#fff}
+
+/* Overview sections */
 .ov-section{
-  padding:14px 16px 18px;
+  padding:16px 16px 20px;
   border-bottom:1px solid #13151f;
 }
-.ov-section:last-child{border-bottom:none;padding-bottom:28px}
+.ov-section:last-child{border-bottom:none;padding-bottom:32px}
 .ov-section-title{
   font-size:0.68rem;text-transform:uppercase;letter-spacing:.08em;
-  color:#6c757d;margin-bottom:12px;
+  color:#6c757d;margin-bottom:14px;
 }
-#wrap-donut{height:210px;position:relative}
-#wrap-bar{height:222px;position:relative}
-#wrap-line{height:196px;position:relative}
+#wrap-donut{height:240px;position:relative}
+#wrap-bar{height:268px;position:relative}
+#wrap-line{height:228px;position:relative}
 
-/* Sul progetto panel */
-#progetto-panel{
-  position:absolute;top:50px;left:0;bottom:68px;
-  width:300px;z-index:999;
-  background:rgba(10,12,20,0.96);
-  backdrop-filter:blur(12px);
-  transform:translateX(-100%);
-  transition:transform .3s cubic-bezier(.4,0,.2,1);
-  overflow-y:auto;overflow-x:hidden;
-  box-shadow:6px 0 24px rgba(0,0,0,.5);
-}
-#progetto-panel.open{transform:translateX(0)}
-.pg-header{
-  padding:14px 16px 12px;
-  display:flex;align-items:center;justify-content:space-between;
-  border-bottom:1px solid #2c3150;
-  position:sticky;top:0;z-index:1;
-  background:rgba(10,12,20,0.98);
-}
-.pg-header h3{
-  font-size:0.8rem;font-weight:700;
-  text-transform:uppercase;letter-spacing:.08em;color:#fff;
-}
-.pg-close{
-  background:none;border:none;color:#6c757d;
-  font-size:1.4rem;line-height:1;cursor:pointer;
-  padding:0 4px;transition:color .15s;
-}
-.pg-close:hover{color:#fff}
+/* Sul progetto body */
 .pg-body{
-  padding:18px 16px 28px;
-  font-size:0.85rem;line-height:1.65;color:#c8cfd8;
+  padding:20px 16px 32px;
+  font-size:0.87rem;line-height:1.7;color:#c8cfd8;
 }
 .pg-body a{color:#7eb8f7;text-decoration:none}
 .pg-body a:hover{color:#a8d0ff;text-decoration:underline}
-.pg-body p{margin-bottom:12px}
+.pg-body p{margin-bottom:14px}
 .pg-body p:last-child{margin-bottom:0}
 
 @media(max-width:600px){
   #overview-btn{left:auto;right:12px}
   #progetto-btn{left:auto;right:130px}
-  #overview-panel{width:100%;top:48px;bottom:72px}
-  #progetto-panel{width:100%;top:48px;bottom:72px}
+  #overview-panel{width:calc(100% - 12px);top:48px;bottom:72px}
+  #progetto-panel{width:calc(100% - 12px);top:48px;bottom:72px}
 }
 </style>
 </head>
@@ -315,9 +292,18 @@ html,body{width:100%;height:100%;font-family:-apple-system,BlinkMacSystemFont,'S
     <button class="pg-close" onclick="toggleProgetto()">×</button>
   </div>
   <div class="pg-body">
-    <p>Un progetto open source fatto da <a href="https://www.linkedin.com/in/jacopo-ottaviani/" target="_blank" rel="noopener">Jacopo Ottaviani</a> basato sui dati di <a href="https://www.ristretti.org" target="_blank" rel="noopener">Ristretti Orizzonti</a>.</p>
-    <p>Il progetto iniziale fu programmato a mano nel lontano 2011, pubblicato sul Fatto Quotidiano e identificato come il primo progetto di data journalism italiano.</p>
+    <p><strong>PatrieGalere</strong> è un progetto open source fatto da <a href="https://www.linkedin.com/in/jacopo-ottaviani/" target="_blank" rel="noopener">Jacopo Ottaviani</a> basato sui dati di <a href="https://www.ristretti.org" target="_blank" rel="noopener">Ristretti Orizzonti</a>.</p>
+    <p>Il progetto iniziale fu programmato a mano nel 2011, pubblicato sul Fatto Quotidiano in Italia e <a href="https://www.theguardian.com/news/datablog/2012/may/23/italian-prisoners-deaths" target="_blank" rel="noopener">The Guardian</a> nel Regno Unito, e identificato come il primo progetto di data journalism italiano.</p>
     <p>Oggi, il progetto è riproposto con tecnologie nuove e un design rivisto, ma sempre aderente ai principi degli open data e della tecnologia civica.</p>
+    <div style="margin-top:18px;padding-top:14px;border-top:1px solid #2c3150">
+      <div style="font-size:0.68rem;text-transform:uppercase;letter-spacing:.08em;color:#6c757d;margin-bottom:8px">Fonti</div>
+      <p><a href="https://www.ristretti.org" target="_blank" rel="noopener">Ristretti Orizzonti</a> è una rivista e centro di documentazione sul carcere, attiva dal 1999 a Padova. Raccoglie e pubblica dati sistematici sui decessi negli istituti penitenziari italiani, ed è uno dei principali osservatori indipendenti sul sistema carcerario in Italia.</p>
+    </div>
+    <div style="margin-top:18px;padding-top:14px;border-top:1px solid #2c3150">
+      <div style="font-size:0.68rem;text-transform:uppercase;letter-spacing:.08em;color:#6c757d;margin-bottom:8px">Tecnologie</div>
+      <p><a href="https://leafletjs.com" target="_blank" rel="noopener">Leaflet</a> — libreria open source per mappe interattive.</p>
+      <p><a href="https://www.chartjs.org" target="_blank" rel="noopener">Chart.js</a> — libreria per la visualizzazione di dati con grafici.</p>
+    </div>
   </div>
 </div>
 
@@ -607,7 +593,13 @@ function updateMarkers() {
 }
 
 function toggleControls() {
-  document.getElementById('controls').classList.toggle('open');
+  const isOpen = document.getElementById('controls').classList.toggle('open');
+  if (isOpen) {
+    document.getElementById('overview-panel').classList.remove('open');
+    document.getElementById('overview-btn').classList.remove('active');
+    document.getElementById('progetto-panel').classList.remove('open');
+    document.getElementById('progetto-btn').classList.remove('active');
+  }
 }
 
 function toggleProgetto() {
