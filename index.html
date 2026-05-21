@@ -191,8 +191,19 @@ html,body{width:100%;height:100%;font-family:-apple-system,BlinkMacSystemFont,'S
 #progetto-btn:hover,#progetto-btn.active{background:#2c3150}
 #progetto-btn svg{width:16px;height:16px;flex-shrink:0}
 
+/* Altre iniziative button */
+#links-btn{
+  background:#1a1d2e;color:#fff;border:none;
+  border-radius:8px;padding:9px 14px;font-size:0.82rem;
+  cursor:pointer;display:flex;align-items:center;gap:6px;
+  box-shadow:0 2px 8px rgba(0,0,0,.35);
+  transition:background .2s;
+}
+#links-btn:hover,#links-btn.active{background:#2c3150}
+#links-btn svg{width:16px;height:16px;flex-shrink:0}
+
 /* Shared sidebar base */
-#overview-panel,#progetto-panel{
+#overview-panel,#progetto-panel,#links-panel{
   position:absolute;top:50px;left:0;bottom:68px;
   width:380px;z-index:999;
   background:rgba(10,12,20,0.96);
@@ -203,7 +214,7 @@ html,body{width:100%;height:100%;font-family:-apple-system,BlinkMacSystemFont,'S
   box-shadow:none;
   border-radius:0 12px 12px 0;
 }
-#overview-panel.open,#progetto-panel.open{transform:translateX(0);box-shadow:8px 0 28px rgba(0,0,0,.55)}
+#overview-panel.open,#progetto-panel.open,#links-panel.open{transform:translateX(0);box-shadow:8px 0 28px rgba(0,0,0,.55)}
 
 /* Shared header */
 .ov-header,.pg-header{
@@ -252,6 +263,7 @@ html,body{width:100%;height:100%;font-family:-apple-system,BlinkMacSystemFont,'S
   #bottom-btns{left:auto;right:12px}
   #overview-panel{width:100%;top:48px;bottom:72px}
   #progetto-panel{width:100%;top:48px;bottom:72px}
+  #links-panel{width:100%;top:48px;bottom:72px}
 }
 </style>
 </head>
@@ -292,6 +304,14 @@ html,body{width:100%;height:100%;font-family:-apple-system,BlinkMacSystemFont,'S
     <circle cx="10" cy="6.5" r="1" fill="#fff"/>
   </svg>
   <span data-i18n="about_btn">Sul progetto</span>
+</button>
+
+<button id="links-btn" onclick="toggleLinks()">
+  <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M8.5 11.5a4.5 4.5 0 0 0 6.364 0l2-2a4.5 4.5 0 0 0-6.364-6.364l-1 1" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M11.5 8.5a4.5 4.5 0 0 0-6.364 0l-2 2a4.5 4.5 0 0 0 6.364 6.364l1-1" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <span data-i18n="links_btn">Altre iniziative</span>
 </button>
 </div>
 
@@ -353,6 +373,69 @@ html,body{width:100%;height:100%;font-family:-apple-system,BlinkMacSystemFont,'S
   </div>
 </div>
 
+<div id="links-panel">
+  <div class="pg-header">
+    <h3 data-i18n="links_btn">Altre iniziative</h3>
+    <button class="pg-close" onclick="toggleLinks()">&#xD7;</button>
+  </div>
+
+  <!-- Italian -->
+  <div class="pg-body" id="links-body-it">
+    <div style="margin-bottom:20px">
+      <p><a href="https://www.giustizia.it/giustizia/it/mg_1_14.page" target="_blank" rel="noopener"><strong>DAP &mdash; Ufficio Statistico</strong></a></p>
+      <p>Il Dipartimento dell&#x2019;Amministrazione Penitenziaria pubblica dati aggiornati sulla popolazione carceraria italiana: presenze, affollamento, caratteristiche demografiche dei detenuti. &Egrave; la fonte ufficiale per chi vuole accedere ai numeri del sistema penitenziario.</p>
+    </div>
+    <div style="margin-bottom:20px;padding-top:16px;border-top:1px solid #2c3150">
+      <p><a href="https://www.antigone.it/" target="_blank" rel="noopener"><strong>Associazione Antigone</strong></a></p>
+      <p>Associazione italiana per i diritti e le garanzie nel sistema penale, fondata alla fine degli anni Ottanta. Conduce ispezioni negli istituti penitenziari, pubblica rapporti annuali sulle condizioni di detenzione e offre tutela legale ai detenuti.</p>
+    </div>
+    <div style="margin-bottom:20px;padding-top:16px;border-top:1px solid #2c3150">
+      <p><a href="https://www.ristretti.org/" target="_blank" rel="noopener"><strong>Ristretti Orizzonti</strong></a></p>
+      <p>Rivista e centro di documentazione sul carcere, attiva dal 1999 nel carcere di Padova. Raccoglie notizie, dati e storie dal mondo della detenzione ed &egrave; uno dei principali osservatori indipendenti sul sistema carcerario italiano.</p>
+    </div>
+    <div style="margin-bottom:20px;padding-top:16px;border-top:1px solid #2c3150">
+      <p><a href="https://www.madeinjail.org/" target="_blank" rel="noopener"><strong>Made in Jail</strong></a></p>
+      <p>Nato nel 1983 nel carcere di Rebibbia a Roma, offre formazione professionale nella serigrafia e nelle arti grafiche a persone detenute o in misura alternativa. Da oltre quarant&#x2019;anni opera in diversi istituti penitenziari, anche minorili, per favorire il reinserimento sociale attraverso il lavoro.</p>
+    </div>
+    <div style="margin-bottom:20px;padding-top:16px;border-top:1px solid #2c3150">
+      <p><a href="https://www.madeincarcere.it/" target="_blank" rel="noopener"><strong>Made in Carcere</strong></a></p>
+      <p>Brand sociale nato nel 2007 nella sezione femminile del carcere di Lecce. Produce borse, accessori e gadget etici utilizzando scarti tessili di aziende italiane, pagando un salario regolare alle detenute coinvolte. Ha coinvolto oltre 200 persone in un modello di economia riparativa e rigenerativa.</p>
+    </div>
+    <div style="padding-top:16px;border-top:1px solid #2c3150">
+      <p><a href="https://www.giustizia.it/giustizia/it/mg_1_21_1.page?contentId=PRD1435487" target="_blank" rel="noopener"><strong>Pastificio Futuro</strong></a></p>
+      <p>Laboratorio artigianale di pasta secca all&#x2019;interno del carcere minorile di Casal del Marmo a Roma, nato su ispirazione di Papa Francesco. Impiega giovani detenuti nella produzione di pasta con semola 100% italiana, combinando formazione professionale e percorso di reinserimento.</p>
+    </div>
+  </div>
+
+  <!-- English -->
+  <div class="pg-body" id="links-body-en" style="display:none">
+    <div style="margin-bottom:20px">
+      <p><a href="https://www.giustizia.it/giustizia/it/mg_1_14.page" target="_blank" rel="noopener"><strong>DAP &mdash; Statistical Office</strong></a></p>
+      <p>The Department of Penitentiary Administration publishes up-to-date data on Italy&#x2019;s prison population: headcounts, overcrowding rates, and demographic profiles. It is the official source for anyone looking to access figures on the penitentiary system.</p>
+    </div>
+    <div style="margin-bottom:20px;padding-top:16px;border-top:1px solid #2c3150">
+      <p><a href="https://www.antigone.it/" target="_blank" rel="noopener"><strong>Associazione Antigone</strong></a></p>
+      <p>Italian association for rights and guarantees in the penal system, founded in the late 1980s. It inspects prisons, publishes annual reports on detention conditions, and provides legal support to incarcerated individuals.</p>
+    </div>
+    <div style="margin-bottom:20px;padding-top:16px;border-top:1px solid #2c3150">
+      <p><a href="https://www.ristretti.org/" target="_blank" rel="noopener"><strong>Ristretti Orizzonti</strong></a></p>
+      <p>A magazine and documentation centre on prisons, active since 1999 inside Padua&#x2019;s penitentiary. It collects news, data, and stories from the world of detention and is one of Italy&#x2019;s main independent observers of the prison system.</p>
+    </div>
+    <div style="margin-bottom:20px;padding-top:16px;border-top:1px solid #2c3150">
+      <p><a href="https://www.madeinjail.org/" target="_blank" rel="noopener"><strong>Made in Jail</strong></a></p>
+      <p>Founded in 1983 at Rebibbia prison in Rome, it offers vocational training in screen printing and graphic arts to incarcerated people and those serving alternative sentences. For over forty years it has worked in several penitentiaries, including juvenile facilities, to promote social reintegration through work.</p>
+    </div>
+    <div style="margin-bottom:20px;padding-top:16px;border-top:1px solid #2c3150">
+      <p><a href="https://www.madeincarcere.it/" target="_blank" rel="noopener"><strong>Made in Carcere</strong></a></p>
+      <p>A social brand born in 2007 in the women&#x2019;s section of Lecce prison. It produces bags, accessories, and ethical gadgets from textile offcuts collected from Italian companies, paying regular wages to the inmates involved. Over 200 people have taken part in this model of restorative and regenerative economy.</p>
+    </div>
+    <div style="padding-top:16px;border-top:1px solid #2c3150">
+      <p><a href="https://www.giustizia.it/giustizia/it/mg_1_21_1.page?contentId=PRD1435487" target="_blank" rel="noopener"><strong>Pastificio Futuro</strong></a></p>
+      <p>An artisan dried-pasta workshop inside Rome&#x2019;s Casal del Marmo juvenile prison, inspired by Pope Francis. It employs young inmates in the production of pasta made from 100% Italian semolina, combining professional training with a path towards reintegration.</p>
+    </div>
+  </div>
+</div>
+
 <div id="controls">
   <h3 data-i18n="controls_title">Causa di morte</h3>
   <div id="cat-list"></div>
@@ -383,6 +466,7 @@ const UI = {
     filters_btn: 'Filtri',
     overview_btn: 'Panoramica',
     about_btn: 'Sul progetto',
+    links_btn: 'Altre iniziative',
     controls_title: 'Causa di morte',
     reset_btn: 'Mostra tutto',
     marker_size_title: 'Dimensione marker',
@@ -404,6 +488,7 @@ const UI = {
     filters_btn: 'Filters',
     overview_btn: 'Overview',
     about_btn: 'About',
+    links_btn: 'Other links',
     controls_title: 'Cause of death',
     reset_btn: 'Show all',
     marker_size_title: 'Marker size',
@@ -475,6 +560,10 @@ function setLang(lang) {
   // Show/hide about panel
   document.getElementById('pg-body-it').style.display = lang === 'it' ? '' : 'none';
   document.getElementById('pg-body-en').style.display = lang === 'en' ? '' : 'none';
+
+  // Show/hide links panel
+  document.getElementById('links-body-it').style.display = lang === 'it' ? '' : 'none';
+  document.getElementById('links-body-en').style.display = lang === 'en' ? '' : 'none';
 
   // Rebuild category filter + legend (preserves active state)
   document.getElementById('cat-list').innerHTML = '';
@@ -799,6 +888,22 @@ function toggleProgetto() {
   if (isOpen) {
     document.getElementById('overview-panel').classList.remove('open');
     document.getElementById('overview-btn').classList.remove('active');
+    document.getElementById('links-panel').classList.remove('open');
+    document.getElementById('links-btn').classList.remove('active');
+    document.getElementById('controls').classList.remove('open');
+  }
+}
+
+function toggleLinks() {
+  var panel = document.getElementById('links-panel');
+  var btn   = document.getElementById('links-btn');
+  var isOpen = panel.classList.toggle('open');
+  btn.classList.toggle('active', isOpen);
+  if (isOpen) {
+    document.getElementById('overview-panel').classList.remove('open');
+    document.getElementById('overview-btn').classList.remove('active');
+    document.getElementById('progetto-panel').classList.remove('open');
+    document.getElementById('progetto-btn').classList.remove('active');
     document.getElementById('controls').classList.remove('open');
   }
 }
@@ -809,6 +914,8 @@ map.on('click', function() {
   document.getElementById('overview-btn').classList.remove('active');
   document.getElementById('progetto-panel').classList.remove('open');
   document.getElementById('progetto-btn').classList.remove('active');
+  document.getElementById('links-panel').classList.remove('open');
+  document.getElementById('links-btn').classList.remove('active');
 });
 
 // Init
@@ -840,6 +947,8 @@ function toggleOverview() {
   if (isOpen) {
     document.getElementById('progetto-panel').classList.remove('open');
     document.getElementById('progetto-btn').classList.remove('active');
+    document.getElementById('links-panel').classList.remove('open');
+    document.getElementById('links-btn').classList.remove('active');
   }
   if (isOpen && !chartsReady) { buildCharts(); chartsReady = true; }
 }
