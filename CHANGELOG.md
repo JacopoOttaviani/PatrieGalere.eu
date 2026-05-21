@@ -8,6 +8,7 @@ All notable changes to this project are documented here, in reverse chronologica
 
 ### Added
 - **"Altre iniziative" panel** — new sidebar with links to related organisations and civic projects, bilingual (IT/EN), accessible via dedicated button in the bottom bar
+- **"Buy me a coffee" button** — Ko-fi link in the bottom bar, bilingual (IT/EN), with tooltip on hover
 
 ---
 
