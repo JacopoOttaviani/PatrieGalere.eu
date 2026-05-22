@@ -655,6 +655,50 @@ html,body{width:100%;height:100%;font-family:-apple-system,BlinkMacSystemFont,'S
     </div>
   </div>
 
+  <!-- Overcrowding legend — shown in overcrowding mode, above toggle -->
+  <div id="ovr-legend-in-controls" style="display:none;margin-top:12px;padding-top:10px;border-top:1px solid #2c3150">
+    <h3 data-i18n="ovr_title" style="margin-bottom:10px">Sovraffollamento</h3>
+    <!-- Donut anatomy -->
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+      <svg width="32" height="32" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0">
+        <path d="M18 18 L18 2 A16 16 0 0 1 34 18 Z" fill="#3d5a80"/>
+        <path d="M18 18 L34 18 A16 16 0 1 1 18 2 Z" fill="#e74c3c"/>
+        <circle cx="18" cy="18" r="7.7" fill="#1a1d2e"/>
+      </svg>
+      <div style="font-size:0.7rem;color:#adb5bd;line-height:1.6">
+        <span style="color:#3d5a80;font-weight:700">&#9632;</span> <span data-i18n="ovr_legend_within">entro la capienza</span><br>
+        <span style="color:#e74c3c;font-weight:700">&#9632;</span> <span data-i18n="ovr_legend_excess">quota eccedente</span>
+      </div>
+    </div>
+    <!-- Marker size -->
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid #2c3150">
+      <div style="display:flex;align-items:center;gap:4px;flex-shrink:0">
+        <div style="width:10px;height:10px;border-radius:50%;background:#6c757d;opacity:0.7"></div>
+        <div style="width:16px;height:16px;border-radius:50%;background:#6c757d"></div>
+      </div>
+      <span style="font-size:0.7rem;color:#adb5bd" data-i18n="ovr_legend_size">dimensione ∝ n° detenuti</span>
+    </div>
+    <!-- Severity scale (interactive filter) -->
+    <div style="display:flex;flex-direction:column;gap:4px">
+      <div id="ovr-row-low-ctrl" class="legend-row" onclick="toggleOvrBucket('low')">
+        <div style="width:10px;height:10px;border-radius:2px;background:#27ae60;flex-shrink:0"></div>
+        <span style="font-size:0.7rem;color:#adb5bd">&lt;120% — <span data-i18n="ovr_sev_low">nella norma</span></span>
+      </div>
+      <div id="ovr-row-mid-ctrl" class="legend-row" onclick="toggleOvrBucket('mid')">
+        <div style="width:10px;height:10px;border-radius:2px;background:#f39c12;flex-shrink:0"></div>
+        <span style="font-size:0.7rem;color:#adb5bd">120–150% — <span data-i18n="ovr_sev_mid">sovraffollato</span></span>
+      </div>
+      <div id="ovr-row-high-ctrl" class="legend-row" onclick="toggleOvrBucket('high')">
+        <div style="width:10px;height:10px;border-radius:2px;background:#e67e22;flex-shrink:0"></div>
+        <span style="font-size:0.7rem;color:#adb5bd">150–180% — <span data-i18n="ovr_sev_high">critico</span></span>
+      </div>
+      <div id="ovr-row-extreme-ctrl" class="legend-row" onclick="toggleOvrBucket('extreme')">
+        <div style="width:10px;height:10px;border-radius:2px;background:#e74c3c;flex-shrink:0"></div>
+        <span style="font-size:0.7rem;color:#adb5bd">&gt;180% — <span data-i18n="ovr_sev_extreme">emergenza</span></span>
+      </div>
+    </div>
+  </div>
+
   <!-- Toggle — always visible -->
   <div style="margin-top:12px;padding-top:10px;border-top:1px solid #2c3150">
     <div class="ovr-toggle" onclick="toggleOvercrowding()">
@@ -984,6 +1028,8 @@ function toggleOvrBucket(bucket) {
   ovrActiveBuckets[bucket] = !ovrActiveBuckets[bucket];
   var row = document.getElementById('ovr-row-' + bucket);
   if (row) row.classList.toggle('inactive', !ovrActiveBuckets[bucket]);
+  var rowCtrl = document.getElementById('ovr-row-' + bucket + '-ctrl');
+  if (rowCtrl) rowCtrl.classList.toggle('inactive', !ovrActiveBuckets[bucket]);
   applyOvrFilter();
 }
 
@@ -1105,8 +1151,9 @@ function toggleOvercrowding() {
   document.getElementById('ovr-track').classList.toggle('on', overcrowdingVisible);
   document.getElementById('ovr-btn').classList.toggle('active', overcrowdingVisible);
 
-  // Left panel: show/hide the death category filter
+  // Left panel: show/hide the death category filter and ovr legend
   document.getElementById('death-filter-section').style.display = overcrowdingVisible ? 'none' : '';
+  document.getElementById('ovr-legend-in-controls').style.display = overcrowdingVisible ? '' : 'none';
 
   // Right legend box: swap between deaths and overcrowding
   document.getElementById('legend-deaths').style.display = overcrowdingVisible ? 'none' : '';
@@ -1123,6 +1170,8 @@ function toggleOvercrowding() {
     ['low','mid','high','extreme'].forEach(function(b) {
       var row = document.getElementById('ovr-row-' + b);
       if (row) row.classList.remove('inactive');
+      var rowCtrl = document.getElementById('ovr-row-' + b + '-ctrl');
+      if (rowCtrl) rowCtrl.classList.remove('inactive');
     });
   }
 }
@@ -1389,6 +1438,11 @@ function updateMarkers() {
   document.getElementById('death-count').textContent = totalDeaths.toLocaleString(locale);
 }
 
+function updateLegendVisibility() {
+  var controlsOpen = document.getElementById('controls').classList.contains('open');
+  document.getElementById('legend').style.display = controlsOpen ? 'none' : '';
+}
+
 function toggleControls() {
   var isOpen = document.getElementById('controls').classList.toggle('open');
   if (isOpen) {
@@ -1397,6 +1451,7 @@ function toggleControls() {
     document.getElementById('progetto-panel').classList.remove('open');
     document.getElementById('progetto-btn').classList.remove('active');
   }
+  updateLegendVisibility();
 }
 
 function toggleProgetto() {
@@ -1410,6 +1465,7 @@ function toggleProgetto() {
     document.getElementById('links-panel').classList.remove('open');
     document.getElementById('links-btn').classList.remove('active');
     document.getElementById('controls').classList.remove('open');
+    updateLegendVisibility();
   }
 }
 
@@ -1424,6 +1480,7 @@ function toggleLinks() {
     document.getElementById('progetto-panel').classList.remove('open');
     document.getElementById('progetto-btn').classList.remove('active');
     document.getElementById('controls').classList.remove('open');
+    updateLegendVisibility();
   }
 }
 
@@ -1435,6 +1492,7 @@ map.on('click', function() {
   document.getElementById('progetto-btn').classList.remove('active');
   document.getElementById('links-panel').classList.remove('open');
   document.getElementById('links-btn').classList.remove('active');
+  updateLegendVisibility();
 });
 
 // Init
@@ -1467,6 +1525,7 @@ function toggleOverview() {
   var isOpen = panel.classList.toggle('open');
   btn.classList.toggle('active', isOpen);
   document.getElementById('controls').classList.remove('open');
+  updateLegendVisibility();
   if (isOpen) {
     document.getElementById('progetto-panel').classList.remove('open');
     document.getElementById('progetto-btn').classList.remove('active');
