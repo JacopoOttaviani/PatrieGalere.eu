@@ -2,25 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-  <!-- Italian (default) -->
+  <!-- Italian (default) — root -->
   <url>
     <loc>https://patriegalere.eu/</loc>
-    <lastmod>2026-05-21</lastmod>
+    <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://patriegalere.eu/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://patriegalere.eu/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://patriegalere.eu/it/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://patriegalere.eu/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://patriegalere.eu/"/>
   </url>
 
-  <!-- English variant -->
+  <!-- Italian — /it/ -->
   <url>
-    <loc>https://patriegalere.eu/?lang=en</loc>
-    <lastmod>2026-05-21</lastmod>
+    <loc>https://patriegalere.eu/it/</loc>
+    <lastmod>2026-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://patriegalere.eu/it/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://patriegalere.eu/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://patriegalere.eu/"/>
+  </url>
+
+  <!-- English — /en/ -->
+  <url>
+    <loc>https://patriegalere.eu/en/</loc>
+    <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://patriegalere.eu/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://patriegalere.eu/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://patriegalere.eu/it/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://patriegalere.eu/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://patriegalere.eu/"/>
   </url>
 
