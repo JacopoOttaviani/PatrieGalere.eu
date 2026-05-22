@@ -128,35 +128,35 @@ html,body{width:100%;height:100%;font-family:-apple-system,BlinkMacSystemFont,'S
   background:rgba(10,12,20,0.88);
   backdrop-filter:blur(8px);
   color:#fff;
-  display:flex;align-items:center;gap:12px;
-  padding:10px 16px;
+  display:flex;align-items:center;gap:14px;
+  padding:12px 19px;
 }
-#header h1{font-size:1.1rem;font-weight:700;letter-spacing:-0.02em;white-space:nowrap}
+#header h1{font-size:1.32rem;font-weight:700;letter-spacing:-0.02em;white-space:nowrap}
 #header h1 span{color:#e74c3c}
-#header p{font-size:0.72rem;color:#adb5bd;flex:1}
+#header p{font-size:0.86rem;color:#adb5bd;flex:1}
 #total-badge{
   background:#e74c3c;color:#fff;
   border-radius:20px;padding:4px 12px;
-  font-size:0.78rem;font-weight:700;white-space:nowrap;
+  font-size:0.94rem;font-weight:700;white-space:nowrap;
 }
 #total-badge span{font-weight:400;opacity:.8}
 
 /* Language toggle */
 #lang-toggle{
   display:flex;align-items:center;gap:3px;
-  font-size:0.75rem;white-space:nowrap;flex-shrink:0;
+  font-size:0.9rem;white-space:nowrap;flex-shrink:0;
 }
 .lang-btn{
   background:none;border:none;color:#6c757d;
   cursor:pointer;padding:2px 5px;
-  font-size:0.75rem;font-weight:700;
+  font-size:0.9rem;font-weight:700;
   letter-spacing:.02em;
   transition:color .15s;
   border-radius:3px;
 }
 .lang-btn:hover{color:#fff}
 .lang-btn.active{color:#fff}
-.lang-sep{color:#2c3150;font-size:0.7rem}
+.lang-sep{color:#2c3150;font-size:0.84rem}
 
 /* Bottom button row */
 #bottom-btns{
@@ -223,6 +223,8 @@ html,body{width:100%;height:100%;font-family:-apple-system,BlinkMacSystemFont,'S
   box-shadow:0 2px 10px rgba(0,0,0,.35);
   width:192px;
   box-sizing:border-box;
+  transform:scale(1.2);
+  transform-origin:bottom right;
 }
 #legend p{color:#6c757d;margin-bottom:6px;font-size:0.68rem;text-transform:uppercase;letter-spacing:.06em}
 .legend-row{display:flex;align-items:center;gap:8px;margin:3px 0;cursor:pointer;user-select:none;transition:opacity .15s}
@@ -255,9 +257,9 @@ html,body{width:100%;height:100%;font-family:-apple-system,BlinkMacSystemFont,'S
 
 /* Mobile adjustments */
 @media(max-width:600px){
-  #header{padding:8px 12px}
+  #header{padding:10px 14px}
   #header p{display:none}
-  #header h1{font-size:1rem}
+  #header h1{font-size:1.2rem}
   #controls{width:calc(100vw - 24px);bottom:72px}
   #legend{right:auto;left:50%;transform:translateX(-50%);bottom:72px;white-space:nowrap;width:auto}
 }
@@ -531,6 +533,10 @@ html,body{width:100%;height:100%;font-family:-apple-system,BlinkMacSystemFont,'S
     <div id="wrap-ovr-stat"></div>
   </div>
   <div class="ov-section">
+    <div class="ov-section-title" data-i18n="ov_ovr_national_disp">Su posti disponibili</div>
+    <div id="wrap-ovr-stat-disp"></div>
+  </div>
+  <div class="ov-section">
     <div class="ov-section-title" data-i18n="ov_ovr_top10">Top 10 istituti più sovraffollati</div>
     <div id="wrap-ovr-bar"><canvas id="chart-ovr-bar" role="img" aria-label="Grafico a barre orizzontali: top 10 istituti con maggiore tasso di affollamento"></canvas></div>
   </div>
@@ -792,6 +798,7 @@ const UI = {
     ov_group_deaths: 'Morti in carcere',
     ov_group_ovr: 'Sovraffollamento',
     ov_ovr_national: 'Tasso di occupazione nazionale',
+    ov_ovr_national_disp: 'Su posti effettivamente disponibili',
     ov_ovr_top10: 'Top 10 istituti più sovraffollati',
     popup_total: 'Totale',
     popup_deaths: 'decessi',
@@ -805,7 +812,7 @@ const UI = {
     ovr_desc: 'Cerchio colorato attorno ai marker. Fonte: sovraffollamentocarcerario.it',
     ovr_popup_label: 'Sovraffollamento',
     ovr_popup_inmates: 'Detenuti',
-    ovr_popup_places: 'Posti disponibili',
+    ovr_popup_places: 'Posti reali',
     ovr_legend_intro: 'Ogni marker mostra il tasso di affollamento del carcere. La sezione colorata indica la quota eccedente la capienza.',
     ovr_legend_size: 'dimensione ∝ n° detenuti',
     ovr_legend_within: 'entro la capienza',
@@ -836,6 +843,7 @@ const UI = {
     ov_group_deaths: 'Deaths in prison',
     ov_group_ovr: 'Overcrowding',
     ov_ovr_national: 'National occupancy rate',
+    ov_ovr_national_disp: 'Based on actually available places',
     ov_ovr_top10: 'Top 10 most overcrowded facilities',
     popup_total: 'Total',
     popup_deaths: 'deaths',
@@ -1103,7 +1111,7 @@ function makeOvrPopup(props) {
     '</div>' +
     '<div style="font-size:0.78rem;color:#adb5bd;line-height:1.8">' +
       (currentLang==='it' ? 'Detenuti' : 'Inmates') + ': <strong style="color:#fff">'+props.detenuti+'</strong><br>' +
-      (currentLang==='it' ? 'Posti disponibili' : 'Available places') + ': <strong style="color:#fff">'+props.disponibili+'</strong><br>' +
+      (currentLang==='it' ? 'Posti reali' : 'Available places') + ': <strong style="color:#fff">'+props.disponibili+'</strong><br>' +
       (currentLang==='it' ? 'Posti regolamentari' : 'Reg. capacity') + ': <strong style="color:#fff">'+props.regolamentari+'</strong>' +
     '</div>' +
     '<div style="font-size:0.68rem;color:#6c757d;margin-top:8px;padding-top:6px;border-top:1px solid #2c3150">' +
@@ -1716,6 +1724,24 @@ function buildCharts() {
     '</div>' +
     '<div style="height:8px;background:#1a1d2e;border-radius:4px;overflow:hidden">' +
       '<div style="height:100%;width:' + gaugeFill + '%;background:#e74c3c;border-radius:4px;transition:width .4s"></div>' +
+    '</div>' +
+    '<div style="display:flex;justify-content:space-between;font-size:0.62rem;color:#4a5068;margin-top:4px">' +
+      '<span>0%</span><span>100%</span><span>200%</span>' +
+    '</div>';
+
+  var totalDisp     = OVR_DATA.reduce(function(s, d){ return s + (d.disponibili || 0); }, 0);
+  var tassoNazDisp  = Math.round(totalDetenuti / totalDisp * 100);
+  var gaugeFillDisp = Math.min(Math.round(tassoNazDisp / 2), 100);
+
+  var statDispEl = document.getElementById('wrap-ovr-stat-disp');
+  statDispEl.innerHTML =
+    '<div style="font-size:2rem;font-weight:500;color:#e67e22;line-height:1.1">' + tassoNazDisp + '%</div>' +
+    '<div style="font-size:0.73rem;color:#6c757d;margin:5px 0 12px">' +
+      totalDetenuti.toLocaleString('it-IT') + ' detenuti &nbsp;&middot;&nbsp; ' +
+      totalDisp.toLocaleString('it-IT') + ' posti disponibili' +
+    '</div>' +
+    '<div style="height:8px;background:#1a1d2e;border-radius:4px;overflow:hidden">' +
+      '<div style="height:100%;width:' + gaugeFillDisp + '%;background:#e67e22;border-radius:4px;transition:width .4s"></div>' +
     '</div>' +
     '<div style="display:flex;justify-content:space-between;font-size:0.62rem;color:#4a5068;margin-top:4px">' +
       '<span>0%</span><span>100%</span><span>200%</span>' +

@@ -805,7 +805,7 @@ const UI = {
     ovr_desc: 'Cerchio colorato attorno ai marker. Fonte: sovraffollamentocarcerario.it',
     ovr_popup_label: 'Sovraffollamento',
     ovr_popup_inmates: 'Detenuti',
-    ovr_popup_places: 'Posti disponibili',
+    ovr_popup_places: 'Posti reali',
     ovr_legend_intro: 'Ogni marker mostra il tasso di affollamento del carcere. La sezione colorata indica la quota eccedente la capienza.',
     ovr_legend_size: 'dimensione ∝ n° detenuti',
     ovr_legend_within: 'entro la capienza',
@@ -1103,7 +1103,7 @@ function makeOvrPopup(props) {
     '</div>' +
     '<div style="font-size:0.78rem;color:#adb5bd;line-height:1.8">' +
       (currentLang==='it' ? 'Detenuti' : 'Inmates') + ': <strong style="color:#fff">'+props.detenuti+'</strong><br>' +
-      (currentLang==='it' ? 'Posti disponibili' : 'Available places') + ': <strong style="color:#fff">'+props.disponibili+'</strong><br>' +
+      (currentLang==='it' ? 'Posti reali' : 'Available places') + ': <strong style="color:#fff">'+props.disponibili+'</strong><br>' +
       (currentLang==='it' ? 'Posti regolamentari' : 'Reg. capacity') + ': <strong style="color:#fff">'+props.regolamentari+'</strong>' +
     '</div>' +
     '<div style="font-size:0.68rem;color:#6c757d;margin-top:8px;padding-top:6px;border-top:1px solid #2c3150">' +
