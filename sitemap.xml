@@ -4,35 +4,35 @@
 
   <!-- Italian (default) — root -->
   <url>
-    <loc>https://patriegalere.eu/</loc>
+    <loc>https://jacopoottaviani.com/PatrieGalere.eu/</loc>
     <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://patriegalere.eu/it/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://patriegalere.eu/en/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://patriegalere.eu/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://jacopoottaviani.com/PatrieGalere.eu/it/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jacopoottaviani.com/PatrieGalere.eu/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jacopoottaviani.com/PatrieGalere.eu/"/>
   </url>
 
   <!-- Italian — /it/ -->
   <url>
-    <loc>https://patriegalere.eu/it/</loc>
+    <loc>https://jacopoottaviani.com/PatrieGalere.eu/it/</loc>
     <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://patriegalere.eu/it/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://patriegalere.eu/en/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://patriegalere.eu/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://jacopoottaviani.com/PatrieGalere.eu/it/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jacopoottaviani.com/PatrieGalere.eu/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jacopoottaviani.com/PatrieGalere.eu/"/>
   </url>
 
   <!-- English — /en/ -->
   <url>
-    <loc>https://patriegalere.eu/en/</loc>
+    <loc>https://jacopoottaviani.com/PatrieGalere.eu/en/</loc>
     <lastmod>2026-05-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="it" href="https://patriegalere.eu/it/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://patriegalere.eu/en/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://patriegalere.eu/"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://jacopoottaviani.com/PatrieGalere.eu/it/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jacopoottaviani.com/PatrieGalere.eu/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jacopoottaviani.com/PatrieGalere.eu/"/>
   </url>
 
 </urlset>
