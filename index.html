@@ -3,7 +3,116 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>PatrieGalere.eu — Morti in carcere in Italia</title>
+<title>PatrieGalere.eu — Morti in carcere in Italia | Deaths in Italian Prisons</title>
+
+<!-- SEO core -->
+<meta name="description" content="Mappa interattiva dei decessi negli istituti penitenziari italiani dal 2002 al 2026. Dati per causa di morte, istituto e anno. Fonte: Ristretti Orizzonti. / Interactive map of deaths in Italian prisons from 2002 to 2026, by cause, facility and year.">
+<meta name="keywords" content="morti in carcere, decessi carcere Italia, suicidi in carcere, carcere sovraffollamento, sistema penitenziario italiano, Ristretti Orizzonti, data journalism, mappa morti carcere, deaths in Italian prisons, Italian prison deaths, prison suicides Italy">
+<meta name="author" content="Jacopo Ottaviani">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://patriegalere.eu/">
+
+<!-- Hreflang for IT/EN -->
+<link rel="alternate" hreflang="it" href="https://patriegalere.eu/">
+<link rel="alternate" hreflang="en" href="https://patriegalere.eu/?lang=en">
+<link rel="alternate" hreflang="x-default" href="https://patriegalere.eu/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://patriegalere.eu/">
+<meta property="og:site_name" content="PatrieGalere.eu">
+<meta property="og:locale" content="it_IT">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:title" content="PatrieGalere.eu — Morti in carcere in Italia">
+<meta property="og:description" content="Mappa interattiva dei decessi negli istituti penitenziari italiani dal 2002 al 2026, per causa di morte, istituto e anno. Dati: Ristretti Orizzonti.">
+<meta property="og:image" content="https://patriegalere.eu/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Mappa interattiva dei decessi in carcere in Italia">
+
+<!-- Twitter / X Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@jacopoottaviani">
+<meta name="twitter:creator" content="@jacopoottaviani">
+<meta name="twitter:title" content="PatrieGalere.eu — Morti in carcere in Italia">
+<meta name="twitter:description" content="Mappa interattiva dei decessi negli istituti penitenziari italiani dal 2002 al 2026. Dati: Ristretti Orizzonti.">
+<meta name="twitter:image" content="https://patriegalere.eu/og-image.png">
+
+<!-- JSON-LD structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Dataset",
+      "name": "Morti in carcere in Italia (2002–2026)",
+      "alternateName": "Deaths in Italian Prisons (2002–2026)",
+      "description": "Dati sui decessi negli istituti penitenziari italiani dal 2002 al 2026, classificati per causa (suicidio, cause naturali, overdose, morte violenta, altro) e istituto. Fonte: Ristretti Orizzonti.",
+      "url": "https://patriegalere.eu/",
+      "inLanguage": ["it", "en"],
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "isAccessibleForFree": true,
+      "temporalCoverage": "2002/2026",
+      "spatialCoverage": {
+        "@type": "Place",
+        "name": "Italia",
+        "geo": {
+          "@type": "GeoShape",
+          "box": "36.6 6.6 47.1 18.5"
+        }
+      },
+      "creator": {
+        "@type": "Person",
+        "name": "Jacopo Ottaviani",
+        "url": "https://www.linkedin.com/in/jacopo-ottaviani/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "PatrieGalere.eu",
+        "url": "https://patriegalere.eu/"
+      },
+      "source": {
+        "@type": "Organization",
+        "name": "Ristretti Orizzonti",
+        "url": "https://www.ristretti.org"
+      },
+      "keywords": ["morti in carcere", "decessi carcere", "suicidi carcere", "sistema penitenziario", "Italy prison deaths", "prison suicides", "data journalism"]
+    },
+    {
+      "@type": "WebApplication",
+      "name": "PatrieGalere.eu",
+      "url": "https://patriegalere.eu/",
+      "description": "Mappa interattiva dei decessi negli istituti penitenziari italiani dal 2002 al 2026.",
+      "applicationCategory": "DataVisualization",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript",
+      "inLanguage": ["it", "en"],
+      "author": {
+        "@type": "Person",
+        "name": "Jacopo Ottaviani",
+        "url": "https://www.linkedin.com/in/jacopo-ottaviani/"
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "Decessi negli istituti penitenziari italiani",
+        "description": "Morti in carcere in Italia dal 2002 al 2026, per causa e istituto."
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "PatrieGalere.eu",
+          "item": "https://patriegalere.eu/"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
@@ -109,13 +218,16 @@ html,body{width:100%;height:100%;font-family:-apple-system,BlinkMacSystemFont,'S
   position:absolute;bottom:24px;right:12px;z-index:1000;
   background:rgba(10,12,20,0.88);
   backdrop-filter:blur(8px);
-  border-radius:10px;padding:10px 14px;color:#fff;
+  border-radius:10px;padding:12px 17px;color:#fff;
   font-size:0.72rem;
   box-shadow:0 2px 10px rgba(0,0,0,.35);
+  width:192px;
+  box-sizing:border-box;
 }
 #legend p{color:#6c757d;margin-bottom:6px;font-size:0.68rem;text-transform:uppercase;letter-spacing:.06em}
-.legend-row{display:flex;align-items:center;gap:8px;margin:3px 0}
-.legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.legend-row{display:flex;align-items:center;gap:8px;margin:3px 0;cursor:pointer;user-select:none;transition:opacity .15s}
+.legend-row.inactive{opacity:0.35}
+.legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;transition:opacity .15s}
 .legend-label{font-size:0.75rem}
 
 /* Popup */
@@ -147,7 +259,7 @@ html,body{width:100%;height:100%;font-family:-apple-system,BlinkMacSystemFont,'S
   #header p{display:none}
   #header h1{font-size:1rem}
   #controls{width:calc(100vw - 24px);bottom:72px}
-  #legend{right:auto;left:50%;transform:translateX(-50%);bottom:72px;white-space:nowrap}
+  #legend{right:auto;left:50%;transform:translateX(-50%);bottom:72px;white-space:nowrap;width:auto}
 }
 
 /* Footer */
@@ -167,7 +279,29 @@ html,body{width:100%;height:100%;font-family:-apple-system,BlinkMacSystemFont,'S
 /* Donut marker */
 .marker-svg{overflow:visible!important;cursor:pointer}
 .marker-svg path,.marker-svg circle{stroke:rgba(255,255,255,0.6);stroke-width:0.8px}
+.marker-svg .ovr-ring{stroke-width:0!important}
+.marker-svg .ovr-label{stroke-width:0!important}
 .marker-svg text{pointer-events:none;font-family:inherit}
+
+/* Overcrowding toggle */
+.ovr-toggle{display:flex;align-items:center;gap:8px;padding:6px 0;cursor:pointer;user-select:none}
+.ovr-track{width:32px;height:18px;border-radius:9px;background:#2c3150;position:relative;transition:background .2s;flex-shrink:0}
+.ovr-track.on{background:#e67e22}
+.ovr-knob{position:absolute;top:2px;left:2px;width:14px;height:14px;border-radius:50%;background:#fff;transition:left .15s}
+.ovr-track.on .ovr-knob{left:16px}
+
+/* Overcrowding button */
+#ovr-btn{
+  background:#1a1d2e;color:#fff;border:none;
+  border-radius:8px;padding:9px 14px;font-size:0.82rem;
+  cursor:pointer;display:flex;align-items:center;gap:6px;
+  box-shadow:0 2px 8px rgba(0,0,0,.35);
+  transition:background .2s;
+}
+#ovr-btn:hover{background:#2c3150}
+#ovr-btn.active{background:#7a3c10;color:#f39c12;border:1px solid #e67e22}
+#ovr-btn.active svg circle{stroke:#f39c12}
+#ovr-btn svg{width:16px;height:16px;flex-shrink:0}
 
 /* Overview button */
 #overview-btn{
@@ -278,9 +412,18 @@ html,body{width:100%;height:100%;font-family:-apple-system,BlinkMacSystemFont,'S
   font-size:0.68rem;text-transform:uppercase;letter-spacing:.08em;
   color:#6c757d;margin-bottom:14px;
 }
+.ov-group-label{
+  font-size:0.60rem;text-transform:uppercase;letter-spacing:.13em;
+  color:#4a5068;padding:12px 16px 10px;
+  background:#0d0f1a;
+  border-top:1px solid #13151f;
+  border-bottom:1px solid #13151f;
+}
 #wrap-donut{height:240px;position:relative}
 #wrap-bar{height:268px;position:relative}
 #wrap-line{height:228px;position:relative}
+#wrap-ovr-stat{padding:2px 0 10px}
+#wrap-ovr-bar{height:308px;position:relative}
 
 /* Sul progetto body */
 .pg-body{
@@ -308,7 +451,7 @@ html,body{width:100%;height:100%;font-family:-apple-system,BlinkMacSystemFont,'S
 
 <div id="header">
   <h1>Patrie<span>Galere</span>.eu</h1>
-  <p id="header-tagline" data-i18n-html="tagline">Mappa dei decessi in carcere in Italia <span style="opacity:.55">&#xB7; 2002&#x2013;2026</span></p>
+  <p id="header-tagline" data-i18n-html="tagline">Mappa dei decessi in carcere in Italia <span style="opacity:.55">&#xB7; 2002&#x2013;2026 &middot; dati aggiornati al 20 maggio 2026</span></p>
   <div id="total-badge"><span data-i18n="deaths_badge">decessi: </span><span id="death-count">0</span></div>
   <div id="lang-toggle">
     <button class="lang-btn active" id="btn-it" onclick="setLang('it')">IT</button>
@@ -328,6 +471,14 @@ html,body{width:100%;height:100%;font-family:-apple-system,BlinkMacSystemFont,'S
     <polyline points="1,14 5,8 9,10 14,4 19,1" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>
   <span data-i18n="overview_btn">Panoramica</span>
+</button>
+
+<button id="ovr-btn" onclick="toggleOvercrowding()">
+  <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="10" cy="10" r="7" stroke="#fff" stroke-width="1.6"/>
+    <circle cx="10" cy="10" r="3.5" stroke="#fff" stroke-width="1.6"/>
+  </svg>
+  <span data-i18n="ovr_btn">Sovraffollamento</span>
 </button>
 
 <button id="progetto-btn" onclick="toggleProgetto()">
@@ -357,17 +508,31 @@ html,body{width:100%;height:100%;font-family:-apple-system,BlinkMacSystemFont,'S
     <h3 data-i18n="overview_btn">Panoramica</h3>
     <button class="ov-close" onclick="toggleOverview()">&#xD7;</button>
   </div>
+
+  <div class="ov-group-label" data-i18n="ov_group_deaths">Morti in carcere</div>
+
   <div class="ov-section">
     <div class="ov-section-title" data-i18n="ov_cause">Causa di morte</div>
-    <div id="wrap-donut"><canvas id="chart-donut"></canvas></div>
+    <div id="wrap-donut"><canvas id="chart-donut" role="img" aria-label="Grafico a ciambella delle cause di morte in carcere"></canvas></div>
   </div>
   <div class="ov-section">
     <div class="ov-section-title" data-i18n="ov_top10">Top 10 istituti per decessi</div>
-    <div id="wrap-bar"><canvas id="chart-bar"></canvas></div>
+    <div id="wrap-bar"><canvas id="chart-bar" role="img" aria-label="Grafico a barre orizzontali: top 10 istituti per numero di decessi"></canvas></div>
   </div>
   <div class="ov-section">
     <div class="ov-section-title" data-i18n="ov_yearly">Decessi per anno</div>
-    <div id="wrap-line"><canvas id="chart-line"></canvas></div>
+    <div id="wrap-line"><canvas id="chart-line" role="img" aria-label="Grafico a linee dei decessi per anno dal 2002 al 2025"></canvas></div>
+  </div>
+
+  <div class="ov-group-label" data-i18n="ov_group_ovr">Sovraffollamento</div>
+
+  <div class="ov-section">
+    <div class="ov-section-title" data-i18n="ov_ovr_national">Tasso di occupazione nazionale</div>
+    <div id="wrap-ovr-stat"></div>
+  </div>
+  <div class="ov-section">
+    <div class="ov-section-title" data-i18n="ov_ovr_top10">Top 10 istituti più sovraffollati</div>
+    <div id="wrap-ovr-bar"><canvas id="chart-ovr-bar" role="img" aria-label="Grafico a barre orizzontali: top 10 istituti con maggiore tasso di affollamento"></canvas></div>
   </div>
 </div>
 
@@ -474,20 +639,82 @@ html,body{width:100%;height:100%;font-family:-apple-system,BlinkMacSystemFont,'S
 </div>
 
 <div id="controls">
-  <h3 data-i18n="controls_title">Causa di morte</h3>
-  <div id="cat-list"></div>
-  <button id="reset-btn" data-i18n="reset_btn" onclick="resetFilters()">Mostra tutto</button>
-  <div style="margin-top:12px;padding-top:10px;border-top:1px solid #2c3150">
-    <h3 data-i18n="marker_size_title" style="margin-bottom:8px">Dimensione marker</h3>
-    <div data-i18n="marker_size_desc" style="font-size:0.72rem;color:#6c757d;line-height:1.5">
-      Proporzionale al numero totale di decessi nell'istituto.
+
+  <!-- Death filter — hidden in overcrowding mode -->
+  <div id="death-filter-section">
+    <h3 data-i18n="controls_title">Causa di morte</h3>
+    <div id="cat-list"></div>
+    <button id="reset-btn" data-i18n="reset_btn" onclick="resetFilters()">Mostra tutto</button>
+    <div style="margin-top:12px;padding-top:10px;border-top:1px solid #2c3150">
+      <h3 data-i18n="marker_size_title" style="margin-bottom:8px">Dimensione marker</h3>
+      <div data-i18n="marker_size_desc" style="font-size:0.72rem;color:#6c757d;line-height:1.5">
+        Proporzionale al numero totale di decessi nell'istituto.
+      </div>
     </div>
   </div>
+
+  <!-- Toggle — always visible -->
+  <div style="margin-top:12px;padding-top:10px;border-top:1px solid #2c3150">
+    <div class="ovr-toggle" onclick="toggleOvercrowding()">
+      <div class="ovr-track" id="ovr-track"><div class="ovr-knob"></div></div>
+      <span style="font-size:0.83rem;flex:1" data-i18n="ovr_toggle">Mostra sovraffollamento</span>
+    </div>
+  </div>
+
 </div>
 
 <div id="legend">
-  <p data-i18n="legend_title">Causa di morte</p>
-  <div id="legend-items"></div>
+  <!-- Deaths legend (default) -->
+  <div id="legend-deaths">
+    <p data-i18n="legend_title">Causa di morte</p>
+    <div id="legend-items"></div>
+  </div>
+  <!-- Overcrowding legend (shown in ovr mode) -->
+  <div id="legend-ovr" style="display:none">
+    <p data-i18n="ovr_title">Sovraffollamento</p>
+    <!-- Donut anatomy -->
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+      <svg width="32" height="32" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0">
+        <path d="M18 18 L18 2 A16 16 0 0 1 34 18 Z" fill="#3d5a80"/>
+        <path d="M18 18 L34 18 A16 16 0 1 1 18 2 Z" fill="#e74c3c"/>
+        <circle cx="18" cy="18" r="7.7" fill="#1a1d2e"/>
+      </svg>
+      <div style="font-size:0.7rem;color:#adb5bd;line-height:1.6">
+        <span style="color:#3d5a80;font-weight:700">&#9632;</span> <span data-i18n="ovr_legend_within">entro la capienza</span><br>
+        <span style="color:#e74c3c;font-weight:700">&#9632;</span> <span data-i18n="ovr_legend_excess">quota eccedente</span>
+      </div>
+    </div>
+    <!-- Marker size -->
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;padding-bottom:8px;border-bottom:1px solid #2c3150">
+      <div style="display:flex;align-items:center;gap:4px;flex-shrink:0">
+        <div style="width:10px;height:10px;border-radius:50%;background:#6c757d;opacity:0.7"></div>
+        <div style="width:16px;height:16px;border-radius:50%;background:#6c757d"></div>
+      </div>
+      <span style="font-size:0.7rem;color:#adb5bd" data-i18n="ovr_legend_size">dimensione ∝ n° detenuti</span>
+    </div>
+    <!-- Severity scale (interactive filter) -->
+    <div style="display:flex;flex-direction:column;gap:4px">
+      <div id="ovr-row-low" class="legend-row" onclick="toggleOvrBucket('low')">
+        <div style="width:10px;height:10px;border-radius:2px;background:#27ae60;flex-shrink:0"></div>
+        <span style="font-size:0.7rem;color:#adb5bd">&lt;120% — <span data-i18n="ovr_sev_low">nella norma</span></span>
+      </div>
+      <div id="ovr-row-mid" class="legend-row" onclick="toggleOvrBucket('mid')">
+        <div style="width:10px;height:10px;border-radius:2px;background:#f39c12;flex-shrink:0"></div>
+        <span style="font-size:0.7rem;color:#adb5bd">120–150% — <span data-i18n="ovr_sev_mid">sovraffollato</span></span>
+      </div>
+      <div id="ovr-row-high" class="legend-row" onclick="toggleOvrBucket('high')">
+        <div style="width:10px;height:10px;border-radius:2px;background:#e67e22;flex-shrink:0"></div>
+        <span style="font-size:0.7rem;color:#adb5bd">150–180% — <span data-i18n="ovr_sev_high">critico</span></span>
+      </div>
+      <div id="ovr-row-extreme" class="legend-row" onclick="toggleOvrBucket('extreme')">
+        <div style="width:10px;height:10px;border-radius:2px;background:#e74c3c;flex-shrink:0"></div>
+        <span style="font-size:0.7rem;color:#adb5bd">&gt;180% — <span data-i18n="ovr_sev_extreme">emergenza</span></span>
+      </div>
+    </div>
+    <div style="margin-top:8px;font-size:0.65rem;color:#6c757d">
+      <a href="https://sovraffollamentocarcerario.it" target="_blank" style="color:#7eb8f7;text-decoration:none">sovraffollamentocarcerario.it</a>
+    </div>
+  </div>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
@@ -498,7 +725,7 @@ let currentLang = 'it';
 
 const UI = {
   it: {
-    tagline: 'Mappa dei decessi in carcere in Italia <span style="opacity:.55">\xB7 2002–2026</span>',
+    tagline: 'Mappa dei decessi in carcere in Italia <span style="opacity:.55">\xB7 2002–2026 · dati aggiornati al 20 maggio 2026</span>',
     deaths_badge: 'decessi: ',
     filters_btn: 'Filtri',
     overview_btn: 'Panoramica',
@@ -514,15 +741,35 @@ const UI = {
     ov_cause: 'Causa di morte',
     ov_top10: 'Top 10 istituti per decessi',
     ov_yearly: 'Decessi per anno',
+    ov_group_deaths: 'Morti in carcere',
+    ov_group_ovr: 'Sovraffollamento',
+    ov_ovr_national: 'Tasso di occupazione nazionale',
+    ov_ovr_top10: 'Top 10 istituti più sovraffollati',
     popup_total: 'Totale',
     popup_deaths: 'decessi',
     chart_total: 'Totale',
     chart_suicides: 'Suicidi',
     chart_deaths: 'decessi',
     page_title: 'PatrieGalere.eu — Morti in carcere in Italia',
+    ovr_btn: 'Sovraffollamento',
+    ovr_title: 'Sovraffollamento',
+    ovr_toggle: 'Mostra sovraffollamento',
+    ovr_desc: 'Cerchio colorato attorno ai marker. Fonte: sovraffollamentocarcerario.it',
+    ovr_popup_label: 'Sovraffollamento',
+    ovr_popup_inmates: 'Detenuti',
+    ovr_popup_places: 'Posti disponibili',
+    ovr_legend_intro: 'Ogni marker mostra il tasso di affollamento del carcere. La sezione colorata indica la quota eccedente la capienza.',
+    ovr_legend_size: 'dimensione ∝ n° detenuti',
+    ovr_legend_within: 'entro la capienza',
+    ovr_legend_excess: 'quota eccedente',
+    ovr_legend_severity: 'Gravità',
+    ovr_sev_low: 'nella norma',
+    ovr_sev_mid: 'sovraffollato',
+    ovr_sev_high: 'critico',
+    ovr_sev_extreme: 'emergenza',
   },
   en: {
-    tagline: 'Map of deaths in prison in Italy <span style="opacity:.55">\xB7 2002–2026</span>',
+    tagline: 'Map of deaths in prison in Italy <span style="opacity:.55">\xB7 2002–2026 · data updated to 20 May 2026</span>',
     deaths_badge: 'deaths: ',
     filters_btn: 'Filters',
     overview_btn: 'Overview',
@@ -538,12 +785,32 @@ const UI = {
     ov_cause: 'Cause of death',
     ov_top10: 'Top 10 facilities by deaths',
     ov_yearly: 'Deaths per year',
+    ov_group_deaths: 'Deaths in prison',
+    ov_group_ovr: 'Overcrowding',
+    ov_ovr_national: 'National occupancy rate',
+    ov_ovr_top10: 'Top 10 most overcrowded facilities',
     popup_total: 'Total',
     popup_deaths: 'deaths',
     chart_total: 'Total',
     chart_suicides: 'Suicides',
     chart_deaths: 'deaths',
     page_title: 'PatrieGalere.eu — Deaths in prison in Italy',
+    ovr_btn: 'Overcrowding',
+    ovr_title: 'Overcrowding',
+    ovr_toggle: 'Show overcrowding',
+    ovr_desc: 'Coloured ring around markers. Source: sovraffollamentocarcerario.it',
+    ovr_popup_label: 'Overcrowding',
+    ovr_popup_inmates: 'Inmates',
+    ovr_popup_places: 'Available places',
+    ovr_legend_intro: 'Each marker shows the prison\'s occupancy rate. The coloured segment indicates the share exceeding capacity.',
+    ovr_legend_size: 'size ∝ no. of inmates',
+    ovr_legend_within: 'within capacity',
+    ovr_legend_excess: 'excess share',
+    ovr_legend_severity: 'Severity',
+    ovr_sev_low: 'within norm',
+    ovr_sev_mid: 'overcrowded',
+    ovr_sev_high: 'critical',
+    ovr_sev_extreme: 'emergency',
   }
 };
 
@@ -638,6 +905,9 @@ function setLang(lang) {
 // ─── Data ───────────────────────────────────────────────────────────────────
 const PRISONS = [{"name":"Napoli Poggioreale","lat":40.861,"lng":14.289,"total":105,"categories":{"Suicidio":46,"Da accertare":23,"Malattia":35,"Omicidio":1}},{"name":"Roma Rebibbia","lat":41.95,"lng":12.546,"total":101,"categories":{"Suicidio":51,"Malattia":29,"Overdose":3,"Omicidio":3,"Da accertare":15}},{"name":"Cagliari","lat":39.224,"lng":9.122,"total":61,"categories":{"Suicidio":38,"Malattia":8,"Da accertare":12,"Sciopero della fame":1,"Overdose":2}},{"name":"Torino","lat":45.071,"lng":7.686,"total":61,"categories":{"Suicidio":36,"Da accertare":11,"Malattia":14}},{"name":"Roma Regina Coeli","lat":41.897,"lng":12.464,"total":61,"categories":{"Da accertare":18,"Suicidio":28,"Malattia":13,"Incidente":1,"Overdose":1}},{"name":"Napoli Secondigliano","lat":40.906,"lng":14.26,"total":56,"categories":{"Da accertare":11,"Malattia":22,"Suicidio":20,"Omicidio":2,"Overdose":1}},{"name":"Milano San Vittore","lat":45.461,"lng":9.168,"total":53,"categories":{"Suicidio":30,"Da accertare":11,"Overdose":3,"Malattia":8,"Soffocamento":1}},{"name":"Lecce","lat":40.352,"lng":18.174,"total":52,"categories":{"Da accertare":13,"Suicidio":27,"Malattia":11,"Sciopero della fame":1}},{"name":"Parma","lat":44.801,"lng":10.328,"total":51,"categories":{"Suicidio":17,"Malattia":26,"Da accertare":8}},{"name":"Padova Reclusione","lat":45.407,"lng":11.868,"total":48,"categories":{"Malattia":12,"Suicidio":21,"Da accertare":14,"Overdose":1}},{"name":"Milano Opera","lat":45.379,"lng":9.217,"total":47,"categories":{"Malattia":22,"Da accertare":3,"Omicidio":2,"Suicidio":20}},{"name":"Genova Marassi","lat":44.407,"lng":8.96,"total":41,"categories":{"Suicidio":21,"Da accertare":14,"Omicidio":1,"Malattia":5}},{"name":"Bologna","lat":44.494,"lng":11.342,"total":40,"categories":{"Da accertare":18,"Suicidio":17,"Malattia":4,"Overdose":1}},{"name":"Teramo","lat":42.659,"lng":13.704,"total":37,"categories":{"Suicidio":18,"Malattia":4,"Da accertare":15}},{"name":"Viterbo","lat":42.417,"lng":12.105,"total":36,"categories":{"Malattia":9,"Suicidio":16,"Da accertare":8,"Omicidio":2,"Overdose":1}},{"name":"Verona","lat":45.438,"lng":10.992,"total":36,"categories":{"Suicidio":25,"Overdose":1,"Da accertare":7,"Malattia":3}},{"name":"Santa Maria C.V. (CE)","lat":41.071,"lng":14.257,"total":35,"categories":{"Suicidio":17,"Da accertare":5,"Malattia":13}},{"name":"Palermo Pagliarelli","lat":38.086,"lng":13.369,"total":35,"categories":{"Suicidio":20,"Malattia":8,"Da accertare":7}},{"name":"Firenze Sollicciano","lat":43.76,"lng":11.19,"total":29,"categories":{"Malattia":1,"Suicidio":19,"Da accertare":9}},{"name":"Sassari","lat":40.726,"lng":8.556,"total":29,"categories":{"Malattia":5,"Da accertare":6,"Suicidio":14,"Overdose":3,"Omicidio":1}},{"name":"Taranto","lat":40.464,"lng":17.247,"total":29,"categories":{"Suicidio":14,"Malattia":10,"Da accertare":5}},{"name":"Firenze","lat":43.769,"lng":11.256,"total":29,"categories":{"Da accertare":9,"Overdose":4,"Suicidio":15,"Malattia":1}},{"name":"Como","lat":45.81,"lng":9.085,"total":28,"categories":{"Suicidio":20,"Da accertare":4,"Overdose":2,"Malattia":2}},{"name":"Salerno","lat":40.68,"lng":14.759,"total":28,"categories":{"Da accertare":8,"Suicidio":10,"Omicidio":1,"Malattia":8,"Overdose":1}},{"name":"Pavia","lat":45.185,"lng":9.16,"total":27,"categories":{"Suicidio":19,"Da accertare":4,"Malattia":2,"Overdose":1,"Omicidio":1}},{"name":"Monza","lat":45.584,"lng":9.274,"total":27,"categories":{"Da accertare":6,"Suicidio":19,"Malattia":2}},{"name":"Foggia","lat":41.462,"lng":15.544,"total":27,"categories":{"Suicidio":19,"Da accertare":4,"Malattia":3,"Omicidio":1}},{"name":"Livorno","lat":43.548,"lng":10.31,"total":26,"categories":{"Da accertare":9,"Suicidio":13,"Malattia":4}},{"name":"Frosinone","lat":41.64,"lng":13.351,"total":25,"categories":{"Malattia":6,"Suicidio":12,"Da accertare":7}},{"name":"Avellino","lat":40.914,"lng":14.79,"total":24,"categories":{"Da accertare":8,"Suicidio":9,"Omicidio":1,"Malattia":5,"Overdose":1}},{"name":"Sulmona (AQ)","lat":42.046,"lng":13.924,"total":23,"categories":{"Malattia":7,"Suicidio":11,"Da accertare":4,"Overdose":1}},{"name":"Prato","lat":43.88,"lng":11.097,"total":23,"categories":{"Malattia":2,"Da accertare":5,"Suicidio":16}},{"name":"Siracusa","lat":37.075,"lng":15.287,"total":23,"categories":{"Suicidio":18,"Malattia":3,"Da accertare":2}},{"name":"OPG Aversa (CE)","lat":40.973,"lng":14.203,"total":23,"categories":{"Da accertare":5,"Suicidio":13,"Omicidio":2,"Malattia":3}},{"name":"Modena","lat":44.648,"lng":10.925,"total":22,"categories":{"Suicidio":12,"Da accertare":9,"Malattia":1}},{"name":"Perugia","lat":43.11,"lng":12.389,"total":22,"categories":{"Da accertare":8,"Suicidio":10,"Overdose":2,"Malattia":2}},{"name":"Pisa","lat":43.72,"lng":10.401,"total":22,"categories":{"Da accertare":7,"Suicidio":8,"Malattia":7}},{"name":"Benevento","lat":41.13,"lng":14.782,"total":21,"categories":{"Suicidio":12,"Malattia":7,"Da accertare":2}},{"name":"Civitavecchia (RM)","lat":42.094,"lng":11.797,"total":21,"categories":{"Da accertare":8,"Malattia":1,"Suicidio":10,"Overdose":2}},{"name":"Terni","lat":42.562,"lng":12.641,"total":21,"categories":{"Suicidio":14,"Malattia":6,"Da accertare":1}},{"name":"Bergamo","lat":45.695,"lng":9.67,"total":19,"categories":{"Suicidio":11,"Da accertare":5,"Malattia":2,"Omicidio":1}},{"name":"Velletri (RM)","lat":41.686,"lng":12.781,"total":19,"categories":{"Omicidio":1,"Malattia":6,"Suicidio":8,"Da accertare":3,"Overdose":1}},{"name":"Busto Arsizio (VA)","lat":45.611,"lng":8.852,"total":18,"categories":{"Suicidio":12,"Malattia":3,"Da accertare":2,"Overdose":1}},{"name":"Catanzaro","lat":38.91,"lng":16.587,"total":18,"categories":{"Da accertare":4,"Malattia":9,"Suicidio":5}},{"name":"Bollate (MI)","lat":45.556,"lng":9.12,"total":17,"categories":{"Malattia":8,"Da accertare":1,"Suicidio":8}},{"name":"Ancona Montacuto","lat":43.616,"lng":13.517,"total":17,"categories":{"Da accertare":6,"Malattia":4,"Suicidio":7}},{"name":"Ferrara","lat":44.835,"lng":11.62,"total":15,"categories":{"Malattia":4,"Da accertare":3,"Suicidio":7,"Overdose":1}},{"name":"Reggio Emilia","lat":44.699,"lng":10.631,"total":15,"categories":{"Suicidio":12,"Da accertare":3}},{"name":"Pescara","lat":42.458,"lng":14.215,"total":15,"categories":{"Malattia":1,"Suicidio":8,"Da accertare":6}},{"name":"Bari","lat":41.117,"lng":16.871,"total":15,"categories":{"Suicidio":9,"Omicidio":1,"Malattia":5}},{"name":"Messina","lat":38.194,"lng":15.556,"total":15,"categories":{"Da accertare":4,"Suicidio":8,"Malattia":3}},{"name":"Piacenza","lat":45.052,"lng":9.693,"total":15,"categories":{"Suicidio":12,"Da accertare":1,"Overdose":2}},{"name":"Cremona","lat":45.133,"lng":10.022,"total":14,"categories":{"Suicidio":10,"Da accertare":3,"Malattia":1}},{"name":"Trieste","lat":45.649,"lng":13.777,"total":14,"categories":{"Suicidio":5,"Overdose":1,"Da accertare":6,"Malattia":2}},{"name":"Augusta (SR)","lat":37.235,"lng":15.221,"total":13,"categories":{"Da accertare":5,"Malattia":2,"Suicidio":6}},{"name":"OPG Reggio Emilia","lat":44.699,"lng":10.631,"total":13,"categories":{"Suicidio":6,"Da accertare":6,"Malattia":1}},{"name":"Brescia","lat":45.538,"lng":10.22,"total":13,"categories":{"Suicidio":8,"Da accertare":3,"Malattia":2}},{"name":"Cuneo","lat":44.387,"lng":7.543,"total":13,"categories":{"Suicidio":6,"Da accertare":4,"Malattia":3}},{"name":"Palermo Ucciardone","lat":38.126,"lng":13.355,"total":13,"categories":{"Malattia":3,"Suicidio":7,"Da accertare":3}},{"name":"Pesaro","lat":43.911,"lng":12.913,"total":13,"categories":{"Da accertare":5,"Suicidio":7,"Malattia":1}},{"name":"Venezia S.M. Maggiore","lat":45.439,"lng":12.331,"total":12,"categories":{"Da accertare":6,"Suicidio":4,"Malattia":2}},{"name":"Ivrea (TO)","lat":45.467,"lng":7.874,"total":12,"categories":{"Da accertare":2,"Malattia":2,"Suicidio":8}},{"name":"Reggio Calabria","lat":38.111,"lng":15.661,"total":12,"categories":{"Suicidio":8,"Da accertare":1,"Malattia":3}},{"name":"Vibo Valentia","lat":38.674,"lng":16.1,"total":11,"categories":{"Suicidio":9,"Da accertare":1,"Malattia":1}},{"name":"La Spezia","lat":44.103,"lng":9.824,"total":11,"categories":{"Suicidio":7,"Da accertare":4}},{"name":"Biella","lat":45.562,"lng":8.053,"total":11,"categories":{"Suicidio":8,"Da accertare":3}},{"name":"Trento","lat":46.068,"lng":11.121,"total":11,"categories":{"Suicidio":8,"Da accertare":2,"Malattia":1}},{"name":"Udine","lat":46.063,"lng":13.235,"total":11,"categories":{"Suicidio":6,"Da accertare":2,"Malattia":3}},{"name":"Carinola (CE)","lat":41.177,"lng":14.05,"total":10,"categories":{"Da accertare":2,"Suicidio":6,"Malattia":2}},{"name":"Vigevano (PV)","lat":45.314,"lng":8.862,"total":10,"categories":{"Suicidio":6,"Malattia":2,"Da accertare":1,"Overdose":1}},{"name":"Vicenza","lat":45.548,"lng":11.535,"total":10,"categories":{"Suicidio":10}},{"name":"Trani (BA)","lat":41.278,"lng":16.415,"total":10,"categories":{"Suicidio":5,"Da accertare":5}},{"name":"Castrovillari (CS)","lat":39.814,"lng":16.201,"total":10,"categories":{"Suicidio":9,"Da accertare":1}},{"name":"Alessandria","lat":44.914,"lng":8.615,"total":10,"categories":{"Malattia":2,"Da accertare":4,"Suicidio":4}},{"name":"Agrigento","lat":37.31,"lng":13.578,"total":9,"categories":{"Suicidio":6,"Da accertare":2,"Malattia":1}},{"name":"Ascoli Piceno","lat":42.854,"lng":13.574,"total":9,"categories":{"Da accertare":3,"Suicidio":6}},{"name":"Barcellona P.G. (Me)","lat":38.115,"lng":15.213,"total":9,"categories":{"Suicidio":8,"Da accertare":1}},{"name":"Saluzzo (CN)","lat":44.644,"lng":7.491,"total":9,"categories":{"Malattia":5,"Suicidio":3,"Da accertare":1}},{"name":"Imperia","lat":43.889,"lng":8.026,"total":9,"categories":{"Suicidio":4,"Da accertare":5}},{"name":"Caltanissetta","lat":37.49,"lng":14.061,"total":9,"categories":{"Suicidio":7,"Malattia":2}},{"name":"Sanremo (IM)","lat":43.817,"lng":7.776,"total":9,"categories":{"Da accertare":4,"Suicidio":3,"Malattia":2}},{"name":"Padova Circondariale","lat":45.407,"lng":11.868,"total":9,"categories":{"Da accertare":3,"Omicidio":1,"Suicidio":5}},{"name":"OPG Barcellona P.G. (ME)","lat":38.115,"lng":15.213,"total":9,"categories":{"Suicidio":7,"Da accertare":1,"Malattia":1}},{"name":"Vasto (Ch)","lat":42.114,"lng":14.706,"total":8,"categories":{"Malattia":2,"Suicidio":5,"Da accertare":1}},{"name":"Brindisi","lat":40.641,"lng":17.942,"total":8,"categories":{"Suicidio":5,"Malattia":3}},{"name":"Massa Carrara","lat":44.036,"lng":10.138,"total":8,"categories":{"Suicidio":6,"Malattia":1,"Da accertare":1}},{"name":"Rieti","lat":42.402,"lng":12.857,"total":8,"categories":{"Suicidio":1,"Malattia":2,"Da accertare":5}},{"name":"Venezia","lat":45.437,"lng":12.332,"total":8,"categories":{"Suicidio":7,"Da accertare":1}},{"name":"Novara","lat":45.447,"lng":8.621,"total":8,"categories":{"Suicidio":5,"Malattia":2,"Da accertare":1}},{"name":"Rossano (CS)","lat":39.578,"lng":16.637,"total":8,"categories":{"Suicidio":6,"Malattia":1,"Da accertare":1}},{"name":"Catania","lat":37.502,"lng":15.09,"total":8,"categories":{"Malattia":4,"Da accertare":1,"Suicidio":3}},{"name":"Ancona","lat":43.616,"lng":13.517,"total":8,"categories":{"Suicidio":6,"Da accertare":2}},{"name":"Campobasso","lat":41.561,"lng":14.656,"total":7,"categories":{"Malattia":2,"Da accertare":4,"Suicidio":1}},{"name":"Belluno","lat":46.14,"lng":12.216,"total":7,"categories":{"Suicidio":7}},{"name":"Trapani","lat":38.018,"lng":12.514,"total":7,"categories":{"Suicidio":2,"Malattia":3,"Da accertare":2}},{"name":"Treviso","lat":45.671,"lng":12.242,"total":7,"categories":{"Da accertare":2,"Suicidio":3,"Malattia":2}},{"name":"Forl\xEC","lat":44.222,"lng":12.041,"total":7,"categories":{"Da accertare":2,"Suicidio":3,"Malattia":2}},{"name":"Caltagirone (CT)","lat":37.237,"lng":14.519,"total":7,"categories":{"Suicidio":3,"Omicidio":2,"Da accertare":1,"Malattia":1}},{"name":"Tolmezzo (UD)","lat":46.397,"lng":13.01,"total":7,"categories":{"Malattia":4,"Suicidio":3}},{"name":"Cosenza","lat":39.307,"lng":16.251,"total":7,"categories":{"Da accertare":1,"Malattia":2,"Suicidio":4}},{"name":"Spoleto (Pg)","lat":42.734,"lng":12.738,"total":7,"categories":{"Suicidio":5,"Da accertare":1,"Malattia":1}},{"name":"Latina","lat":41.467,"lng":12.904,"total":6,"categories":{"Da accertare":2,"Suicidio":4}},{"name":"Paola (CS)","lat":39.361,"lng":16.041,"total":6,"categories":{"Suicidio":6}},{"name":"Voghera (PV)","lat":44.993,"lng":9.012,"total":6,"categories":{"Malattia":2,"Suicidio":4}},{"name":"Ravenna","lat":44.418,"lng":12.203,"total":6,"categories":{"Suicidio":6}},{"name":"Oristano","lat":39.908,"lng":8.594,"total":6,"categories":{"Da accertare":1,"Suicidio":3,"Malattia":2}},{"name":"Genova","lat":44.407,"lng":8.934,"total":6,"categories":{"Malattia":2,"Da accertare":2,"Suicidio":2}},{"name":"Porto Azzurro (LI)","lat":42.764,"lng":10.399,"total":6,"categories":{"Suicidio":2,"Malattia":2,"Da accertare":1,"Omicidio":1}},{"name":"Lucca","lat":43.843,"lng":10.508,"total":6,"categories":{"Malattia":1,"Suicidio":4,"Da accertare":1}},{"name":"Venezia Giudecca","lat":45.427,"lng":12.327,"total":5,"categories":{"Suicidio":2,"Malattia":2,"Da accertare":1}},{"name":"Asti","lat":44.9,"lng":8.206,"total":5,"categories":{"Suicidio":4,"Malattia":1}},{"name":"Cassino (FR)","lat":41.491,"lng":13.833,"total":5,"categories":{"Da accertare":3,"Malattia":2}},{"name":"Catania Piazza Lanza","lat":37.502,"lng":15.09,"total":5,"categories":{"Suicidio":4,"Malattia":1}},{"name":"Lodi","lat":45.314,"lng":9.502,"total":5,"categories":{"Da accertare":2,"Suicidio":3}},{"name":"Ragusa","lat":36.928,"lng":14.741,"total":5,"categories":{"Suicidio":3,"Da accertare":1,"Omicidio":1}},{"name":"Lanciano (CH)","lat":42.231,"lng":14.389,"total":5,"categories":{"Suicidio":2,"Malattia":3}},{"name":"OPG Castiglione (MN)","lat":45.391,"lng":10.722,"total":5,"categories":{"Suicidio":3,"Da accertare":2}},{"name":"Vercelli","lat":45.328,"lng":8.424,"total":5,"categories":{"Suicidio":5}},{"name":"OPG Montelupo (FI)","lat":43.73,"lng":11.025,"total":5,"categories":{"Suicidio":2,"Malattia":2,"Omicidio":1}},{"name":"Lucera (Fg)","lat":41.507,"lng":15.335,"total":4,"categories":{"Suicidio":4}},{"name":"Gorgona (LI)","lat":43.431,"lng":9.9,"total":4,"categories":{"Suicidio":1,"Da accertare":1,"Omicidio":2}},{"name":"Genova Pontedecimo","lat":44.476,"lng":8.886,"total":4,"categories":{"Malattia":1,"Suicidio":3}},{"name":"Chieti","lat":42.351,"lng":14.167,"total":4,"categories":{"Malattia":2,"Suicidio":1,"Da accertare":1}},{"name":"Crotone","lat":39.081,"lng":17.122,"total":4,"categories":{"Suicidio":3,"Omicidio":1}},{"name":"Bolzano","lat":46.498,"lng":11.354,"total":4,"categories":{"Suicidio":3,"Overdose":1}},{"name":"Fossombrone (PU)","lat":43.688,"lng":12.81,"total":4,"categories":{"Suicidio":3,"Malattia":1}},{"name":"Catania Bicocca","lat":37.502,"lng":15.09,"total":4,"categories":{"Suicidio":4}},{"name":"Milano Questura","lat":45.464,"lng":9.19,"total":4,"categories":{"Suicidio":1,"Da accertare":2,"Malattia":1}},{"name":"OPG Napoli","lat":40.863,"lng":14.271,"total":4,"categories":{"Suicidio":3,"Da accertare":1}},{"name":"Palmi (RC)","lat":38.362,"lng":15.847,"total":4,"categories":{"Suicidio":2,"Malattia":2}},{"name":"L'Aquila","lat":42.351,"lng":13.4,"total":4,"categories":{"Suicidio":3,"Malattia":1}},{"name":"Spoleto","lat":42.734,"lng":12.738,"total":4,"categories":{"Suicidio":3,"Malattia":1}},{"name":"Alessandria Casa Reclusione","lat":44.914,"lng":8.615,"total":3,"categories":{"Da accertare":1,"Suicidio":2}},{"name":"Aosta","lat":45.737,"lng":7.315,"total":3,"categories":{"Suicidio":1,"Malattia":2}},{"name":"Melfi (Pz)","lat":40.996,"lng":15.649,"total":3,"categories":{"Suicidio":2,"Malattia":1}},{"name":"Mantova","lat":45.156,"lng":10.792,"total":3,"categories":{"Suicidio":2,"Da accertare":1}},{"name":"Varese","lat":45.82,"lng":8.826,"total":3,"categories":{"Suicidio":2,"Malattia":1}},{"name":"San Gimignano (SI)","lat":43.468,"lng":11.043,"total":3,"categories":{"Suicidio":2,"Omicidio":1}},{"name":"Termini Imerese (Pa)","lat":37.984,"lng":13.697,"total":3,"categories":{"Suicidio":2,"Da accertare":1}},{"name":"Rimini","lat":44.059,"lng":12.565,"total":3,"categories":{"Suicidio":2,"Da accertare":1}},{"name":"Sondrio","lat":46.17,"lng":9.876,"total":3,"categories":{"Suicidio":3}},{"name":"Isili (NU)","lat":39.744,"lng":9.104,"total":3,"categories":{"Suicidio":1,"Da accertare":2}},{"name":"Caserta","lat":41.073,"lng":14.333,"total":3,"categories":{"Suicidio":1,"Malattia":1,"Da accertare":1}},{"name":"Larino (CB)","lat":41.797,"lng":14.914,"total":3,"categories":{"Malattia":2,"Suicidio":1}},{"name":"Fermo (AP)","lat":43.16,"lng":13.716,"total":3,"categories":{"Suicidio":3}},{"name":"Siena","lat":43.319,"lng":11.331,"total":3,"categories":{"Suicidio":1,"Da accertare":1,"Malattia":1}},{"name":"Aversa (Ce)","lat":40.973,"lng":14.203,"total":3,"categories":{"Malattia":1,"Suicidio":2}},{"name":"Pordenone","lat":45.956,"lng":12.66,"total":3,"categories":{"Malattia":1,"Suicidio":1,"Da accertare":1}},{"name":"Alba (CN)","lat":44.699,"lng":8.035,"total":3,"categories":{"Suicidio":2,"Da accertare":1}},{"name":"Firenze Solliccianino","lat":43.76,"lng":11.19,"total":3,"categories":{"Malattia":1,"Suicidio":1,"Overdose":1}},{"name":"Isernia","lat":41.593,"lng":14.231,"total":3,"categories":{"Omicidio":1,"Malattia":1,"Overdose":1}},{"name":"Nuoro","lat":40.321,"lng":9.33,"total":3,"categories":{"Malattia":1,"Da accertare":1,"Suicidio":1}},{"name":"Spoleto (PG)","lat":42.734,"lng":12.738,"total":3,"categories":{"Suicidio":3}},{"name":"Iglesias (CA)","lat":39.305,"lng":8.538,"total":3,"categories":{"Suicidio":3}},{"name":"Ariano Irpino (Av)","lat":41.155,"lng":15.089,"total":3,"categories":{"Suicidio":2,"Da accertare":1}},{"name":"Gela (CL)","lat":37.074,"lng":14.253,"total":2,"categories":{"Suicidio":2}},{"name":"Pistoia","lat":43.93,"lng":10.917,"total":2,"categories":{"Suicidio":2}},{"name":"REMS San Nicola Baronia (Av)","lat":41.006,"lng":15.145,"total":2,"categories":{"Omicidio":1,"Suicidio":1}},{"name":"Gorizia","lat":45.94,"lng":13.621,"total":2,"categories":{"Da accertare":1,"Suicidio":1}},{"name":"Roma","lat":41.902,"lng":12.496,"total":2,"categories":{"Suicidio":1,"Da accertare":1}},{"name":"Reggio Calabria Arghill\xE0","lat":38.143,"lng":15.636,"total":2,"categories":{"Suicidio":1,"Malattia":1}},{"name":"L'Aquila","lat":42.351,"lng":13.4,"total":2,"categories":{"Malattia":2}},{"name":"Arienzo (Ce)","lat":41.024,"lng":14.464,"total":2,"categories":{"Da accertare":1,"Suicidio":1}},{"name":"CPR Gradisca d'Isonzo","lat":45.891,"lng":13.499,"total":2,"categories":{"Da accertare":2}},{"name":"Enna","lat":37.566,"lng":14.279,"total":2,"categories":{"Suicidio":2}},{"name":"San Severo (FG)","lat":41.688,"lng":15.381,"total":2,"categories":{"Malattia":1,"Suicidio":1}},{"name":"Noto (SR)","lat":36.891,"lng":15.068,"total":2,"categories":{"Malattia":1,"Suicidio":1}},{"name":"Napoli (domiciliari)","lat":40.851,"lng":14.268,"total":2,"categories":{"Suicidio":2}},{"name":"Giarre (Ct)","lat":37.728,"lng":15.183,"total":2,"categories":{"Da accertare":1,"Suicidio":1}},{"name":"Alghero","lat":40.558,"lng":8.319,"total":2,"categories":{"Suicidio":2}},{"name":"Castelfranco C.L. (Mo)","lat":44.602,"lng":11.05,"total":2,"categories":{"Suicidio":1,"Da accertare":1}},{"name":"Macomer (NU)","lat":40.266,"lng":8.768,"total":2,"categories":{"Suicidio":2}},{"name":"Firenze (Questura)","lat":43.769,"lng":11.256,"total":2,"categories":{"Da accertare":1,"Suicidio":1}},{"name":"Rovereto (TN)","lat":45.891,"lng":11.043,"total":2,"categories":{"Suicidio":2}},{"name":"Roma Cie","lat":41.902,"lng":12.496,"total":2,"categories":{"Suicidio":1,"Da accertare":1}},{"name":"Modena Cie","lat":44.648,"lng":10.925,"total":2,"categories":{"Suicidio":2}},{"name":"Brucoli (SR)","lat":37.289,"lng":15.19,"total":2,"categories":{"Suicidio":1,"Da accertare":1}},{"name":"Orvieto (TR)","lat":42.717,"lng":12.108,"total":2,"categories":{"Suicidio":2}},{"name":"Is Arenas (CA)","lat":39.744,"lng":8.488,"total":2,"categories":{"Suicidio":1,"Overdose":1}},{"name":"Treviso (IPM)","lat":45.671,"lng":12.242,"total":1,"categories":{"Suicidio":1}},{"name":"Bari (CARA)","lat":41.117,"lng":16.871,"total":1,"categories":{"Da accertare":1}},{"name":"Palazzo San Gervasio (Pz)","lat":40.928,"lng":15.979,"total":1,"categories":{"Da accertare":1}},{"name":"Potenza","lat":40.641,"lng":15.8,"total":1,"categories":{"Suicidio":1}},{"name":"Tempio Pausania","lat":40.899,"lng":9.102,"total":1,"categories":{"Suicidio":1}},{"name":"Chiavari (Ge)","lat":44.317,"lng":9.323,"total":1,"categories":{"Suicidio":1}},{"name":"Brescia Verziano","lat":45.492,"lng":10.151,"total":1,"categories":{"Suicidio":1}},{"name":"Albenga (Ge)","lat":44.049,"lng":8.213,"total":1,"categories":{"Da accertare":1}},{"name":"Milano (Questura)","lat":45.464,"lng":9.19,"total":1,"categories":{"Suicidio":1}},{"name":"Palermo (domiciliari)","lat":38.116,"lng":13.362,"total":1,"categories":{"Suicidio":1}},{"name":"Salerno (domiciliari)","lat":40.68,"lng":14.759,"total":1,"categories":{"Suicidio":1}},{"name":"Roma (Rems)","lat":41.902,"lng":12.496,"total":1,"categories":{"Suicidio":1}},{"name":"Arezzo","lat":43.464,"lng":11.88,"total":1,"categories":{"Suicidio":1}},{"name":"Napoli (Ospedale)","lat":40.851,"lng":14.268,"total":1,"categories":{"Suicidio":1}},{"name":"Treviso (domiciliari)","lat":45.671,"lng":12.242,"total":1,"categories":{"Suicidio":1}},{"name":"Bologna (Questura)","lat":44.494,"lng":11.342,"total":1,"categories":{"Suicidio":1}},{"name":"Verona (semilibert\xE0)","lat":45.438,"lng":10.992,"total":1,"categories":{"Suicidio":1}},{"name":"Verona (REMS)","lat":45.438,"lng":10.992,"total":1,"categories":{"Suicidio":1}},{"name":"Volterra (Pi)","lat":43.401,"lng":10.862,"total":1,"categories":{"Da accertare":1}},{"name":"Grosseto","lat":42.764,"lng":11.114,"total":1,"categories":{"Suicidio":1}},{"name":"Sciacca (Ag)","lat":37.508,"lng":13.086,"total":1,"categories":{"Suicidio":1}},{"name":"Taranto (permesso)","lat":40.464,"lng":17.247,"total":1,"categories":{"Suicidio":1}},{"name":"S. Angelo d. L. (Av)","lat":40.926,"lng":15.177,"total":1,"categories":{"Suicidio":1}},{"name":"Foggia (comunit\xE0)","lat":41.462,"lng":15.544,"total":1,"categories":{"Omicidio":1}},{"name":"Roma (Ospedale)","lat":41.902,"lng":12.496,"total":1,"categories":{"Suicidio":1}},{"name":"Napoli (Caserma CC)","lat":40.851,"lng":14.268,"total":1,"categories":{"Suicidio":1}},{"name":"Trieste (Commissariato)","lat":45.649,"lng":13.777,"total":1,"categories":{"Suicidio":1}},{"name":"Bologna (Cie)","lat":44.494,"lng":11.342,"total":1,"categories":{"Overdose":1}},{"name":"Viterbo (Osp. Belcolle)","lat":42.417,"lng":12.105,"total":1,"categories":{"Da accertare":1}},{"name":"Genova (domicil.)","lat":44.407,"lng":8.934,"total":1,"categories":{"Suicidio":1}},{"name":"Lanciano (domicil.)","lat":42.231,"lng":14.389,"total":1,"categories":{"Suicidio":1}},{"name":"Roma (domicil.)","lat":41.902,"lng":12.496,"total":1,"categories":{"Malattia":1}},{"name":"Massa","lat":44.036,"lng":10.138,"total":1,"categories":{"Da accertare":1}},{"name":"Altamura (BA)","lat":40.826,"lng":16.553,"total":1,"categories":{"Suicidio":1}},{"name":"Milano Cie","lat":45.47,"lng":9.08,"total":1,"categories":{"Suicidio":1}},{"name":"Firenze Ipm","lat":43.769,"lng":11.256,"total":1,"categories":{"Suicidio":1}},{"name":"Mamone (NU)","lat":40.45,"lng":9.42,"total":1,"categories":{"Suicidio":1}},{"name":"Bari Ipm","lat":41.117,"lng":16.871,"total":1,"categories":{"Suicidio":1}},{"name":"Marsala (TP)","lat":37.8,"lng":12.438,"total":1,"categories":{"Suicidio":1}},{"name":"Caltanissetta Cie","lat":37.49,"lng":14.061,"total":1,"categories":{"Malattia":1}},{"name":"Torino Cie","lat":45.071,"lng":7.686,"total":1,"categories":{"Malattia":1}},{"name":"Locri (RC)","lat":38.236,"lng":16.263,"total":1,"categories":{"Malattia":1}},{"name":"Lamezia Terme Cie","lat":38.974,"lng":16.329,"total":1,"categories":{"Suicidio":1}},{"name":"Massa Marittima (GR)","lat":43.049,"lng":10.887,"total":1,"categories":{"Suicidio":1}},{"name":"Rovigo","lat":45.07,"lng":11.787,"total":1,"categories":{"Suicidio":1}},{"name":"Volterra (SI)","lat":43.401,"lng":10.862,"total":1,"categories":{"Suicidio":1}},{"name":"Empoli (FI)","lat":43.716,"lng":10.95,"total":1,"categories":{"Da accertare":1}},{"name":"Lamezia","lat":38.974,"lng":16.329,"total":1,"categories":{"Suicidio":1}},{"name":"Barletta (BA)","lat":41.317,"lng":16.283,"total":1,"categories":{"Da accertare":1}},{"name":"Ipm Casal del Marmo (RM)","lat":41.942,"lng":12.414,"total":1,"categories":{"Suicidio":1}},{"name":"Camerino (MC)","lat":43.139,"lng":13.069,"total":1,"categories":{"Suicidio":1}},{"name":"Ipm Casal Del Marmo (RM)","lat":41.942,"lng":12.414,"total":1,"categories":{"Suicidio":1}},{"name":"Roma Questura","lat":41.902,"lng":12.496,"total":1,"categories":{"Da accertare":1}},{"name":"Pozzuoli (NA)","lat":40.823,"lng":14.118,"total":1,"categories":{"Da accertare":1}},{"name":"Avezzano (AQ)","lat":42.027,"lng":13.424,"total":1,"categories":{"Suicidio":1}},{"name":"Caltanisssetta","lat":37.49,"lng":14.061,"total":1,"categories":{"Suicidio":1}},{"name":"Crotone (Cie)","lat":39.081,"lng":17.122,"total":1,"categories":{"Da accertare":1}},{"name":"Mamone (Nu)","lat":40.45,"lng":9.42,"total":1,"categories":{"Da accertare":1}},{"name":"Napoli","lat":40.851,"lng":14.268,"total":1,"categories":{"Da accertare":1}},{"name":"Pozzuoli (Na)","lat":40.823,"lng":14.118,"total":1,"categories":{"Malattia":1}},{"name":"Vasto","lat":42.114,"lng":14.706,"total":1,"categories":{"Da accertare":1}}];
 
+// ─── Overcrowding data (inline, 189 istituti — fonte: sovraffollamentocarcerario.it, aggiornato 2026-05-20) ──
+const OVR_DATA = [{"nome":"Genova Marassi","tipo":"Casa circondariale","lat":44.417913,"lng":8.9511,"tasso":128.0,"detenuti":686,"disponibili":534,"regolamentari":535,"aggiornato":"2026-05-20"},{"nome":"Alba","tipo":"Casa di reclusione - Giuseppe Montalto","lat":44.691542,"lng":8.025636,"tasso":87.0,"detenuti":41,"disponibili":47,"regolamentari":138,"aggiornato":"2026-05-20"},{"nome":"Milano San Vittore","tipo":"Casa circondariale - Francesco Di Cataldo","lat":45.461598,"lng":9.166399,"tasso":212.0,"detenuti":1020,"disponibili":482,"regolamentari":702,"aggiornato":"2026-05-20"},{"nome":"Belluno","tipo":"Casa circondariale","lat":46.139738,"lng":12.219297,"tasso":132.0,"detenuti":108,"disponibili":82,"regolamentari":86,"aggiornato":"2026-05-20"},{"nome":"Agrigento","tipo":"Casa circondariale - Pasquale Di Lorenzo","lat":37.319422,"lng":13.617396,"tasso":138.0,"detenuti":366,"disponibili":265,"regolamentari":283,"aggiornato":"2026-05-20"},{"nome":"Alessandria Cantiello, Gaeta","tipo":"Casa circondariale","lat":44.912923,"lng":8.615321,"tasso":109.0,"detenuti":255,"disponibili":233,"regolamentari":233,"aggiornato":"2026-05-20"},{"nome":"Alessandria San Michele","tipo":"Casa di reclusione","lat":44.912923,"lng":8.615321,"tasso":35.0,"detenuti":41,"disponibili":118,"regolamentari":269,"aggiornato":"2026-05-20"},{"nome":"Alghero","tipo":"Casa di reclusione - Giuseppe Tomasiello","lat":40.560021,"lng":8.315147,"tasso":99.0,"detenuti":154,"disponibili":156,"regolamentari":156,"aggiornato":"2026-05-20"},{"nome":"Ancona Montacuto","tipo":"Casa circondariale","lat":43.61934,"lng":13.52788,"tasso":135.0,"detenuti":345,"disponibili":255,"regolamentari":256,"aggiornato":"2026-05-20"},{"nome":"Ancona Barcaglione","tipo":"Casa di reclusione","lat":43.61336,"lng":13.44018,"tasso":87.0,"detenuti":87,"disponibili":100,"regolamentari":100,"aggiornato":"2026-05-20"},{"nome":"Arbus","tipo":"Casa di reclusione - località Is Arenas","lat":39.498751,"lng":8.479643,"tasso":101.0,"detenuti":127,"disponibili":126,"regolamentari":176,"aggiornato":"2026-05-20"},{"nome":"Arezzo","tipo":"Casa circondariale","lat":43.462896,"lng":11.878167,"tasso":195.0,"detenuti":43,"disponibili":22,"regolamentari":108,"aggiornato":"2026-05-20"},{"nome":"Ariano Irpino","tipo":"Casa circondariale - Pasquale Campanello","lat":41.12807,"lng":15.081699,"tasso":144.0,"detenuti":310,"disponibili":216,"regolamentari":263,"aggiornato":"2026-05-20"},{"nome":"Arienzo","tipo":"Casa di reclusione - Gennaro De Angelis","lat":41.024257,"lng":14.497052,"tasso":136.0,"detenuti":79,"disponibili":58,"regolamentari":58,"aggiornato":"2026-05-20"},{"nome":"Ascoli Piceno","tipo":"Casa circondariale","lat":42.854619,"lng":13.575504,"tasso":136.0,"detenuti":140,"disponibili":103,"regolamentari":103,"aggiornato":"2026-05-20"},{"nome":"Asti","tipo":"Casa di reclusione","lat":44.900542,"lng":8.206888,"tasso":133.0,"detenuti":268,"disponibili":201,"regolamentari":205,"aggiornato":"2026-05-20"},{"nome":"Augusta","tipo":"Casa di reclusione","lat":37.236936,"lng":15.219658,"tasso":172.0,"detenuti":588,"disponibili":341,"regolamentari":364,"aggiornato":"2026-05-20"},{"nome":"Benevento","tipo":"Casa circondariale - Michele Gaglione","lat":41.129559,"lng":14.782464,"tasso":155.0,"detenuti":384,"disponibili":247,"regolamentari":259,"aggiornato":"2026-05-20"},{"nome":"Rieti","tipo":"Casa circondariale - Nuovo Complesso","lat":42.401691,"lng":12.862999,"tasso":183.0,"detenuti":529,"disponibili":289,"regolamentari":295,"aggiornato":"2026-05-20"},{"nome":"Avellino","tipo":"Casa circondariale - Antimo Graziano Bellizzi","lat":40.914196,"lng":14.788876,"tasso":141.0,"detenuti":661,"disponibili":468,"regolamentari":503,"aggiornato":"2026-05-20"},{"nome":"Aversa","tipo":"Casa di reclusione - Filippo Saporito","lat":40.973212,"lng":14.204928,"tasso":131.0,"detenuti":307,"disponibili":234,"regolamentari":234,"aggiornato":"2026-05-20"},{"nome":"Civitavecchia Nuovo Complesso","tipo":"Casa circondariale","lat":42.093752,"lng":11.792246,"tasso":181.0,"detenuti":628,"disponibili":347,"regolamentari":358,"aggiornato":"2026-05-20"},{"nome":"Barcellona Pozzo di Gotto","tipo":"Casa circondariale - Vittorio Madia","lat":38.15123,"lng":15.227888,"tasso":86.0,"detenuti":236,"disponibili":274,"regolamentari":387,"aggiornato":"2026-05-20"},{"nome":"Altamura","tipo":"Casa di reclusione","lat":40.828363,"lng":16.55235,"tasso":184.0,"detenuti":90,"disponibili":49,"regolamentari":52,"aggiornato":"2026-05-20"},{"nome":"Busto Arsizio","tipo":"Casa circondariale","lat":45.611906,"lng":8.852052,"tasso":202.0,"detenuti":439,"disponibili":217,"regolamentari":240,"aggiornato":"2026-05-20"},{"nome":"Biella","tipo":"Casa circondariale","lat":45.566411,"lng":8.054276,"tasso":141.0,"detenuti":554,"disponibili":392,"regolamentari":392,"aggiornato":"2026-05-20"},{"nome":"Bollate","tipo":"Casa di reclusione - IIª casa","lat":45.543835,"lng":9.117707,"tasso":126.0,"detenuti":1597,"disponibili":1267,"regolamentari":1267,"aggiornato":"2026-05-20"},{"nome":"Bologna","tipo":"Casa circondariale - Rocco D'Amato","lat":44.493671,"lng":11.343035,"tasso":175.0,"detenuti":830,"disponibili":473,"regolamentari":507,"aggiornato":"2026-05-20"},{"nome":"Bolzano","tipo":"Casa circondariale","lat":46.491774,"lng":11.346817,"tasso":141.0,"detenuti":124,"disponibili":88,"regolamentari":88,"aggiornato":"2026-05-20"},{"nome":"Brescia Canton Monbello","tipo":"Casa circondariale - Nerio Fischione","lat":45.53254,"lng":10.234068,"tasso":204.0,"detenuti":371,"disponibili":182,"regolamentari":182,"aggiornato":"2026-05-20"},{"nome":"Brescia Verziano","tipo":"Casa di reclusione","lat":45.499606,"lng":10.187768,"tasso":179.0,"detenuti":127,"disponibili":71,"regolamentari":71,"aggiornato":"2026-05-20"},{"nome":"Brindisi","tipo":"Casa circondariale","lat":40.63953,"lng":17.945526,"tasso":174.0,"detenuti":265,"disponibili":152,"regolamentari":152,"aggiornato":"2026-05-20"},{"nome":"Brissogne - Aosta","tipo":"Casa circondariale","lat":45.72852,"lng":7.406663,"tasso":86.0,"detenuti":150,"disponibili":175,"regolamentari":181,"aggiornato":"2026-05-20"},{"nome":"Bergamo","tipo":"Casa circondariale","lat":45.756656,"lng":9.754219,"tasso":186.0,"detenuti":592,"disponibili":319,"regolamentari":319,"aggiornato":"2026-05-20"},{"nome":"Cagliari Uta","tipo":"Casa circondariale - Ettore Scalas","lat":39.169419,"lng":8.939449,"tasso":132.0,"detenuti":739,"disponibili":559,"regolamentari":561,"aggiornato":"2026-05-20"},{"nome":"Caltagirone","tipo":"Casa circondariale","lat":37.237201,"lng":14.513202,"tasso":121.0,"detenuti":450,"disponibili":372,"regolamentari":541,"aggiornato":"2026-05-20"},{"nome":"Caltanissetta","tipo":"Casa circondariale","lat":37.494383,"lng":14.056156,"tasso":142.0,"detenuti":260,"disponibili":183,"regolamentari":183,"aggiornato":"2026-05-20"},{"nome":"Campobasso","tipo":"Casa circondariale","lat":41.555686,"lng":14.661722,"tasso":176.0,"detenuti":180,"disponibili":102,"regolamentari":106,"aggiornato":"2026-05-20"},{"nome":"Carinola","tipo":"Casa di reclusione - Gian Battista Novelli","lat":41.186987,"lng":13.981213,"tasso":118.0,"detenuti":534,"disponibili":452,"regolamentari":563,"aggiornato":"2026-05-20"},{"nome":"Cassino","tipo":"Casa circondariale","lat":41.492558,"lng":13.83053,"tasso":175.0,"detenuti":156,"disponibili":89,"regolamentari":200,"aggiornato":"2026-05-20"},{"nome":"Castelfranco Emilia","tipo":"Casa di reclusione","lat":44.595025,"lng":11.052901,"tasso":64.0,"detenuti":96,"disponibili":149,"regolamentari":191,"aggiornato":"2026-05-20"},{"nome":"Castelvetrano","tipo":"Casa circondariale","lat":37.682851,"lng":12.795534,"tasso":157.0,"detenuti":69,"disponibili":44,"regolamentari":44,"aggiornato":"2026-05-20"},{"nome":"Castrovillari","tipo":"Casa circondariale - Rosa Sisca","lat":39.836025,"lng":16.221062,"tasso":170.0,"detenuti":119,"disponibili":70,"regolamentari":122,"aggiornato":"2026-05-20"},{"nome":"Catania Bicocca","tipo":"Casa circondariale","lat":37.505705,"lng":14.944202,"tasso":123.0,"detenuti":163,"disponibili":132,"regolamentari":136,"aggiornato":"2026-05-20"},{"nome":"Catania Piazza Lanza","tipo":"Casa circondariale","lat":37.505705,"lng":14.944202,"tasso":171.0,"detenuti":478,"disponibili":279,"regolamentari":279,"aggiornato":"2026-05-20"},{"nome":"Catanzaro","tipo":"Casa circondariale - Ugo Caridi","lat":38.907635,"lng":16.596046,"tasso":111.0,"detenuti":726,"disponibili":652,"regolamentari":682,"aggiornato":"2026-05-20"},{"nome":"Crotone","tipo":"Casa circondariale","lat":39.080622,"lng":17.127196,"tasso":133.0,"detenuti":84,"disponibili":63,"regolamentari":99,"aggiornato":"2026-05-20"},{"nome":"Cosenza","tipo":"Casa circondariale - Sergio Cosmai","lat":39.309993,"lng":16.250193,"tasso":128.0,"detenuti":277,"disponibili":217,"regolamentari":220,"aggiornato":"2026-05-20"},{"nome":"Chiavari","tipo":"Casa di reclusione","lat":44.316449,"lng":9.323338,"tasso":129.0,"detenuti":67,"disponibili":52,"regolamentari":52,"aggiornato":"2026-05-20"},{"nome":"Chieti","tipo":"Casa circondariale","lat":42.344653,"lng":14.165974,"tasso":186.0,"detenuti":147,"disponibili":79,"regolamentari":79,"aggiornato":"2026-05-20"},{"nome":"Civitavecchia Giuseppe Passerini","tipo":"Casa di reclusione","lat":42.098986,"lng":11.786755,"tasso":54.0,"detenuti":78,"disponibili":144,"regolamentari":172,"aggiornato":"2026-05-20"},{"nome":"Como","tipo":"Casa circondariale","lat":45.939476,"lng":9.14941,"tasso":176.0,"detenuti":395,"disponibili":225,"regolamentari":225,"aggiornato":"2026-05-20"},{"nome":"Cremona","tipo":"Casa circondariale","lat":45.13348,"lng":10.024872,"tasso":157.0,"detenuti":601,"disponibili":384,"regolamentari":394,"aggiornato":"2026-05-20"},{"nome":"Cuneo","tipo":"Casa circondariale","lat":44.64319,"lng":7.436454,"tasso":105.0,"detenuti":399,"disponibili":381,"regolamentari":433,"aggiornato":"2026-05-20"},{"nome":"Eboli","tipo":"Casa di reclusione","lat":40.617515,"lng":15.056944,"tasso":78.0,"detenuti":42,"disponibili":54,"regolamentari":54,"aggiornato":"2026-05-20"},{"nome":"Enna","tipo":"Casa circondariale - Luigi Bodenza","lat":37.566757,"lng":14.280747,"tasso":141.0,"detenuti":204,"disponibili":145,"regolamentari":167,"aggiornato":"2026-05-20"},{"nome":"Favignana","tipo":"Casa di reclusione - Giuseppe Barraco","lat":37.93145,"lng":12.327365,"tasso":119.0,"detenuti":105,"disponibili":88,"regolamentari":89,"aggiornato":"2026-05-20"},{"nome":"Fermo","tipo":"Casa di reclusione","lat":43.092249,"lng":13.638768,"tasso":177.0,"detenuti":76,"disponibili":43,"regolamentari":43,"aggiornato":"2026-05-20"},{"nome":"Ferrara","tipo":"Casa circondariale - Costantino Satta","lat":44.842347,"lng":11.582288,"tasso":169.0,"detenuti":410,"disponibili":243,"regolamentari":243,"aggiornato":"2026-05-20"},{"nome":"Firenze Sollicciano","tipo":"Casa circondariale","lat":43.769451,"lng":11.17403,"tasso":169.0,"detenuti":618,"disponibili":366,"regolamentari":502,"aggiornato":"2026-05-20"},{"nome":"Firenze Mario Gozzini","tipo":"Casa circondariale","lat":43.769871,"lng":11.255576,"tasso":150.0,"detenuti":111,"disponibili":74,"regolamentari":89,"aggiornato":"2026-05-20"},{"nome":"Foggia","tipo":"Casa circondariale","lat":41.502811,"lng":15.4529,"tasso":221.0,"detenuti":666,"disponibili":302,"regolamentari":364,"aggiornato":"2026-05-20"},{"nome":"Forlì","tipo":"Casa circondariale","lat":44.222602,"lng":12.040938,"tasso":118.0,"detenuti":155,"disponibili":131,"regolamentari":144,"aggiornato":"2026-05-20"},{"nome":"Fossano","tipo":"Casa di reclusione","lat":44.549349,"lng":7.725015,"tasso":82.0,"detenuti":111,"disponibili":136,"regolamentari":136,"aggiornato":"2026-05-20"},{"nome":"Fossombrone","tipo":"Casa di reclusione","lat":43.687736,"lng":12.822933,"tasso":117.0,"detenuti":182,"disponibili":156,"regolamentari":156,"aggiornato":"2026-05-20"},{"nome":"Frosinone","tipo":"Casa circondariale - Giuseppe Pagliei","lat":41.641981,"lng":13.346929,"tasso":134.0,"detenuti":676,"disponibili":506,"regolamentari":521,"aggiornato":"2026-05-20"},{"nome":"Gela","tipo":"Casa circondariale","lat":37.066436,"lng":14.250245,"tasso":173.0,"detenuti":83,"disponibili":48,"regolamentari":48,"aggiornato":"2026-05-20"},{"nome":"Genova Pontedecimo","tipo":"Casa circondariale","lat":44.494119,"lng":8.905409,"tasso":159.0,"detenuti":153,"disponibili":96,"regolamentari":96,"aggiornato":"2026-05-20"},{"nome":"Giarre","tipo":"Casa circondariale","lat":37.726857,"lng":15.187688,"tasso":156.0,"detenuti":67,"disponibili":43,"regolamentari":58,"aggiornato":"2026-05-20"},{"nome":"Gorizia","tipo":"Casa circondariale - Angiolo Bigazzi","lat":45.944128,"lng":13.625229,"tasso":127.0,"detenuti":80,"disponibili":63,"regolamentari":63,"aggiornato":"2026-05-20"},{"nome":"Grosseto","tipo":"Casa circondariale","lat":42.759726,"lng":11.113739,"tasso":207.0,"detenuti":31,"disponibili":15,"regolamentari":15,"aggiornato":"2026-05-20"},{"nome":"Imperia","tipo":"Casa circondariale","lat":43.886296,"lng":8.026711,"tasso":121.0,"detenuti":64,"disponibili":53,"regolamentari":53,"aggiornato":"2026-05-20"},{"nome":"Isernia","tipo":"Casa circondariale","lat":41.600216,"lng":14.238217,"tasso":177.0,"detenuti":78,"disponibili":44,"regolamentari":44,"aggiornato":"2026-05-20"},{"nome":"Isili","tipo":"Casa di reclusione","lat":39.740405,"lng":9.10859,"tasso":114.0,"detenuti":122,"disponibili":107,"regolamentari":130,"aggiornato":"2026-05-20"},{"nome":"Ivrea","tipo":"Casa circondariale","lat":45.467379,"lng":7.874797,"tasso":147.0,"detenuti":258,"disponibili":175,"regolamentari":195,"aggiornato":"2026-05-20"},{"nome":"La Spezia","tipo":"Casa circondariale","lat":44.107033,"lng":9.828226,"tasso":148.0,"detenuti":223,"disponibili":151,"regolamentari":152,"aggiornato":"2026-05-20"},{"nome":"Lanciano","tipo":"Casa circondariale","lat":42.230532,"lng":14.390779,"tasso":117.0,"detenuti":260,"disponibili":223,"regolamentari":223,"aggiornato":"2026-05-20"},{"nome":"Lanusei","tipo":"Casa circondariale - San Daniele","lat":39.878571,"lng":9.541077,"tasso":112.0,"detenuti":37,"disponibili":33,"regolamentari":33,"aggiornato":"2026-05-20"},{"nome":"L'Aquila","tipo":"Casa circondariale","lat":42.34892,"lng":13.397967,"tasso":84.0,"detenuti":174,"disponibili":208,"regolamentari":214,"aggiornato":"2026-05-20"},{"nome":"Larino","tipo":"Casa circondariale","lat":41.805567,"lng":14.921098,"tasso":147.0,"detenuti":160,"disponibili":109,"regolamentari":119,"aggiornato":"2026-05-20"},{"nome":"Latina","tipo":"Casa circondariale","lat":41.460836,"lng":12.899352,"tasso":196.0,"detenuti":151,"disponibili":77,"regolamentari":77,"aggiornato":"2026-05-20"},{"nome":"Laureana di Borrello","tipo":"Casa di reclusione - Luigi Daga","lat":38.492577,"lng":16.082098,"tasso":154.0,"detenuti":57,"disponibili":37,"regolamentari":37,"aggiornato":"2026-05-20"},{"nome":"Lauro","tipo":"Istituto custodia attenuata per madri","lat":40.879968,"lng":14.629467,"tasso":18.0,"detenuti":9,"disponibili":50,"regolamentari":50,"aggiornato":"2026-05-20"},{"nome":"Lecce","tipo":"Casa circondariale - Nuovo Complesso","lat":40.376797,"lng":18.156339,"tasso":180.0,"detenuti":1419,"disponibili":787,"regolamentari":798,"aggiornato":"2026-05-20"},{"nome":"Lecco","tipo":"Casa circondariale","lat":45.855376,"lng":9.389605,"tasso":160.0,"detenuti":83,"disponibili":52,"regolamentari":53,"aggiornato":"2026-05-20"},{"nome":"Livorno","tipo":"Casa circondariale","lat":43.550741,"lng":10.309146,"tasso":154.0,"detenuti":229,"disponibili":149,"regolamentari":391,"aggiornato":"2026-05-20"},{"nome":"Livorno Gorgona","tipo":"Casa di reclusione","lat":43.429597,"lng":9.898708,"tasso":129.0,"detenuti":115,"disponibili":89,"regolamentari":89,"aggiornato":"2026-05-20"},{"nome":"Locri","tipo":"Casa circondariale","lat":38.238537,"lng":16.265509,"tasso":156.0,"detenuti":125,"disponibili":80,"regolamentari":86,"aggiornato":"2026-05-20"},{"nome":"Onanì","tipo":"Casa di reclusione - Onanì-Mamone","lat":40.572595,"lng":9.4206,"tasso":90.0,"detenuti":188,"disponibili":210,"regolamentari":264,"aggiornato":"2026-05-20"},{"nome":"Lodi","tipo":"Casa circondariale","lat":45.313896,"lng":9.503263,"tasso":209.0,"detenuti":90,"disponibili":43,"regolamentari":45,"aggiornato":"2026-05-20"},{"nome":"Lucca","tipo":"Casa circondariale","lat":43.845701,"lng":10.499982,"tasso":243.0,"detenuti":90,"disponibili":37,"regolamentari":59,"aggiornato":"2026-05-20"},{"nome":"Lucera","tipo":"Casa circondariale","lat":41.511408,"lng":15.333575,"tasso":137.0,"detenuti":177,"disponibili":129,"regolamentari":135,"aggiornato":"2026-05-20"},{"nome":"Mantova","tipo":"Casa circondariale","lat":45.156668,"lng":10.791719,"tasso":145.0,"detenuti":133,"disponibili":92,"regolamentari":97,"aggiornato":"2026-05-20"},{"nome":"Massa","tipo":"Casa di reclusione","lat":44.023103,"lng":10.137166,"tasso":168.0,"detenuti":294,"disponibili":175,"regolamentari":177,"aggiornato":"2026-05-20"},{"nome":"Massa Marittima","tipo":"Casa circondariale","lat":43.043805,"lng":10.902323,"tasso":123.0,"detenuti":59,"disponibili":48,"regolamentari":48,"aggiornato":"2026-05-20"},{"nome":"Matera","tipo":"Casa circondariale","lat":40.676213,"lng":16.605999,"tasso":170.0,"detenuti":208,"disponibili":122,"regolamentari":132,"aggiornato":"2026-05-20"},{"nome":"Melfi","tipo":"Casa circondariale","lat":40.996196,"lng":15.655636,"tasso":161.0,"detenuti":108,"disponibili":67,"regolamentari":126,"aggiornato":"2026-05-20"},{"nome":"Messina","tipo":"Casa circondariale","lat":38.048433,"lng":15.004347,"tasso":113.0,"detenuti":241,"disponibili":214,"regolamentari":302,"aggiornato":"2026-05-20"},{"nome":"Milano San Vittore femminile","tipo":"Casa circondariale - Francesco Di Cataldo","lat":45.461598,"lng":9.166399,"tasso":189.0,"detenuti":87,"disponibili":46,"regolamentari":46,"aggiornato":"2026-05-20"},{"nome":"Modena","tipo":"Casa circondariale","lat":44.67086,"lng":10.919071,"tasso":162.0,"detenuti":522,"disponibili":323,"regolamentari":371,"aggiornato":"2026-05-20"},{"nome":"Monza","tipo":"Casa circondariale","lat":45.560424,"lng":9.281253,"tasso":169.0,"detenuti":688,"disponibili":407,"regolamentari":413,"aggiornato":"2026-05-20"},{"nome":"Napoli Poggioreale","tipo":"Casa circondariale - Giuseppe Salvia","lat":40.859981,"lng":14.279375,"tasso":168.0,"detenuti":2258,"disponibili":1341,"regolamentari":1616,"aggiornato":"2026-05-20"},{"nome":"Napoli Secondigliano","tipo":"Casa circondariale - Pasquale Mandato","lat":40.910478,"lng":14.245872,"tasso":142.0,"detenuti":1575,"disponibili":1111,"regolamentari":1112,"aggiornato":"2026-05-20"},{"nome":"Noto","tipo":"Casa di reclusione - Attilio Bonincontro","lat":36.893413,"lng":15.072084,"tasso":95.0,"detenuti":152,"disponibili":160,"regolamentari":176,"aggiornato":"2026-05-20"},{"nome":"Novara","tipo":"Casa circondariale","lat":45.43538,"lng":8.637888,"tasso":111.0,"detenuti":173,"disponibili":156,"regolamentari":156,"aggiornato":"2026-05-20"},{"nome":"Nuoro","tipo":"Casa circondariale","lat":40.314211,"lng":9.30415,"tasso":19.0,"detenuti":51,"disponibili":274,"regolamentari":378,"aggiornato":"2026-05-20"},{"nome":"Opera","tipo":"Casa di reclusione - Iª casa","lat":45.373069,"lng":9.211149,"tasso":154.0,"detenuti":1401,"disponibili":908,"regolamentari":918,"aggiornato":"2026-05-20"},{"nome":"Oristano","tipo":"Casa di reclusione - Salvatore Soro","lat":39.940788,"lng":8.612012,"tasso":97.0,"detenuti":254,"disponibili":261,"regolamentari":264,"aggiornato":"2026-05-20"},{"nome":"Orvieto","tipo":"Casa di reclusione","lat":42.721105,"lng":12.115064,"tasso":123.0,"detenuti":121,"disponibili":98,"regolamentari":98,"aggiornato":"2026-05-20"},{"nome":"Padova","tipo":"Casa circondariale","lat":45.445153,"lng":11.841371,"tasso":131.0,"detenuti":234,"disponibili":178,"regolamentari":188,"aggiornato":"2026-05-20"},{"nome":"Padova Nuovo Complesso","tipo":"Casa di reclusione","lat":45.44365,"lng":11.845284,"tasso":151.0,"detenuti":654,"disponibili":432,"regolamentari":432,"aggiornato":"2026-05-20"},{"nome":"Palermo Pagliarelli","tipo":"Casa circondariale - Antonio Lorusso","lat":38.09077,"lng":13.33932,"tasso":127.0,"detenuti":1388,"disponibili":1095,"regolamentari":1166,"aggiornato":"2026-05-20"},{"nome":"Palermo Ucciardone","tipo":"Casa di reclusione - Calogero Di Bona","lat":38.132894,"lng":13.357696,"tasso":107.0,"detenuti":563,"disponibili":527,"regolamentari":569,"aggiornato":"2026-05-20"},{"nome":"Paliano","tipo":"Casa di reclusione","lat":41.806023,"lng":13.058068,"tasso":42.0,"detenuti":61,"disponibili":146,"regolamentari":153,"aggiornato":"2026-05-20"},{"nome":"Palmi","tipo":"Casa circondariale - Filippo Salsone","lat":38.367325,"lng":15.85893,"tasso":107.0,"detenuti":128,"disponibili":120,"regolamentari":141,"aggiornato":"2026-05-20"},{"nome":"Paola","tipo":"Casa circondariale","lat":39.359893,"lng":16.039588,"tasso":151.0,"detenuti":240,"disponibili":159,"regolamentari":181,"aggiornato":"2026-05-20"},{"nome":"Parma","tipo":"Casa di reclusione","lat":44.816749,"lng":10.365222,"tasso":122.0,"detenuti":795,"disponibili":649,"regolamentari":655,"aggiornato":"2026-05-20"},{"nome":"Voghera","tipo":"Casa circondariale - Nuovo Complesso","lat":44.997895,"lng":8.992522,"tasso":122.0,"detenuti":420,"disponibili":345,"regolamentari":346,"aggiornato":"2026-05-20"},{"nome":"Perugia","tipo":"Casa circondariale - Nuovo complesso penitenziario Capanne","lat":43.053175,"lng":12.262603,"tasso":159.0,"detenuti":487,"disponibili":307,"regolamentari":363,"aggiornato":"2026-05-20"},{"nome":"Pesaro","tipo":"Casa circondariale","lat":43.873595,"lng":12.855242,"tasso":178.0,"detenuti":256,"disponibili":144,"regolamentari":156,"aggiornato":"2026-05-20"},{"nome":"Pescara","tipo":"Casa circondariale","lat":42.450632,"lng":14.215016,"tasso":164.0,"detenuti":398,"disponibili":243,"regolamentari":276,"aggiornato":"2026-05-20"},{"nome":"Piacenza","tipo":"Casa circondariale - San Lazzaro","lat":45.053475,"lng":9.694746,"tasso":139.0,"detenuti":572,"disponibili":411,"regolamentari":414,"aggiornato":"2026-05-20"},{"nome":"Piazza Armerina","tipo":"Casa circondariale","lat":37.385946,"lng":14.367174,"tasso":136.0,"detenuti":64,"disponibili":47,"regolamentari":48,"aggiornato":"2026-05-20"},{"nome":"Volterra","tipo":"Casa di reclusione","lat":43.400337,"lng":10.860019,"tasso":96.0,"detenuti":181,"disponibili":188,"regolamentari":189,"aggiornato":"2026-05-20"},{"nome":"Pistoia","tipo":"Casa circondariale","lat":43.939041,"lng":10.915505,"tasso":113.0,"detenuti":86,"disponibili":76,"regolamentari":76,"aggiornato":"2026-05-20"},{"nome":"Pordenone","tipo":"Casa circondariale","lat":45.956103,"lng":12.662657,"tasso":138.0,"detenuti":51,"disponibili":37,"regolamentari":37,"aggiornato":"2026-05-20"},{"nome":"Porto Azzurro","tipo":"Casa di reclusione - Pasquale De Santis","lat":42.765521,"lng":10.402891,"tasso":123.0,"detenuti":412,"disponibili":334,"regolamentari":334,"aggiornato":"2026-05-20"},{"nome":"Potenza","tipo":"Casa circondariale - Antonio Santoro","lat":40.641368,"lng":15.824158,"tasso":165.0,"detenuti":177,"disponibili":107,"regolamentari":107,"aggiornato":"2026-05-20"},{"nome":"Prato","tipo":"Casa circondariale","lat":43.903455,"lng":11.064407,"tasso":113.0,"detenuti":615,"disponibili":542,"regolamentari":589,"aggiornato":"2026-05-20"},{"nome":"Ragusa","tipo":"Casa circondariale","lat":36.91458,"lng":14.723725,"tasso":111.0,"detenuti":204,"disponibili":183,"regolamentari":196,"aggiornato":"2026-05-20"},{"nome":"Ravenna","tipo":"Casa circondariale","lat":44.41458,"lng":12.192138,"tasso":167.0,"detenuti":82,"disponibili":49,"regolamentari":49,"aggiornato":"2026-05-20"},{"nome":"Reggio Calabria Arghillà","tipo":"Casa circondariale","lat":38.192951,"lng":15.681927,"tasso":133.0,"detenuti":367,"disponibili":275,"regolamentari":294,"aggiornato":"2026-05-20"},{"nome":"Reggio Calabria Giuseppe Panzera","tipo":"Casa circondariale","lat":38.103539,"lng":15.639756,"tasso":86.0,"detenuti":137,"disponibili":159,"regolamentari":180,"aggiornato":"2026-05-20"},{"nome":"Rimini","tipo":"Casa circondariale","lat":44.059389,"lng":12.568437,"tasso":142.0,"detenuti":168,"disponibili":118,"regolamentari":118,"aggiornato":"2026-05-20"},{"nome":"Roma Rebibbia femminile","tipo":"Casa circondariale - Germana Stefanini","lat":41.934512,"lng":12.574066,"tasso":159.0,"detenuti":371,"disponibili":234,"regolamentari":272,"aggiornato":"2026-05-20"},{"nome":"Roma Rebibbia IIIª casa","tipo":"Casa circondariale","lat":41.934512,"lng":12.574066,"tasso":77.0,"detenuti":102,"disponibili":132,"regolamentari":172,"aggiornato":"2026-05-20"},{"nome":"Roma Rebibbia Nuovo Complesso","tipo":"Casa circondariale - Raffaele Cinotti","lat":41.934512,"lng":12.574066,"tasso":153.0,"detenuti":1636,"disponibili":1068,"regolamentari":1171,"aggiornato":"2026-05-20"},{"nome":"Roma Rebibbia","tipo":"Casa di reclusione","lat":41.934512,"lng":12.574066,"tasso":111.0,"detenuti":292,"disponibili":263,"regolamentari":445,"aggiornato":"2026-05-20"},{"nome":"Roma Regina Coeli","tipo":"Casa circondariale","lat":41.89522,"lng":12.463861,"tasso":171.0,"detenuti":976,"disponibili":572,"regolamentari":628,"aggiornato":"2026-05-20"},{"nome":"Rossano","tipo":"Casa di reclusione - Nuovo Complesso","lat":39.574682,"lng":16.634865,"tasso":121.0,"detenuti":317,"disponibili":263,"regolamentari":263,"aggiornato":"2026-05-20"},{"nome":"Rovigo","tipo":"Casa circondariale","lat":45.084333,"lng":11.813009,"tasso":131.0,"detenuti":271,"disponibili":207,"regolamentari":209,"aggiornato":"2026-05-20"},{"nome":"Salerno","tipo":"Casa circondariale - Antonio Caputo","lat":40.652118,"lng":14.850329,"tasso":159.0,"detenuti":599,"disponibili":376,"regolamentari":376,"aggiornato":"2026-05-20"},{"nome":"Saluzzo","tipo":"Casa di reclusione - Rodolfo Morandi","lat":44.644605,"lng":7.492601,"tasso":85.0,"detenuti":349,"disponibili":412,"regolamentari":420,"aggiornato":"2026-05-20"},{"nome":"San Cataldo","tipo":"Casa di reclusione","lat":37.488445,"lng":13.993065,"tasso":88.0,"detenuti":103,"disponibili":117,"regolamentari":135,"aggiornato":"2026-05-20"},{"nome":"San Gimignano","tipo":"Casa di reclusione","lat":43.426336,"lng":11.023551,"tasso":148.0,"detenuti":330,"disponibili":223,"regolamentari":243,"aggiornato":"2026-05-20"},{"nome":"Sanremo","tipo":"Casa di reclusione - Nuovo Complesso","lat":43.819825,"lng":7.774883,"tasso":123.0,"detenuti":269,"disponibili":219,"regolamentari":223,"aggiornato":"2026-05-20"},{"nome":"San Severo","tipo":"Casa circondariale","lat":41.689321,"lng":15.370827,"tasso":144.0,"detenuti":88,"disponibili":61,"regolamentari":61,"aggiornato":"2026-05-20"},{"nome":"Santa Maria Capua Vetere","tipo":"Casa circondariale - Francesco Uccella","lat":41.043257,"lng":14.235039,"tasso":153.0,"detenuti":1034,"disponibili":676,"regolamentari":826,"aggiornato":"2026-05-20"},{"nome":"Sant'Angelo dei Lombardi","tipo":"Casa di reclusione - Famiglietti, Forgetta, Bartolo","lat":40.91014,"lng":15.189285,"tasso":155.0,"detenuti":178,"disponibili":115,"regolamentari":124,"aggiornato":"2026-05-20"},{"nome":"Sassari","tipo":"Casa circondariale - Giovanni Bacchiddu","lat":40.720201,"lng":8.551483,"tasso":125.0,"detenuti":571,"disponibili":458,"regolamentari":458,"aggiornato":"2026-05-20"},{"nome":"Sciacca","tipo":"Casa circondariale","lat":37.506479,"lng":13.082332,"tasso":120.0,"detenuti":24,"disponibili":20,"regolamentari":73,"aggiornato":"2026-05-20"},{"nome":"Siena","tipo":"Casa circondariale","lat":43.318146,"lng":11.337941,"tasso":112.0,"detenuti":65,"disponibili":58,"regolamentari":58,"aggiornato":"2026-05-20"},{"nome":"Siracusa","tipo":"Casa circondariale","lat":37.034874,"lng":15.162612,"tasso":126.0,"detenuti":685,"disponibili":545,"regolamentari":545,"aggiornato":"2026-05-20"},{"nome":"Sondrio","tipo":"Casa circondariale","lat":46.323362,"lng":10.258414,"tasso":167.0,"detenuti":40,"disponibili":24,"regolamentari":26,"aggiornato":"2026-05-20"},{"nome":"Spoleto","tipo":"Casa di reclusione","lat":42.781131,"lng":12.727109,"tasso":113.0,"detenuti":516,"disponibili":456,"regolamentari":456,"aggiornato":"2026-05-20"},{"nome":"Sulmona","tipo":"Casa di reclusione","lat":42.06854,"lng":13.927974,"tasso":128.0,"detenuti":667,"disponibili":523,"regolamentari":523,"aggiornato":"2026-05-20"},{"nome":"Taranto","tipo":"Casa circondariale - Carmelo Magli","lat":40.455749,"lng":17.293884,"tasso":197.0,"detenuti":845,"disponibili":430,"regolamentari":500,"aggiornato":"2026-05-20"},{"nome":"Tempio Pausania","tipo":"Casa di reclusione - Paolo Pittalis","lat":40.897382,"lng":9.103516,"tasso":104.0,"detenuti":170,"disponibili":163,"regolamentari":163,"aggiornato":"2026-05-20"},{"nome":"Teramo","tipo":"Casa circondariale","lat":42.661289,"lng":13.698352,"tasso":179.0,"detenuti":451,"disponibili":252,"regolamentari":255,"aggiornato":"2026-05-20"},{"nome":"Termini Imerese","tipo":"Casa circondariale - Antonino Burrafato","lat":37.983651,"lng":13.695554,"tasso":116.0,"detenuti":107,"disponibili":92,"regolamentari":95,"aggiornato":"2026-05-20"},{"nome":"Terni","tipo":"Casa circondariale","lat":42.554575,"lng":12.598244,"tasso":136.0,"detenuti":576,"disponibili":423,"regolamentari":423,"aggiornato":"2026-05-20"},{"nome":"Tolmezzo","tipo":"Casa circondariale","lat":46.418571,"lng":13.018053,"tasso":126.0,"detenuti":186,"disponibili":148,"regolamentari":148,"aggiornato":"2026-05-20"},{"nome":"Torino","tipo":"Casa circondariale - Lorusso Cutugno","lat":45.101337,"lng":7.619962,"tasso":137.0,"detenuti":1491,"disponibili":1092,"regolamentari":1119,"aggiornato":"2026-05-20"},{"nome":"Trani","tipo":"Casa circondariale","lat":41.275354,"lng":16.395945,"tasso":148.0,"detenuti":440,"disponibili":297,"regolamentari":447,"aggiornato":"2026-05-20"},{"nome":"Trani femminile","tipo":"Casa di reclusione","lat":41.275354,"lng":16.395945,"tasso":141.0,"detenuti":45,"disponibili":32,"regolamentari":32,"aggiornato":"2026-05-20"},{"nome":"Trapani","tipo":"Casa circondariale - Pietro Cerulli","lat":38.016054,"lng":12.543748,"tasso":115.0,"detenuti":556,"disponibili":482,"regolamentari":555,"aggiornato":"2026-05-20"},{"nome":"Trento","tipo":"Casa circondariale - Spini di Gardolo","lat":46.12681,"lng":11.094241,"tasso":99.0,"detenuti":419,"disponibili":422,"regolamentari":422,"aggiornato":"2026-05-20"},{"nome":"Treviso","tipo":"Casa circondariale","lat":45.673017,"lng":12.230062,"tasso":167.0,"detenuti":221,"disponibili":132,"regolamentari":132,"aggiornato":"2026-05-20"},{"nome":"Trieste","tipo":"Casa circondariale - Ernesto Mari","lat":45.655679,"lng":13.780733,"tasso":184.0,"detenuti":248,"disponibili":135,"regolamentari":150,"aggiornato":"2026-05-20"},{"nome":"Udine","tipo":"Casa circondariale - Antonio Santoro","lat":46.067115,"lng":13.248054,"tasso":197.0,"detenuti":169,"disponibili":86,"regolamentari":89,"aggiornato":"2026-05-20"},{"nome":"Bari","tipo":"Casa circondariale - Francesco Rucci","lat":41.125784,"lng":16.862029,"tasso":166.0,"detenuti":429,"disponibili":259,"regolamentari":296,"aggiornato":"2026-05-20"},{"nome":"Turi","tipo":"Casa di reclusione","lat":40.917324,"lng":17.018931,"tasso":169.0,"detenuti":182,"disponibili":108,"regolamentari":108,"aggiornato":"2026-05-20"},{"nome":"Vallo della Lucania","tipo":"Casa circondariale - Alfredo Paragano","lat":40.229704,"lng":15.26576,"tasso":150.0,"detenuti":60,"disponibili":40,"regolamentari":40,"aggiornato":"2026-05-20"},{"nome":"Varese","tipo":"Casa circondariale","lat":45.817536,"lng":8.826344,"tasso":202.0,"detenuti":107,"disponibili":53,"regolamentari":53,"aggiornato":"2026-05-20"},{"nome":"Vasto","tipo":"Casa di lavoro","lat":42.295596,"lng":14.446335,"tasso":78.0,"detenuti":153,"disponibili":195,"regolamentari":197,"aggiornato":"2026-05-20"},{"nome":"Velletri","tipo":"Casa circondariale","lat":41.612407,"lng":12.730587,"tasso":153.0,"detenuti":590,"disponibili":385,"regolamentari":412,"aggiornato":"2026-05-20"},{"nome":"Venezia Giudecca","tipo":"Casa di reclusione femminile","lat":45.426082,"lng":12.318262,"tasso":87.0,"detenuti":97,"disponibili":112,"regolamentari":112,"aggiornato":"2026-05-20"},{"nome":"Venezia Santa Maria Maggiore","tipo":"Casa circondariale","lat":45.435422,"lng":12.317243,"tasso":168.0,"detenuti":265,"disponibili":158,"regolamentari":159,"aggiornato":"2026-05-20"},{"nome":"Verbania","tipo":"Casa circondariale","lat":45.922171,"lng":8.551679,"tasso":158.0,"detenuti":76,"disponibili":48,"regolamentari":53,"aggiornato":"2026-05-20"},{"nome":"Vercelli","tipo":"Casa circondariale","lat":45.306356,"lng":8.429095,"tasso":165.0,"detenuti":364,"disponibili":220,"regolamentari":229,"aggiornato":"2026-05-20"},{"nome":"Verona","tipo":"Casa circondariale - Montorio","lat":45.443453,"lng":11.048082,"tasso":190.0,"detenuti":635,"disponibili":334,"regolamentari":335,"aggiornato":"2026-05-20"},{"nome":"Vibo Valentia","tipo":"Casa circondariale - Nuovo Complesso","lat":38.677407,"lng":16.09248,"tasso":116.0,"detenuti":320,"disponibili":276,"regolamentari":406,"aggiornato":"2026-05-20"},{"nome":"Vicenza","tipo":"Casa circondariale - Filippo Del Papa","lat":45.551899,"lng":11.578008,"tasso":134.0,"detenuti":355,"disponibili":265,"regolamentari":276,"aggiornato":"2026-05-20"},{"nome":"Vigevano","tipo":"Casa di reclusione","lat":45.321107,"lng":8.811459,"tasso":113.0,"detenuti":17,"disponibili":15,"regolamentari":237,"aggiornato":"2026-05-20"},{"nome":"Viterbo","tipo":"Casa circondariale  N.C.  - Nicandro Izzo","lat":42.452565,"lng":12.094236,"tasso":167.0,"detenuti":663,"disponibili":396,"regolamentari":440,"aggiornato":"2026-05-20"},{"nome":"Reggio Emilia","tipo":"Istituti di pena - casa circondariale e di reclusione","lat":44.663936,"lng":10.639732,"tasso":131.0,"detenuti":307,"disponibili":234,"regolamentari":292,"aggiornato":"2026-05-20"},{"nome":"Avezzano","tipo":"Casa circondariale","lat":42.034796,"lng":13.426505,"tasso":142.0,"detenuti":75,"disponibili":53,"regolamentari":53,"aggiornato":"2026-05-20"},{"nome":"Pavia","tipo":"Casa circondariale","lat":45.20737,"lng":9.178873,"tasso":145.0,"detenuti":742,"disponibili":512,"regolamentari":515,"aggiornato":"2026-05-20"},{"nome":"Pisa","tipo":"Casa circondariale","lat":43.718514,"lng":10.414029,"tasso":158.0,"detenuti":293,"disponibili":185,"regolamentari":195,"aggiornato":"2026-05-20"}];
+
 const COLORS = {
   'Suicidio':            '#e74c3c',
   'Malattia':            '#3498db',
@@ -655,6 +925,190 @@ const CAT_LABELS = Object.keys(COLORS);
 let activeCategories = new Set(CAT_LABELS);
 let markerMap = {};
 let clusterGroup;
+
+// ─── Overcrowding layer ──────────────────────────────────────────────────────
+var overcrowdingVisible = false;
+var overcrowdingLayerGroup = null;
+var ovrMarkers = [];
+var ovrActiveBuckets = {low: true, mid: true, high: true, extreme: true};
+
+function tassoColor(t) {
+  if (t >= 180) return '#e74c3c';
+  if (t >= 150) return '#e67e22';
+  if (t >= 120) return '#f39c12';
+  return '#27ae60';
+}
+
+function getSevBucket(t) {
+  if (t >= 180) return 'extreme';
+  if (t >= 150) return 'high';
+  if (t >= 120) return 'mid';
+  return 'low';
+}
+
+function applyOvrFilter() {
+  if (!overcrowdingLayerGroup) return;
+  overcrowdingLayerGroup.clearLayers();
+  for (var i = 0; i < ovrMarkers.length; i++) {
+    var m = ovrMarkers[i];
+    var bucket = getSevBucket(m._ovrTasso);
+    if (ovrActiveBuckets[bucket]) {
+      overcrowdingLayerGroup.addLayer(m);
+    }
+  }
+}
+
+function toggleOvrBucket(bucket) {
+  // Prevent deselecting all
+  var activeCount = 0;
+  for (var k in ovrActiveBuckets) { if (ovrActiveBuckets[k]) activeCount++; }
+  if (activeCount === 1 && ovrActiveBuckets[bucket]) return;
+
+  ovrActiveBuckets[bucket] = !ovrActiveBuckets[bucket];
+  var row = document.getElementById('ovr-row-' + bucket);
+  if (row) row.classList.toggle('inactive', !ovrActiveBuckets[bucket]);
+  applyOvrFilter();
+}
+
+function ovrMarkerSize(totalInmates) {
+  return Math.max(30, Math.min(68, Math.round(Math.sqrt(totalInmates) * 2.5)));
+}
+
+function makeOvrSVG(tasso, size, isCluster, count) {
+  var r = size / 2;
+  var cx = r, cy = r;
+  var outerR = r - 1;
+  var innerR = outerR * 0.48;
+  var sevColor = tassoColor(tasso);
+  var slices = '';
+
+  if (tasso <= 100) {
+    slices = '<circle cx="'+cx+'" cy="'+cy+'" r="'+outerR+'" fill="#27ae60" stroke="rgba(255,255,255,.6)" stroke-width="0.8"/>';
+  } else {
+    // Segment 1: within-capacity portion (100/tasso of the circle)
+    var withinSweep = (100 / tasso) * 360;
+    var p1 = polar(cx, cy, outerR, 0);
+    var p2 = polar(cx, cy, outerR, withinSweep);
+    var lg1 = withinSweep > 180 ? 1 : 0;
+    slices += '<path d="M'+cx+' '+cy+' L'+p1[0].toFixed(2)+' '+p1[1].toFixed(2)+
+      ' A'+outerR+' '+outerR+' 0 '+lg1+' 1 '+p2[0].toFixed(2)+' '+p2[1].toFixed(2)+' Z" fill="#3d5a80"/>';
+    // Segment 2: over-capacity excess
+    var overSweep = 360 - withinSweep;
+    var p3 = polar(cx, cy, outerR, withinSweep);
+    var p4 = polar(cx, cy, outerR, 359.99);
+    var lg2 = overSweep > 180 ? 1 : 0;
+    slices += '<path d="M'+cx+' '+cy+' L'+p3[0].toFixed(2)+' '+p3[1].toFixed(2)+
+      ' A'+outerR+' '+outerR+' 0 '+lg2+' 1 '+p4[0].toFixed(2)+' '+p4[1].toFixed(2)+' Z" fill="'+sevColor+'"/>';
+  }
+
+  slices += '<circle cx="'+cx+'" cy="'+cy+'" r="'+innerR+'" fill="#1a1d2e"/>';
+
+  if (isCluster && count) {
+    var fsize = (innerR * 0.62).toFixed(1);
+    slices += '<text x="'+cx+'" y="'+cy+'" text-anchor="middle" dominant-baseline="central"'+
+      ' font-size="'+fsize+'" font-weight="700" fill="#ffffff"'+
+      ' style="font-family:-apple-system,sans-serif">'+count+'</text>';
+  } else if (!isCluster) {
+    var fsize = (innerR * 0.58).toFixed(1);
+    slices += '<text x="'+cx+'" y="'+cy+'" text-anchor="middle" dominant-baseline="central"'+
+      ' font-size="'+fsize+'" font-weight="800" fill="'+sevColor+'"'+
+      ' style="font-family:-apple-system,sans-serif">'+Math.round(tasso)+'%</text>';
+  }
+
+  return '<svg class="marker-svg" width="'+size+'" height="'+size+'" viewBox="0 0 '+size+' '+size+'" xmlns="http://www.w3.org/2000/svg">'+slices+'</svg>';
+}
+
+function makeOvrDivIcon(tasso, totalInmates, isCluster, count) {
+  var sz = ovrMarkerSize(totalInmates || 100);
+  return L.divIcon({
+    html: makeOvrSVG(tasso, sz, isCluster, count),
+    className: '',
+    iconSize: [sz, sz],
+    iconAnchor: [sz/2, sz/2],
+    popupAnchor: [0, -sz/2 - 4]
+  });
+}
+
+function makeOvrPopup(props) {
+  var tc = tassoColor(props.tasso);
+  return '<div class="popup-inner">' +
+    '<div class="popup-name">'+props.nome+'</div>' +
+    '<div style="font-size:0.75rem;color:#adb5bd;margin-bottom:10px">'+props.tipo+'</div>' +
+    '<div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">' +
+      '<span style="font-size:1.6rem;font-weight:800;color:'+tc+';line-height:1">'+Math.round(props.tasso)+'%</span>' +
+      '<span style="font-size:0.72rem;color:#6c757d;line-height:1.4">' + (currentLang==='it' ? 'tasso di<br>affollamento' : 'overcrowding<br>rate') + '</span>' +
+    '</div>' +
+    '<div style="font-size:0.78rem;color:#adb5bd;line-height:1.8">' +
+      (currentLang==='it' ? 'Detenuti' : 'Inmates') + ': <strong style="color:#fff">'+props.detenuti+'</strong><br>' +
+      (currentLang==='it' ? 'Posti disponibili' : 'Available places') + ': <strong style="color:#fff">'+props.disponibili+'</strong><br>' +
+      (currentLang==='it' ? 'Posti regolamentari' : 'Reg. capacity') + ': <strong style="color:#fff">'+props.regolamentari+'</strong>' +
+    '</div>' +
+    '<div style="font-size:0.68rem;color:#6c757d;margin-top:8px;padding-top:6px;border-top:1px solid #2c3150">' +
+      (currentLang==='it' ? 'Aggiornato al' : 'Updated') + ' '+props.aggiornato +
+      ' &middot; <a href="https://sovraffollamentocarcerario.it" target="_blank" style="color:#7eb8f7;text-decoration:none">sovraffollamentocarcerario.it</a>' +
+    '</div>' +
+    '</div>';
+}
+
+// Build overcrowding layer synchronously from inline data
+overcrowdingLayerGroup = L.markerClusterGroup({
+  maxClusterRadius: 70,
+  disableClusteringAtZoom: 12,
+  spiderfyOnMaxZoom: true,
+  showCoverageOnHover: false,
+  zoomToBoundsOnClick: true,
+  spiderLegPolylineOptions: { weight: 1.5, color: '#aaa', opacity: 0.5 },
+  iconCreateFunction: function(cluster) {
+    var children = cluster.getAllChildMarkers();
+    var totalDetenuti = 0, weightedTasso = 0;
+    for (var ci = 0; ci < children.length; ci++) {
+      var cm = children[ci];
+      totalDetenuti += (cm._ovrDetenuti || 0);
+      weightedTasso += (cm._ovrTasso || 0) * (cm._ovrDetenuti || 0);
+    }
+    var avgTasso = totalDetenuti > 0 ? weightedTasso / totalDetenuti : 0;
+    return makeOvrDivIcon(avgTasso, totalDetenuti, true, children.length);
+  }
+});
+for (var oi = 0; oi < OVR_DATA.length; oi++) {
+  var od = OVR_DATA[oi];
+  if (!od.tasso || !od.detenuti) continue;
+  var om = L.marker([od.lat, od.lng], {
+    icon: makeOvrDivIcon(od.tasso, od.detenuti)
+  });
+  om._ovrTasso = od.tasso;
+  om._ovrDetenuti = od.detenuti;
+  om.bindPopup(makeOvrPopup(od), {maxWidth: 280, minWidth: 220});
+  ovrMarkers.push(om);
+  overcrowdingLayerGroup.addLayer(om);
+}
+
+function toggleOvercrowding() {
+  overcrowdingVisible = !overcrowdingVisible;
+  document.getElementById('ovr-track').classList.toggle('on', overcrowdingVisible);
+  document.getElementById('ovr-btn').classList.toggle('active', overcrowdingVisible);
+
+  // Left panel: show/hide the death category filter
+  document.getElementById('death-filter-section').style.display = overcrowdingVisible ? 'none' : '';
+
+  // Right legend box: swap between deaths and overcrowding
+  document.getElementById('legend-deaths').style.display = overcrowdingVisible ? 'none' : '';
+  document.getElementById('legend-ovr').style.display    = overcrowdingVisible ? 'block' : 'none';
+
+  if (overcrowdingVisible) {
+    map.removeLayer(clusterGroup);
+    if (overcrowdingLayerGroup) overcrowdingLayerGroup.addTo(map);
+  } else {
+    if (overcrowdingLayerGroup) map.removeLayer(overcrowdingLayerGroup);
+    map.addLayer(clusterGroup);
+    // Reset bucket filters when hiding the layer
+    ovrActiveBuckets = {low: true, mid: true, high: true, extreme: true};
+    ['low','mid','high','extreme'].forEach(function(b) {
+      var row = document.getElementById('ovr-row-' + b);
+      if (row) row.classList.remove('inactive');
+    });
+  }
+}
 
 // ─── Map init ───────────────────────────────────────────────────────────────
 const map = L.map('map', {
@@ -821,7 +1275,7 @@ for (var pi = 0; pi < PRISONS.length; pi++) {
   marker._filteredTotal = prison.total;
   marker.bindPopup(makePopup(prison), {maxWidth: 280, minWidth: 220});
   clusterGroup.addLayer(marker);
-  markerMap[prison.name] = {marker: marker, prison: prison};
+  markerMap[pi] = {marker: marker, prison: prison};
 }
 map.addLayer(clusterGroup);
 
@@ -852,31 +1306,33 @@ function buildCatUI() {
     item.innerHTML = '<div class="cat-dot" style="background:'+col+'"></div>' +
       '<span class="cat-label">'+label+'</span>' +
       '<span class="cat-count">'+count+'</span>';
-    (function(c, el){ el.onclick = function(){ toggleCategory(c, el); }; })(cat, item);
+    (function(c){ item.onclick = function(){ toggleCategory(c); }; })(cat);
     list.appendChild(item);
 
     var leg = document.createElement('div');
-    leg.className = 'legend-row';
+    leg.className = 'legend-row' + (isActive ? '' : ' inactive');
+    leg.dataset.cat = cat;
     leg.innerHTML = '<div class="legend-dot" style="background:'+col+'"></div><span class="legend-label">'+label+'</span>';
+    (function(c){ leg.onclick = function(){ toggleCategory(c); }; })(cat);
     legendEl.appendChild(leg);
   }
 }
 
-function toggleCategory(cat, el) {
+function toggleCategory(cat) {
   if (activeCategories.has(cat)) {
     if (activeCategories.size === 1) return;
     activeCategories.delete(cat);
-    el.classList.add('inactive');
+    document.querySelectorAll('[data-cat="'+cat+'"]').forEach(function(el){ el.classList.add('inactive'); });
   } else {
     activeCategories.add(cat);
-    el.classList.remove('inactive');
+    document.querySelectorAll('[data-cat="'+cat+'"]').forEach(function(el){ el.classList.remove('inactive'); });
   }
   updateMarkers();
 }
 
 function resetFilters() {
   activeCategories = new Set(CAT_LABELS);
-  document.querySelectorAll('.cat-item').forEach(function(el){ el.classList.remove('inactive'); });
+  document.querySelectorAll('[data-cat]').forEach(function(el){ el.classList.remove('inactive'); });
   updateMarkers();
 }
 
@@ -969,19 +1425,20 @@ buildCatUI();
 
 var initTotal = 0;
 for (var pi = 0; pi < PRISONS.length; pi++) initTotal += PRISONS[pi].total;
-document.getElementById('death-count').textContent = initTotal.toLocaleString('it-IT');
+document.getElementById('death-count').textContent = initTotal.toLocaleString(currentLang === 'it' ? 'it-IT' : 'en-US');
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <script>
 // ─── Overview panel ──────────────────────────────────────────────────────────
 var chartsReady = false;
-var chartDonut, chartBar, chartLine;
+var chartDonut, chartBar, chartLine, chartOvrBar;
 
 function destroyCharts() {
-  if (chartDonut) { chartDonut.destroy(); chartDonut = null; }
-  if (chartBar)   { chartBar.destroy();   chartBar = null; }
-  if (chartLine)  { chartLine.destroy();  chartLine = null; }
+  if (chartDonut)  { chartDonut.destroy();  chartDonut = null; }
+  if (chartBar)    { chartBar.destroy();    chartBar = null; }
+  if (chartLine)   { chartLine.destroy();   chartLine = null; }
+  if (chartOvrBar) { chartOvrBar.destroy(); chartOvrBar = null; }
 }
 
 function toggleOverview() {
@@ -1160,6 +1617,68 @@ function buildCharts() {
           grid: { color: '#1a1d2e' },
           ticks: { color: '#6c757d', maxTicksLimit: 5 },
           border: { display: false }, min: 0
+        }
+      }
+    }
+  });
+
+  // ── 4. Overcrowding: national stat ────────────────────────────────────────
+  var totalDetenuti = OVR_DATA.reduce(function(s, d){ return s + (d.detenuti || 0); }, 0);
+  var totalPosti    = OVR_DATA.reduce(function(s, d){ return s + (d.regolamentari || 0); }, 0);
+  var tassoNaz      = Math.round(totalDetenuti / totalPosti * 100);
+  var gaugeFill     = Math.min(Math.round(tassoNaz / 2), 100); // 200% = full bar
+
+  var statEl = document.getElementById('wrap-ovr-stat');
+  statEl.innerHTML =
+    '<div style="font-size:2rem;font-weight:500;color:#e74c3c;line-height:1.1">' + tassoNaz + '%</div>' +
+    '<div style="font-size:0.73rem;color:#6c757d;margin:5px 0 12px">' +
+      totalDetenuti.toLocaleString('it-IT') + ' detenuti &nbsp;&middot;&nbsp; ' +
+      totalPosti.toLocaleString('it-IT') + ' posti regolamentari' +
+    '</div>' +
+    '<div style="height:8px;background:#1a1d2e;border-radius:4px;overflow:hidden">' +
+      '<div style="height:100%;width:' + gaugeFill + '%;background:#e74c3c;border-radius:4px;transition:width .4s"></div>' +
+    '</div>' +
+    '<div style="display:flex;justify-content:space-between;font-size:0.62rem;color:#4a5068;margin-top:4px">' +
+      '<span>0%</span><span>100%</span><span>200%</span>' +
+    '</div>';
+
+  // ── 5. Overcrowding: top 10 bar ───────────────────────────────────────────
+  var ovrTop10 = OVR_DATA.slice().sort(function(a, b){ return b.tasso - a.tasso; }).slice(0, 10);
+
+  chartOvrBar = new Chart(document.getElementById('chart-ovr-bar'), {
+    type: 'bar',
+    data: {
+      labels: ovrTop10.map(function(d){ return d.nome.length > 22 ? d.nome.slice(0, 20) + '…' : d.nome; }),
+      datasets: [{
+        data: ovrTop10.map(function(d){ return d.tasso; }),
+        backgroundColor: 'rgba(231,76,60,0.45)',
+        borderColor: '#e74c3c',
+        borderWidth: 1,
+        borderRadius: 3,
+        borderSkipped: false,
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: Object.assign({}, tooltipDefaults, {
+          callbacks: { label: function(ctx){ return ' ' + ctx.parsed.x + '%'; } }
+        })
+      },
+      scales: {
+        x: {
+          grid: { color: '#1a1d2e' },
+          ticks: { color: '#6c757d', maxTicksLimit: 5, callback: function(v){ return v + '%'; } },
+          border: { display: false },
+          min: 0, max: 260
+        },
+        y: {
+          grid: { display: false },
+          ticks: { color: '#adb5bd', font: { size: 10.5 } },
+          border: { display: false }
         }
       }
     }

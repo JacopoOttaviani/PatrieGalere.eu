@@ -1,0 +1,48 @@
+# PatrieGalere.eu
+
+> Interactive map of deaths in Italian prisons (2002–2026) / Mappa interattiva dei decessi negli istituti penitenziari italiani (2002–2026)
+
+PatrieGalere.eu is an open-source civic data project by Jacopo Ottaviani that visualises all recorded deaths inside Italian penitentiaries from 2002 to the present. It is available in Italian and English.
+
+## What this site contains
+
+- A Leaflet-based interactive map of Italy showing every prison facility with at least one recorded death, sized proportionally to total deaths.
+- Filters by cause of death: suicide, natural causes, overdose, violent death, other/unknown.
+- Aggregated charts: deaths by cause (donut), top 10 facilities by deaths (bar), deaths per year (line).
+- Popup details for each facility: name, total deaths, breakdown by cause.
+- An "About" panel describing the project history and methodology.
+- A "Links" panel pointing to related organisations: DAP (official prison statistics), Associazione Antigone, Ristretti Orizzonti, Made in Jail, Made in Carcere, Pastificio Futuro.
+
+## Data source
+
+Data comes from [Ristretti Orizzonti](https://www.ristretti.org), a magazine and documentation centre on Italian prisons active since 1999 in Padua. It is one of Italy's main independent monitors of the prison system.
+
+## Key facts (as of the data currently loaded)
+
+- Coverage: 2002 to 2026.
+- Categories tracked: suicide (suicidio), natural causes (cause naturali), overdose, violent death (morte violenta), other/unknown (altro).
+- Scope: all official Italian penitentiary facilities (case circondariali, case di reclusione, OPG/REMS, istituti minorili).
+
+## Project history
+
+The original PatrieGalere was hand-coded in 2011 by Jacopo Ottaviani. It was published in Italy's *Il Fatto Quotidiano* and in [The Guardian](https://www.theguardian.com/news/datablog/2012/may/23/italian-prisoners-deaths) (UK) and is widely cited as Italy's first data journalism project. The current version is a full rebuild with modern mapping libraries and a revised design.
+
+## Author
+
+Jacopo Ottaviani — journalist and data journalist based in Italy.
+LinkedIn: https://www.linkedin.com/in/jacopo-ottaviani/
+
+## Technical stack
+
+- [Leaflet](https://leafletjs.com) for interactive maps
+- [Leaflet.markercluster](https://github.com/Leaflet/Leaflet.markercluster) for marker clustering
+- [Chart.js](https://www.chartjs.org) for data visualisation
+- Vanilla HTML/CSS/JavaScript, no framework dependency
+
+## License
+
+Open source. Data from Ristretti Orizzonti. Reuse with attribution.
+
+## Contact / Support
+
+Support the project: https://ko-fi.com/jacopoottaviani

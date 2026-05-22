@@ -1,0 +1,4185 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.9511004,
+          44.4179134
+        ]
+      },
+      "properties": {
+        "id": "MII152284",
+        "nome": "Genova Marassi",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Piazzale Marassi n.2 - 16139 Genova",
+        "tasso_affollamento": 128.0,
+        "posti_regolamentari": 535.0,
+        "posti_disponibili": 534.0,
+        "posti_non_disponibili": 1.0,
+        "totale_detenuti": 686.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.025636,
+          44.691542
+        ]
+      },
+      "properties": {
+        "id": "MII157783",
+        "nome": "Alba",
+        "tipo": "Casa di reclusione - Giuseppe Montalto",
+        "indirizzo": "Loc.Toppino - Via Vivaro n. 14 - 12051 Alba",
+        "tasso_affollamento": 87.0,
+        "posti_regolamentari": 138.0,
+        "posti_disponibili": 47.0,
+        "posti_non_disponibili": 91.0,
+        "totale_detenuti": 41.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.16639949,
+          45.4615979
+        ]
+      },
+      "properties": {
+        "id": "MII158895",
+        "nome": "Milano San Vittore",
+        "tipo": "Casa circondariale - Francesco Di Cataldo",
+        "indirizzo": "Piazza Filangieri n.2 - 20123 Milano",
+        "tasso_affollamento": 212.0,
+        "posti_regolamentari": 702.0,
+        "posti_disponibili": 482.0,
+        "posti_non_disponibili": 220.0,
+        "totale_detenuti": 1020.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.2192968,
+          46.1397378
+        ]
+      },
+      "properties": {
+        "id": "MII158901",
+        "nome": "Belluno",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Baldenich n.11 - 32100 Belluno",
+        "tasso_affollamento": 132.0,
+        "posti_regolamentari": 86.0,
+        "posti_disponibili": 82.0,
+        "posti_non_disponibili": 4.0,
+        "totale_detenuti": 108.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.61739575,
+          37.31942185
+        ]
+      },
+      "properties": {
+        "id": "MII158910",
+        "nome": "Agrigento",
+        "tipo": "Casa circondariale - Pasquale Di Lorenzo",
+        "indirizzo": "Piazza Di Lorenzo n. 1 -  92100 Agrigento",
+        "tasso_affollamento": 138.0,
+        "posti_regolamentari": 283.0,
+        "posti_disponibili": 265.0,
+        "posti_non_disponibili": 18.0,
+        "totale_detenuti": 366.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.615321,
+          44.9129225
+        ]
+      },
+      "properties": {
+        "id": "MII158919",
+        "nome": "Alessandria Cantiello, Gaeta",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Piazza Don Soria n. 13 - 15121 Alessandria",
+        "tasso_affollamento": 109.0,
+        "posti_regolamentari": 233.0,
+        "posti_disponibili": 233.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 255.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.615321,
+          44.9129225
+        ]
+      },
+      "properties": {
+        "id": "MII158924",
+        "nome": "Alessandria San Michele",
+        "tipo": "Casa di reclusione",
+        "indirizzo": "Strada Statale per Casale n.50/A - 15121 Alessandria",
+        "tasso_affollamento": 35.0,
+        "posti_regolamentari": 269.0,
+        "posti_disponibili": 118.0,
+        "posti_non_disponibili": 151.0,
+        "totale_detenuti": 41.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.3151473,
+          40.5600205
+        ]
+      },
+      "properties": {
+        "id": "MII158935",
+        "nome": "Alghero",
+        "tipo": "Casa di reclusione - Giuseppe Tomasiello",
+        "indirizzo": "Via Vittorio Emanuele n.28 - 07041 Alghero",
+        "tasso_affollamento": 99.0,
+        "posti_regolamentari": 156.0,
+        "posti_disponibili": 156.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 154.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.52788,
+          43.61934
+        ]
+      },
+      "properties": {
+        "id": "MII158941",
+        "nome": "Ancona Montacuto",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Montecavallo di Montacuto n.73/a - 60129 Ancona",
+        "tasso_affollamento": 135.0,
+        "posti_regolamentari": 256.0,
+        "posti_disponibili": 255.0,
+        "posti_non_disponibili": 1.0,
+        "totale_detenuti": 345.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.44018,
+          43.61336
+        ]
+      },
+      "properties": {
+        "id": "MII158944",
+        "nome": "Ancona Barcaglione",
+        "tipo": "Casa di reclusione",
+        "indirizzo": "Via Colle Ameno n.25 - 60126 Ancona",
+        "tasso_affollamento": 87.0,
+        "posti_regolamentari": 100.0,
+        "posti_disponibili": 100.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 87.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.47964289,
+          39.4987508
+        ]
+      },
+      "properties": {
+        "id": "MII158945",
+        "nome": "Arbus",
+        "tipo": "Casa di reclusione - località Is Arenas",
+        "indirizzo": "Localit&agrave; Bau  -  09031 Arbus",
+        "tasso_affollamento": 101.0,
+        "posti_regolamentari": 176.0,
+        "posti_disponibili": 126.0,
+        "posti_non_disponibili": 50.0,
+        "totale_detenuti": 127.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.8781675,
+          43.4628957
+        ]
+      },
+      "properties": {
+        "id": "MII158948",
+        "nome": "Arezzo",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Garibaldi n.259 - 52100 Arezzo",
+        "tasso_affollamento": 195.0,
+        "posti_regolamentari": 108.0,
+        "posti_disponibili": 22.0,
+        "posti_non_disponibili": 86.0,
+        "totale_detenuti": 43.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.08169876,
+          41.1280699
+        ]
+      },
+      "properties": {
+        "id": "MII159053",
+        "nome": "Ariano Irpino",
+        "tipo": "Casa circondariale - Pasquale Campanello",
+        "indirizzo": "Via Grignano n. 60 - 83031 Ariano Irpino",
+        "tasso_affollamento": 144.0,
+        "posti_regolamentari": 263.0,
+        "posti_disponibili": 216.0,
+        "posti_non_disponibili": 47.0,
+        "totale_detenuti": 310.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.4970522,
+          41.0242566
+        ]
+      },
+      "properties": {
+        "id": "MII159060",
+        "nome": "Arienzo",
+        "tipo": "Casa di reclusione - Gennaro De Angelis",
+        "indirizzo": "Via Nazionale Appia Km 230+600 n.7 - 81021 Arienzo",
+        "tasso_affollamento": 136.0,
+        "posti_regolamentari": 58.0,
+        "posti_disponibili": 58.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 79.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.5755038,
+          42.8546185
+        ]
+      },
+      "properties": {
+        "id": "MII159065",
+        "nome": "Ascoli Piceno",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via dei meli n.218 - 63100 Ascoli Piceno",
+        "tasso_affollamento": 136.0,
+        "posti_regolamentari": 103.0,
+        "posti_disponibili": 103.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 140.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.2068876,
+          44.900542
+        ]
+      },
+      "properties": {
+        "id": "MII159069",
+        "nome": "Asti",
+        "tipo": "Casa di reclusione",
+        "indirizzo": "Frazione Quarto Inferiore n. 266 14100 Asti",
+        "tasso_affollamento": 133.0,
+        "posti_regolamentari": 205.0,
+        "posti_disponibili": 201.0,
+        "posti_non_disponibili": 4.0,
+        "totale_detenuti": 268.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.2196575,
+          37.2369363
+        ]
+      },
+      "properties": {
+        "id": "MII159314",
+        "nome": "Augusta",
+        "tipo": "Casa di reclusione",
+        "indirizzo": "Contrada Piano Ippolito n.1 - 96011 Augusta",
+        "tasso_affollamento": 172.0,
+        "posti_regolamentari": 364.0,
+        "posti_disponibili": 341.0,
+        "posti_non_disponibili": 23.0,
+        "totale_detenuti": 588.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.7824639,
+          41.1295587
+        ]
+      },
+      "properties": {
+        "id": "MII160204",
+        "nome": "Benevento",
+        "tipo": "Casa circondariale - Michele Gaglione",
+        "indirizzo": "Via Ermete Novelli n.11 -  82100 Benevento",
+        "tasso_affollamento": 155.0,
+        "posti_regolamentari": 259.0,
+        "posti_disponibili": 247.0,
+        "posti_non_disponibili": 12.0,
+        "totale_detenuti": 384.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.8629993,
+          42.4016906
+        ]
+      },
+      "properties": {
+        "id": "MII169535",
+        "nome": "Rieti",
+        "tipo": "Casa circondariale - Nuovo Complesso",
+        "indirizzo": "Via Maestri del lavoro n.2 - 02100 Rieti",
+        "tasso_affollamento": 183.0,
+        "posti_regolamentari": 295.0,
+        "posti_disponibili": 289.0,
+        "posti_non_disponibili": 6.0,
+        "totale_detenuti": 529.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.7888764,
+          40.9141958
+        ]
+      },
+      "properties": {
+        "id": "MII172011",
+        "nome": "Avellino",
+        "tipo": "Casa circondariale - Antimo Graziano Bellizzi",
+        "indirizzo": "Frazione Bellizzi Irpino - Contrada Sant'Oronzo n.1 -  83100 Avellino",
+        "tasso_affollamento": 141.0,
+        "posti_regolamentari": 503.0,
+        "posti_disponibili": 468.0,
+        "posti_non_disponibili": 35.0,
+        "totale_detenuti": 661.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.204928,
+          40.973212
+        ]
+      },
+      "properties": {
+        "id": "MII172187",
+        "nome": "Aversa",
+        "tipo": "Casa di reclusione - Filippo Saporito",
+        "indirizzo": "Via San Francesco da Paola n.2 - 81031 Aversa",
+        "tasso_affollamento": 131.0,
+        "posti_regolamentari": 234.0,
+        "posti_disponibili": 234.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 307.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.7922462,
+          42.0937524
+        ]
+      },
+      "properties": {
+        "id": "MII172208",
+        "nome": "Civitavecchia Nuovo Complesso",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Aurelia nord km 79,500 n. snc - 00053 Civitavecchia",
+        "tasso_affollamento": 181.0,
+        "posti_regolamentari": 358.0,
+        "posti_disponibili": 347.0,
+        "posti_non_disponibili": 11.0,
+        "totale_detenuti": 628.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.2278876,
+          38.15123
+        ]
+      },
+      "properties": {
+        "id": "MII172222",
+        "nome": "Barcellona Pozzo di Gotto",
+        "tipo": "Casa circondariale - Vittorio Madia",
+        "indirizzo": "Via V. Madia n.31 - 98051 Barcellona Pozzo di Gotto",
+        "tasso_affollamento": 86.0,
+        "posti_regolamentari": 387.0,
+        "posti_disponibili": 274.0,
+        "posti_non_disponibili": 113.0,
+        "totale_detenuti": 236.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5523505,
+          40.8283631
+        ]
+      },
+      "properties": {
+        "id": "MII172277",
+        "nome": "Altamura",
+        "tipo": "Casa di reclusione",
+        "indirizzo": "Via dell'Uva Spina n.18 - 70022 Altamura",
+        "tasso_affollamento": 184.0,
+        "posti_regolamentari": 52.0,
+        "posti_disponibili": 49.0,
+        "posti_non_disponibili": 3.0,
+        "totale_detenuti": 90.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.8520522,
+          45.6119057
+        ]
+      },
+      "properties": {
+        "id": "MII172320",
+        "nome": "Busto Arsizio",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via per Cassano Magnago n.102 - 21052 Busto Arsizio",
+        "tasso_affollamento": 202.0,
+        "posti_regolamentari": 240.0,
+        "posti_disponibili": 217.0,
+        "posti_non_disponibili": 23.0,
+        "totale_detenuti": 439.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0542758,
+          45.5664109
+        ]
+      },
+      "properties": {
+        "id": "MII172332",
+        "nome": "Biella",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Viale dei Tigli n.14 - 13900 Biella",
+        "tasso_affollamento": 141.0,
+        "posti_regolamentari": 392.0,
+        "posti_disponibili": 392.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 554.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1177075,
+          45.543835
+        ]
+      },
+      "properties": {
+        "id": "MII172344",
+        "nome": "Bollate",
+        "tipo": "Casa di reclusione - IIª casa",
+        "indirizzo": "Via Cristina Belgioioso n.120 20157 - Milano",
+        "tasso_affollamento": 126.0,
+        "posti_regolamentari": 1267.0,
+        "posti_disponibili": 1267.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 1597.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.3430347,
+          44.4936714
+        ]
+      },
+      "properties": {
+        "id": "MII172508",
+        "nome": "Bologna",
+        "tipo": "Casa circondariale - Rocco D'Amato",
+        "indirizzo": "Via del Gomito n. 2 - 40127 Bologna",
+        "tasso_affollamento": 175.0,
+        "posti_regolamentari": 507.0,
+        "posti_disponibili": 473.0,
+        "posti_non_disponibili": 34.0,
+        "totale_detenuti": 830.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.34681702,
+          46.49177448
+        ]
+      },
+      "properties": {
+        "id": "MII172580",
+        "nome": "Bolzano",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Dante n. 28/a -  39100 Bolzano",
+        "tasso_affollamento": 141.0,
+        "posti_regolamentari": 88.0,
+        "posti_disponibili": 88.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 124.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.2340676,
+          45.5325399
+        ]
+      },
+      "properties": {
+        "id": "MII172592",
+        "nome": "Brescia Canton Monbello",
+        "tipo": "Casa circondariale - Nerio Fischione",
+        "indirizzo": "Via Spalto San Marco n 20 - 25121 Brescia",
+        "tasso_affollamento": 204.0,
+        "posti_regolamentari": 182.0,
+        "posti_disponibili": 182.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 371.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.18776766,
+          45.4996058
+        ]
+      },
+      "properties": {
+        "id": "MII172610",
+        "nome": "Brescia Verziano",
+        "tipo": "Casa di reclusione",
+        "indirizzo": "Via Flero n.157 - 25124 Brescia",
+        "tasso_affollamento": 179.0,
+        "posti_regolamentari": 71.0,
+        "posti_disponibili": 71.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 127.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.945526,
+          40.6395295
+        ]
+      },
+      "properties": {
+        "id": "MII172623",
+        "nome": "Brindisi",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Appia n.131 - 72100 Brindisi",
+        "tasso_affollamento": 174.0,
+        "posti_regolamentari": 152.0,
+        "posti_disponibili": 152.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 265.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.4066634,
+          45.7285199
+        ]
+      },
+      "properties": {
+        "id": "MII172814",
+        "nome": "Brissogne - Aosta",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Loc. Les Iles, 14 n.14  - 761900 Brissogne",
+        "tasso_affollamento": 86.0,
+        "posti_regolamentari": 181.0,
+        "posti_disponibili": 175.0,
+        "posti_non_disponibili": 6.0,
+        "totale_detenuti": 150.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.7542192,
+          45.7566557
+        ]
+      },
+      "properties": {
+        "id": "MII172827",
+        "nome": "Bergamo",
+        "tipo": "Casa circondariale",
+        "indirizzo": "via Monte Gleno n.61 - 24125 Bergamo",
+        "tasso_affollamento": 186.0,
+        "posti_regolamentari": 319.0,
+        "posti_disponibili": 319.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 592.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.93944903,
+          39.1694193
+        ]
+      },
+      "properties": {
+        "id": "MII172835",
+        "nome": "Cagliari Uta",
+        "tipo": "Casa circondariale - Ettore Scalas",
+        "indirizzo": "Zona industriale Macchiareddu 2&deg; strada ovest Uta n.0 - 09010 Cagliari",
+        "tasso_affollamento": 132.0,
+        "posti_regolamentari": 561.0,
+        "posti_disponibili": 559.0,
+        "posti_non_disponibili": 2.0,
+        "totale_detenuti": 739.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.5132023,
+          37.2372009
+        ]
+      },
+      "properties": {
+        "id": "MII173006",
+        "nome": "Caltagirone",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Contrada Noce San Nicola le Canne s.n.c. n. 00 -  95041 Caltagirone",
+        "tasso_affollamento": 121.0,
+        "posti_regolamentari": 541.0,
+        "posti_disponibili": 372.0,
+        "posti_non_disponibili": 169.0,
+        "totale_detenuti": 450.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.05615604195194,
+          37.49438296522256
+        ]
+      },
+      "properties": {
+        "id": "MII173063",
+        "nome": "Caltanissetta",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Messina n. 94 - 93100 Caltanissetta",
+        "tasso_affollamento": 142.0,
+        "posti_regolamentari": 183.0,
+        "posti_disponibili": 183.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 260.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.66172195,
+          41.555686
+        ]
+      },
+      "properties": {
+        "id": "MII173088",
+        "nome": "Campobasso",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Cavour n. 52 - 86100 Campobasso",
+        "tasso_affollamento": 176.0,
+        "posti_regolamentari": 106.0,
+        "posti_disponibili": 102.0,
+        "posti_non_disponibili": 4.0,
+        "totale_detenuti": 180.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9812129,
+          41.186987
+        ]
+      },
+      "properties": {
+        "id": "MII173101",
+        "nome": "Carinola",
+        "tipo": "Casa di reclusione - Gian Battista Novelli",
+        "indirizzo": "Via provinciale San Biagio n.6 - 81030 CARINOLA",
+        "tasso_affollamento": 118.0,
+        "posti_regolamentari": 563.0,
+        "posti_disponibili": 452.0,
+        "posti_non_disponibili": 111.0,
+        "totale_detenuti": 534.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.8305297,
+          41.4925576
+        ]
+      },
+      "properties": {
+        "id": "MII173114",
+        "nome": "Cassino",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Sferracavalli n 3 - 03043 Cassino",
+        "tasso_affollamento": 175.0,
+        "posti_regolamentari": 200.0,
+        "posti_disponibili": 89.0,
+        "posti_non_disponibili": 111.0,
+        "totale_detenuti": 156.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.0529006,
+          44.5950245
+        ]
+      },
+      "properties": {
+        "id": "MII173237",
+        "nome": "Castelfranco Emilia",
+        "tipo": "Casa di reclusione",
+        "indirizzo": "Via Forte Urbano n.1 - 41013 Castelfranco Emilia",
+        "tasso_affollamento": 64.0,
+        "posti_regolamentari": 191.0,
+        "posti_disponibili": 149.0,
+        "posti_non_disponibili": 42.0,
+        "totale_detenuti": 96.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.7955336,
+          37.6828513
+        ]
+      },
+      "properties": {
+        "id": "MII173259",
+        "nome": "Castelvetrano",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Contrada Strasatto n. snc - 91022 Castelvetrano",
+        "tasso_affollamento": 157.0,
+        "posti_regolamentari": 44.0,
+        "posti_disponibili": 44.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 69.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.2210616,
+          39.83602485
+        ]
+      },
+      "properties": {
+        "id": "MII173265",
+        "nome": "Castrovillari",
+        "tipo": "Casa circondariale - Rosa Sisca",
+        "indirizzo": "Via Sergio Cosmai n 1 - 87012 Castrovillari",
+        "tasso_affollamento": 170.0,
+        "posti_regolamentari": 122.0,
+        "posti_disponibili": 70.0,
+        "posti_non_disponibili": 52.0,
+        "totale_detenuti": 119.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.94420233,
+          37.50570535
+        ]
+      },
+      "properties": {
+        "id": "MII173285",
+        "nome": "Catania Bicocca",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Tangenziale Ovest km 8 n. s.n.c. - 95030 Catania",
+        "tasso_affollamento": 123.0,
+        "posti_regolamentari": 136.0,
+        "posti_disponibili": 132.0,
+        "posti_non_disponibili": 4.0,
+        "totale_detenuti": 163.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.94420233,
+          37.50570535
+        ]
+      },
+      "properties": {
+        "id": "MII173301",
+        "nome": "Catania Piazza Lanza",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Piazza Vincenzo Lanza n.11 - 95100 Catania",
+        "tasso_affollamento": 171.0,
+        "posti_regolamentari": 279.0,
+        "posti_disponibili": 279.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 478.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.5960465,
+          38.9076353
+        ]
+      },
+      "properties": {
+        "id": "MII173311",
+        "nome": "Catanzaro",
+        "tipo": "Casa circondariale - Ugo Caridi",
+        "indirizzo": "Via Tre Fontane n.28 - 88100 Catanzaro",
+        "tasso_affollamento": 111.0,
+        "posti_regolamentari": 682.0,
+        "posti_disponibili": 652.0,
+        "posti_non_disponibili": 30.0,
+        "totale_detenuti": 726.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.127196,
+          39.0806223
+        ]
+      },
+      "properties": {
+        "id": "MII173324",
+        "nome": "Crotone",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Localit&agrave; Passovecchio n.1 - 88900 Crotone",
+        "tasso_affollamento": 133.0,
+        "posti_regolamentari": 99.0,
+        "posti_disponibili": 63.0,
+        "posti_non_disponibili": 36.0,
+        "totale_detenuti": 84.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.2501929,
+          39.3099931
+        ]
+      },
+      "properties": {
+        "id": "MII173341",
+        "nome": "Cosenza",
+        "tipo": "Casa circondariale - Sergio Cosmai",
+        "indirizzo": "Viale Giacomo Mancini n.320 - 87100 Cosenza",
+        "tasso_affollamento": 128.0,
+        "posti_regolamentari": 220.0,
+        "posti_disponibili": 217.0,
+        "posti_non_disponibili": 3.0,
+        "totale_detenuti": 277.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.3233382,
+          44.3164494
+        ]
+      },
+      "properties": {
+        "id": "MII173356",
+        "nome": "Chiavari",
+        "tipo": "Casa di reclusione",
+        "indirizzo": "Via al Gasometro n.2 - 16043 Chiavari",
+        "tasso_affollamento": 129.0,
+        "posti_regolamentari": 52.0,
+        "posti_disponibili": 52.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 67.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.1659738,
+          42.3446529
+        ]
+      },
+      "properties": {
+        "id": "MII173364",
+        "nome": "Chieti",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Ettore Ianni n.30 - 66100 Chieti",
+        "tasso_affollamento": 186.0,
+        "posti_regolamentari": 79.0,
+        "posti_disponibili": 79.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 147.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.78675481,
+          42.0989856
+        ]
+      },
+      "properties": {
+        "id": "MII173688",
+        "nome": "Civitavecchia Giuseppe Passerini",
+        "tipo": "Casa di reclusione",
+        "indirizzo": "Via Tarquinia n. 20 - 00053 Civitavecchia",
+        "tasso_affollamento": 54.0,
+        "posti_regolamentari": 172.0,
+        "posti_disponibili": 144.0,
+        "posti_non_disponibili": 28.0,
+        "totale_detenuti": 78.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.14941015,
+          45.9394759
+        ]
+      },
+      "properties": {
+        "id": "MII173712",
+        "nome": "Como",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Bassone n.11 - 22100 Como",
+        "tasso_affollamento": 176.0,
+        "posti_regolamentari": 225.0,
+        "posti_disponibili": 225.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 395.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.0248716,
+          45.1334796
+        ]
+      },
+      "properties": {
+        "id": "MII173747",
+        "nome": "Cremona",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Palosca n.2 - 26100 Cremona",
+        "tasso_affollamento": 157.0,
+        "posti_regolamentari": 394.0,
+        "posti_disponibili": 384.0,
+        "posti_non_disponibili": 10.0,
+        "totale_detenuti": 601.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.43645384,
+          44.64319015
+        ]
+      },
+      "properties": {
+        "id": "MII173764",
+        "nome": "Cuneo",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Roncata n.75 - 12100 Cuneo",
+        "tasso_affollamento": 105.0,
+        "posti_regolamentari": 433.0,
+        "posti_disponibili": 381.0,
+        "posti_non_disponibili": 52.0,
+        "totale_detenuti": 399.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.0569438,
+          40.6175146
+        ]
+      },
+      "properties": {
+        "id": "MII173784",
+        "nome": "Eboli",
+        "tipo": "Casa di reclusione",
+        "indirizzo": "Via Castello n.10 - 84025 Eboli",
+        "tasso_affollamento": 78.0,
+        "posti_regolamentari": 54.0,
+        "posti_disponibili": 54.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 42.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.2807473,
+          37.5667573
+        ]
+      },
+      "properties": {
+        "id": "MII173813",
+        "nome": "Enna",
+        "tipo": "Casa circondariale - Luigi Bodenza",
+        "indirizzo": "Via Palermo n.20 - 94100 Enna",
+        "tasso_affollamento": 141.0,
+        "posti_regolamentari": 167.0,
+        "posti_disponibili": 145.0,
+        "posti_non_disponibili": 22.0,
+        "totale_detenuti": 204.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.3273647,
+          37.9314505
+        ]
+      },
+      "properties": {
+        "id": "MII173994",
+        "nome": "Favignana",
+        "tipo": "Casa di reclusione - Giuseppe Barraco",
+        "indirizzo": "Via Aurelio Padovani n.1 - 91023 Favignana",
+        "tasso_affollamento": 119.0,
+        "posti_regolamentari": 89.0,
+        "posti_disponibili": 88.0,
+        "posti_non_disponibili": 1.0,
+        "totale_detenuti": 105.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.63876807,
+          43.0922489
+        ]
+      },
+      "properties": {
+        "id": "MII174501",
+        "nome": "Fermo",
+        "tipo": "Casa di reclusione",
+        "indirizzo": "Viale XX Giugno n.1/3 - 63900 Fermo",
+        "tasso_affollamento": 177.0,
+        "posti_regolamentari": 43.0,
+        "posti_disponibili": 43.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 76.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.5822881,
+          44.8423466
+        ]
+      },
+      "properties": {
+        "id": "MII174686",
+        "nome": "Ferrara",
+        "tipo": "Casa circondariale - Costantino Satta",
+        "indirizzo": "Via Arginone n.327 - 44122 Ferrara",
+        "tasso_affollamento": 169.0,
+        "posti_regolamentari": 243.0,
+        "posti_disponibili": 243.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 410.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.17403045,
+          43.76945125
+        ]
+      },
+      "properties": {
+        "id": "MII174720",
+        "nome": "Firenze Sollicciano",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Girolamo Minervini n 2/R  - 50142 Firenze",
+        "tasso_affollamento": 169.0,
+        "posti_regolamentari": 502.0,
+        "posti_disponibili": 366.0,
+        "posti_non_disponibili": 136.0,
+        "totale_detenuti": 618.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.2555757,
+          43.7698712
+        ]
+      },
+      "properties": {
+        "id": "MII174825",
+        "nome": "Firenze Mario Gozzini",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Girolamo Minervini n.5 - 50142 Firenze",
+        "tasso_affollamento": 150.0,
+        "posti_regolamentari": 89.0,
+        "posti_disponibili": 74.0,
+        "posti_non_disponibili": 15.0,
+        "totale_detenuti": 111.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.45289961,
+          41.50281055
+        ]
+      },
+      "properties": {
+        "id": "MII176375",
+        "nome": "Foggia",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via delle Casermette n.22 - 71100 Foggia",
+        "tasso_affollamento": 221.0,
+        "posti_regolamentari": 364.0,
+        "posti_disponibili": 302.0,
+        "posti_non_disponibili": 62.0,
+        "totale_detenuti": 666.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.0409384,
+          44.2226017
+        ]
+      },
+      "properties": {
+        "id": "MII176403",
+        "nome": "Forlì",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via della Rocca n.4/6 - 47121 Forl&igrave;",
+        "tasso_affollamento": 118.0,
+        "posti_regolamentari": 144.0,
+        "posti_disponibili": 131.0,
+        "posti_non_disponibili": 13.0,
+        "totale_detenuti": 155.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.7250155,
+          44.5493489
+        ]
+      },
+      "properties": {
+        "id": "MII176414",
+        "nome": "Fossano",
+        "tipo": "Casa di reclusione",
+        "indirizzo": "Via S.Giovanni Bosco n.48 - 12045 Fossano",
+        "tasso_affollamento": 82.0,
+        "posti_regolamentari": 136.0,
+        "posti_disponibili": 136.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 111.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.8229332,
+          43.68773585
+        ]
+      },
+      "properties": {
+        "id": "MII176424",
+        "nome": "Fossombrone",
+        "tipo": "Casa di reclusione",
+        "indirizzo": "Viale Leopardi n.2 - 61034 Fossombrone",
+        "tasso_affollamento": 117.0,
+        "posti_regolamentari": 156.0,
+        "posti_disponibili": 156.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 182.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3469287,
+          41.6419807
+        ]
+      },
+      "properties": {
+        "id": "MII176437",
+        "nome": "Frosinone",
+        "tipo": "Casa circondariale - Giuseppe Pagliei",
+        "indirizzo": "Via Cerreto n.55 - 03100  Frosinone",
+        "tasso_affollamento": 134.0,
+        "posti_regolamentari": 521.0,
+        "posti_disponibili": 506.0,
+        "posti_non_disponibili": 15.0,
+        "totale_detenuti": 676.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.2502445,
+          37.0664363
+        ]
+      },
+      "properties": {
+        "id": "MII176451",
+        "nome": "Gela",
+        "tipo": "Casa circondariale",
+        "indirizzo": "C.da Balate SS 117 bis n. snc - 93012 Gela",
+        "tasso_affollamento": 173.0,
+        "posti_regolamentari": 48.0,
+        "posti_disponibili": 48.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 83.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.90540935,
+          44.49411925
+        ]
+      },
+      "properties": {
+        "id": "MII176703",
+        "nome": "Genova Pontedecimo",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Coni Zugna n.32 - 16100 Genova",
+        "tasso_affollamento": 159.0,
+        "posti_regolamentari": 96.0,
+        "posti_disponibili": 96.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 153.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.187688,
+          37.726857
+        ]
+      },
+      "properties": {
+        "id": "MII176714",
+        "nome": "Giarre",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Foscolo n.67 - 95017 Giarre",
+        "tasso_affollamento": 156.0,
+        "posti_regolamentari": 58.0,
+        "posti_disponibili": 43.0,
+        "posti_non_disponibili": 15.0,
+        "totale_detenuti": 67.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6252288,
+          45.9441278
+        ]
+      },
+      "properties": {
+        "id": "MII176719",
+        "nome": "Gorizia",
+        "tipo": "Casa circondariale - Angiolo Bigazzi",
+        "indirizzo": "Via G. Barzellini n 8 - 34170 Gorizia",
+        "tasso_affollamento": 127.0,
+        "posti_regolamentari": 63.0,
+        "posti_disponibili": 63.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 80.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.1137389,
+          42.7597261
+        ]
+      },
+      "properties": {
+        "id": "MII176743",
+        "nome": "Grosseto",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via A Saffi n.23 - 58100 Grosseto",
+        "tasso_affollamento": 207.0,
+        "posti_regolamentari": 15.0,
+        "posti_disponibili": 15.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 31.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.0267106,
+          43.8862958
+        ]
+      },
+      "properties": {
+        "id": "MII176749",
+        "nome": "Imperia",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Giacomo Agnesi n. 2 18100 Imperia",
+        "tasso_affollamento": 121.0,
+        "posti_regolamentari": 53.0,
+        "posti_disponibili": 53.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 64.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.238217,
+          41.600216
+        ]
+      },
+      "properties": {
+        "id": "MII176759",
+        "nome": "Isernia",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Ponte San Leonardo n.5 - 86170  Isernia",
+        "tasso_affollamento": 177.0,
+        "posti_regolamentari": 44.0,
+        "posti_disponibili": 44.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 78.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1085903,
+          39.7404048
+        ]
+      },
+      "properties": {
+        "id": "MII176771",
+        "nome": "Isili",
+        "tipo": "Casa di reclusione",
+        "indirizzo": "Localit&agrave; Sarcidano n.SN - 08033 Isili",
+        "tasso_affollamento": 114.0,
+        "posti_regolamentari": 130.0,
+        "posti_disponibili": 107.0,
+        "posti_non_disponibili": 23.0,
+        "totale_detenuti": 122.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.874797,
+          45.4673791
+        ]
+      },
+      "properties": {
+        "id": "MII176781",
+        "nome": "Ivrea",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Corso Vercelli n.165 - 10015 Ivrea",
+        "tasso_affollamento": 147.0,
+        "posti_regolamentari": 195.0,
+        "posti_disponibili": 175.0,
+        "posti_non_disponibili": 20.0,
+        "totale_detenuti": 258.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.8282255,
+          44.107033
+        ]
+      },
+      "properties": {
+        "id": "MII176788",
+        "nome": "La Spezia",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Piazza Falcone e Borsellino n.1 - 19125 La Spezia",
+        "tasso_affollamento": 148.0,
+        "posti_regolamentari": 152.0,
+        "posti_disponibili": 151.0,
+        "posti_non_disponibili": 1.0,
+        "totale_detenuti": 223.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.3907794,
+          42.2305316
+        ]
+      },
+      "properties": {
+        "id": "MII177107",
+        "nome": "Lanciano",
+        "tipo": "Casa circondariale",
+        "indirizzo": "C/da Villa Stanazzo n.212/A - 66034 Lanciano",
+        "tasso_affollamento": 117.0,
+        "posti_regolamentari": 223.0,
+        "posti_disponibili": 223.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 260.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.5410772,
+          39.8785705
+        ]
+      },
+      "properties": {
+        "id": "MII177118",
+        "nome": "Lanusei",
+        "tipo": "Casa circondariale - San Daniele",
+        "indirizzo": "Viale Europa n.10 - 08045 Lanusei",
+        "tasso_affollamento": 112.0,
+        "posti_regolamentari": 33.0,
+        "posti_disponibili": 33.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 37.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.3979672,
+          42.3489203
+        ]
+      },
+      "properties": {
+        "id": "MII177134",
+        "nome": "L'Aquila",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Amiternina Localit&agrave; Costarelle di Preturo n.3 - 67100 L'Aquila",
+        "tasso_affollamento": 84.0,
+        "posti_regolamentari": 214.0,
+        "posti_disponibili": 208.0,
+        "posti_non_disponibili": 6.0,
+        "totale_detenuti": 174.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.9210984,
+          41.8055672
+        ]
+      },
+      "properties": {
+        "id": "MII177323",
+        "nome": "Larino",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Contrada Monte Arcano n.2 - 86035 Larino",
+        "tasso_affollamento": 147.0,
+        "posti_regolamentari": 119.0,
+        "posti_disponibili": 109.0,
+        "posti_non_disponibili": 10.0,
+        "totale_detenuti": 160.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.89935226,
+          41.46083555
+        ]
+      },
+      "properties": {
+        "id": "MII177332",
+        "nome": "Latina",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Aspromonte n.100 - 04100 Latina",
+        "tasso_affollamento": 196.0,
+        "posti_regolamentari": 77.0,
+        "posti_disponibili": 77.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 151.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.082098,
+          38.492577
+        ]
+      },
+      "properties": {
+        "id": "MII177346",
+        "nome": "Laureana di Borrello",
+        "tipo": "Casa di reclusione - Luigi Daga",
+        "indirizzo": "Viale Paolo Quattrone n.7 - 89023 Laureana di Borrello",
+        "tasso_affollamento": 154.0,
+        "posti_regolamentari": 37.0,
+        "posti_disponibili": 37.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 57.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.629467,
+          40.8799681
+        ]
+      },
+      "properties": {
+        "id": "MII177384",
+        "nome": "Lauro",
+        "tipo": "Istituto custodia attenuata per madri",
+        "indirizzo": "Strada Provinciale Bosagro n. snc - 83023 Lauro",
+        "tasso_affollamento": 18.0,
+        "posti_regolamentari": 50.0,
+        "posti_disponibili": 50.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 9.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          18.156339,
+          40.3767969
+        ]
+      },
+      "properties": {
+        "id": "MII177420",
+        "nome": "Lecce",
+        "tipo": "Casa circondariale - Nuovo Complesso",
+        "indirizzo": "Via Paolo Perrone n.4 - 73100 Lecce",
+        "tasso_affollamento": 180.0,
+        "posti_regolamentari": 798.0,
+        "posti_disponibili": 787.0,
+        "posti_non_disponibili": 11.0,
+        "totale_detenuti": 1419.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.389605,
+          45.8553764
+        ]
+      },
+      "properties": {
+        "id": "MII177436",
+        "nome": "Lecco",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Cesare Beccaria n.9 - 23900 Lecco",
+        "tasso_affollamento": 160.0,
+        "posti_regolamentari": 53.0,
+        "posti_disponibili": 52.0,
+        "posti_non_disponibili": 1.0,
+        "totale_detenuti": 83.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.3091456,
+          43.5507411
+        ]
+      },
+      "properties": {
+        "id": "MII177463",
+        "nome": "Livorno",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via delle Macchie n.9 - 57124 Livorno",
+        "tasso_affollamento": 154.0,
+        "posti_regolamentari": 391.0,
+        "posti_disponibili": 149.0,
+        "posti_non_disponibili": 242.0,
+        "totale_detenuti": 229.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.89870751,
+          43.42959665
+        ]
+      },
+      "properties": {
+        "id": "MII177498",
+        "nome": "Livorno Gorgona",
+        "tipo": "Casa di reclusione",
+        "indirizzo": "Gorgona Via Torre Nuova n.1 -. 57030 Livorno",
+        "tasso_affollamento": 129.0,
+        "posti_regolamentari": 89.0,
+        "posti_disponibili": 89.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 115.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.2655092,
+          38.2385368
+        ]
+      },
+      "properties": {
+        "id": "MII177996",
+        "nome": "Locri",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Vittorio Veneto n.71 - 89044 Locri",
+        "tasso_affollamento": 156.0,
+        "posti_regolamentari": 86.0,
+        "posti_disponibili": 80.0,
+        "posti_non_disponibili": 6.0,
+        "totale_detenuti": 125.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.4205999,
+          40.5725948
+        ]
+      },
+      "properties": {
+        "id": "MII178003",
+        "nome": "Onanì",
+        "tipo": "Casa di reclusione - Onanì-Mamone",
+        "indirizzo": "Via Centrale n.3 - 08020 Onan&igrave; (Nuoro)",
+        "tasso_affollamento": 90.0,
+        "posti_regolamentari": 264.0,
+        "posti_disponibili": 210.0,
+        "posti_non_disponibili": 54.0,
+        "totale_detenuti": 188.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.503263,
+          45.3138959
+        ]
+      },
+      "properties": {
+        "id": "MII178027",
+        "nome": "Lodi",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Cagnola n.2 - 26900 Lodi",
+        "tasso_affollamento": 209.0,
+        "posti_regolamentari": 45.0,
+        "posti_disponibili": 43.0,
+        "posti_non_disponibili": 2.0,
+        "totale_detenuti": 90.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.49998221,
+          43.84570065
+        ]
+      },
+      "properties": {
+        "id": "MII178035",
+        "nome": "Lucca",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via San Giorgio n.108 - 55100 Lucca",
+        "tasso_affollamento": 243.0,
+        "posti_regolamentari": 59.0,
+        "posti_disponibili": 37.0,
+        "posti_non_disponibili": 22.0,
+        "totale_detenuti": 90.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.33357537,
+          41.51140835
+        ]
+      },
+      "properties": {
+        "id": "MII178045",
+        "nome": "Lucera",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Piazza Tribunali n.16 - 71036 Lucera",
+        "tasso_affollamento": 137.0,
+        "posti_regolamentari": 135.0,
+        "posti_disponibili": 129.0,
+        "posti_non_disponibili": 6.0,
+        "totale_detenuti": 177.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.7917191,
+          45.1566683
+        ]
+      },
+      "properties": {
+        "id": "MII178072",
+        "nome": "Mantova",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via C. Poma n.3 - 46100 Mantova",
+        "tasso_affollamento": 145.0,
+        "posti_regolamentari": 97.0,
+        "posti_disponibili": 92.0,
+        "posti_non_disponibili": 5.0,
+        "totale_detenuti": 133.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.1371655,
+          44.0231028
+        ]
+      },
+      "properties": {
+        "id": "MII178085",
+        "nome": "Massa",
+        "tipo": "Casa di reclusione",
+        "indirizzo": "Via Pietro Pellegrini n.17 - 54100 Massa",
+        "tasso_affollamento": 168.0,
+        "posti_regolamentari": 177.0,
+        "posti_disponibili": 175.0,
+        "posti_non_disponibili": 2.0,
+        "totale_detenuti": 294.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.9023227,
+          43.0438048
+        ]
+      },
+      "properties": {
+        "id": "MII178115",
+        "nome": "Massa Marittima",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Viale Martiri della Niccioleta n.148 - 58024 Massa Marittima",
+        "tasso_affollamento": 123.0,
+        "posti_regolamentari": 48.0,
+        "posti_disponibili": 48.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 59.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.60599858,
+          40.676213
+        ]
+      },
+      "properties": {
+        "id": "MII178124",
+        "nome": "Matera",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Cererie n.24 - 75100 Matera",
+        "tasso_affollamento": 170.0,
+        "posti_regolamentari": 132.0,
+        "posti_disponibili": 122.0,
+        "posti_non_disponibili": 10.0,
+        "totale_detenuti": 208.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.6556359,
+          40.9961962
+        ]
+      },
+      "properties": {
+        "id": "MII178141",
+        "nome": "Melfi",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Lecce n. snc - 85025 Melfi",
+        "tasso_affollamento": 161.0,
+        "posti_regolamentari": 126.0,
+        "posti_disponibili": 67.0,
+        "posti_non_disponibili": 59.0,
+        "totale_detenuti": 108.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.00434682,
+          38.048433
+        ]
+      },
+      "properties": {
+        "id": "MII178148",
+        "nome": "Messina",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Consolare Valeria n.2 - 98124 Messina",
+        "tasso_affollamento": 113.0,
+        "posti_regolamentari": 302.0,
+        "posti_disponibili": 214.0,
+        "posti_non_disponibili": 88.0,
+        "totale_detenuti": 241.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.16639949,
+          45.4615979
+        ]
+      },
+      "properties": {
+        "id": "MII178501",
+        "nome": "Milano San Vittore femminile",
+        "tipo": "Casa circondariale - Francesco Di Cataldo",
+        "indirizzo": "Piazza Filangieri n.2 - 20123 Milano",
+        "tasso_affollamento": 189.0,
+        "posti_regolamentari": 46.0,
+        "posti_disponibili": 46.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 87.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.9190707,
+          44.67086
+        ]
+      },
+      "properties": {
+        "id": "MII178638",
+        "nome": "Modena",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Strada Sant'Anna n.370 - 41122 Modena",
+        "tasso_affollamento": 162.0,
+        "posti_regolamentari": 371.0,
+        "posti_disponibili": 323.0,
+        "posti_non_disponibili": 48.0,
+        "totale_detenuti": 522.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.28125258,
+          45.5604241
+        ]
+      },
+      "properties": {
+        "id": "MII178659",
+        "nome": "Monza",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Sanquirico n.6 - 20900 Monza",
+        "tasso_affollamento": 169.0,
+        "posti_regolamentari": 413.0,
+        "posti_disponibili": 407.0,
+        "posti_non_disponibili": 6.0,
+        "totale_detenuti": 688.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.27937499,
+          40.8599808
+        ]
+      },
+      "properties": {
+        "id": "MII178666",
+        "nome": "Napoli Poggioreale",
+        "tipo": "Casa circondariale - Giuseppe Salvia",
+        "indirizzo": "Via Nuova Poggioreale n.167 - 80143 Napoli",
+        "tasso_affollamento": 168.0,
+        "posti_regolamentari": 1616.0,
+        "posti_disponibili": 1341.0,
+        "posti_non_disponibili": 275.0,
+        "totale_detenuti": 2258.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.24587204,
+          40.9104776
+        ]
+      },
+      "properties": {
+        "id": "MII178672",
+        "nome": "Napoli Secondigliano",
+        "tipo": "Casa circondariale - Pasquale Mandato",
+        "indirizzo": "Via Roma verso Scampia n.350 - 80144 Napoli",
+        "tasso_affollamento": 142.0,
+        "posti_regolamentari": 1112.0,
+        "posti_disponibili": 1111.0,
+        "posti_non_disponibili": 1.0,
+        "totale_detenuti": 1575.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.07208372,
+          36.89341275
+        ]
+      },
+      "properties": {
+        "id": "MII178681",
+        "nome": "Noto",
+        "tipo": "Casa di reclusione - Attilio Bonincontro",
+        "indirizzo": "Via Garibaldi n.8 - 96017 Noto",
+        "tasso_affollamento": 95.0,
+        "posti_regolamentari": 176.0,
+        "posti_disponibili": 160.0,
+        "posti_non_disponibili": 16.0,
+        "totale_detenuti": 152.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.63788811,
+          45.4353796
+        ]
+      },
+      "properties": {
+        "id": "MII178700",
+        "nome": "Novara",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Sforzesca n.49 - 28100 Novara",
+        "tasso_affollamento": 111.0,
+        "posti_regolamentari": 156.0,
+        "posti_disponibili": 156.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 173.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.30414976,
+          40.31421085
+        ]
+      },
+      "properties": {
+        "id": "MII179224",
+        "nome": "Nuoro",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Badu e Carros n.1 - 08100 Nuoro",
+        "tasso_affollamento": 19.0,
+        "posti_regolamentari": 378.0,
+        "posti_disponibili": 274.0,
+        "posti_non_disponibili": 104.0,
+        "totale_detenuti": 51.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.211149,
+          45.373069
+        ]
+      },
+      "properties": {
+        "id": "MII179237",
+        "nome": "Opera",
+        "tipo": "Casa di reclusione - Iª casa",
+        "indirizzo": "Via Camporgnago n.40 - 20090 Milano",
+        "tasso_affollamento": 154.0,
+        "posti_regolamentari": 918.0,
+        "posti_disponibili": 908.0,
+        "posti_non_disponibili": 10.0,
+        "totale_detenuti": 1401.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.61201176,
+          39.94078795
+        ]
+      },
+      "properties": {
+        "id": "MII179274",
+        "nome": "Oristano",
+        "tipo": "Casa di reclusione - Salvatore Soro",
+        "indirizzo": "Loc. Su Pedriaxiu Massama n. snc - 09170 Oristano",
+        "tasso_affollamento": 97.0,
+        "posti_regolamentari": 264.0,
+        "posti_disponibili": 261.0,
+        "posti_non_disponibili": 3.0,
+        "totale_detenuti": 254.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.11506423,
+          42.72110485
+        ]
+      },
+      "properties": {
+        "id": "MII179280",
+        "nome": "Orvieto",
+        "tipo": "Casa di reclusione",
+        "indirizzo": "Via Roma n.1 - 05018 Orvieto",
+        "tasso_affollamento": 123.0,
+        "posti_regolamentari": 98.0,
+        "posti_disponibili": 98.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 121.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.84137093,
+          45.4451533
+        ]
+      },
+      "properties": {
+        "id": "MII179290",
+        "nome": "Padova",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Due Palazzi n.25/A - 35136 Padova",
+        "tasso_affollamento": 131.0,
+        "posti_regolamentari": 188.0,
+        "posti_disponibili": 178.0,
+        "posti_non_disponibili": 10.0,
+        "totale_detenuti": 234.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.84528382,
+          45.4436499
+        ]
+      },
+      "properties": {
+        "id": "MII179299",
+        "nome": "Padova Nuovo Complesso",
+        "tipo": "Casa di reclusione",
+        "indirizzo": "Via Due Palazzi n.35 - 35135 Padova",
+        "tasso_affollamento": 151.0,
+        "posti_regolamentari": 432.0,
+        "posti_disponibili": 432.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 654.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.33932043,
+          38.09077025
+        ]
+      },
+      "properties": {
+        "id": "MII179306",
+        "nome": "Palermo Pagliarelli",
+        "tipo": "Casa circondariale - Antonio Lorusso",
+        "indirizzo": "Piazza Pietro Cerulli n.1 - 90129 Palermo",
+        "tasso_affollamento": 127.0,
+        "posti_regolamentari": 1166.0,
+        "posti_disponibili": 1095.0,
+        "posti_non_disponibili": 71.0,
+        "totale_detenuti": 1388.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.35769614,
+          38.13289445
+        ]
+      },
+      "properties": {
+        "id": "MII179324",
+        "nome": "Palermo Ucciardone",
+        "tipo": "Casa di reclusione - Calogero Di Bona",
+        "indirizzo": "Via Enrico Albanese n.3 - 90139 Palermo",
+        "tasso_affollamento": 107.0,
+        "posti_regolamentari": 569.0,
+        "posti_disponibili": 527.0,
+        "posti_non_disponibili": 42.0,
+        "totale_detenuti": 563.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0580683,
+          41.8060233
+        ]
+      },
+      "properties": {
+        "id": "MII179331",
+        "nome": "Paliano",
+        "tipo": "Casa di reclusione",
+        "indirizzo": "Viale Garibaldi n.6 - 03018 Paliano",
+        "tasso_affollamento": 42.0,
+        "posti_regolamentari": 153.0,
+        "posti_disponibili": 146.0,
+        "posti_non_disponibili": 7.0,
+        "totale_detenuti": 61.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.8589302,
+          38.3673254
+        ]
+      },
+      "properties": {
+        "id": "MII179342",
+        "nome": "Palmi",
+        "tipo": "Casa circondariale - Filippo Salsone",
+        "indirizzo": "Via Trodio n.1 - 89015 Palmi",
+        "tasso_affollamento": 107.0,
+        "posti_regolamentari": 141.0,
+        "posti_disponibili": 120.0,
+        "posti_non_disponibili": 21.0,
+        "totale_detenuti": 128.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.039588,
+          39.359893
+        ]
+      },
+      "properties": {
+        "id": "MII179353",
+        "nome": "Paola",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Paolino Maria Quattrone n.1 - 87027 Paola",
+        "tasso_affollamento": 151.0,
+        "posti_regolamentari": 181.0,
+        "posti_disponibili": 159.0,
+        "posti_non_disponibili": 22.0,
+        "totale_detenuti": 240.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.36522212,
+          44.8167494
+        ]
+      },
+      "properties": {
+        "id": "MII179364",
+        "nome": "Parma",
+        "tipo": "Casa di reclusione",
+        "indirizzo": "Strada Burla n.57 - 43122 Parma",
+        "tasso_affollamento": 122.0,
+        "posti_regolamentari": 655.0,
+        "posti_disponibili": 649.0,
+        "posti_non_disponibili": 6.0,
+        "totale_detenuti": 795.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.9925217,
+          44.9978954
+        ]
+      },
+      "properties": {
+        "id": "MII179733",
+        "nome": "Voghera",
+        "tipo": "Casa circondariale - Nuovo Complesso",
+        "indirizzo": "Via Prati Nuovi n.7 - 27058 Voghera",
+        "tasso_affollamento": 122.0,
+        "posti_regolamentari": 346.0,
+        "posti_disponibili": 345.0,
+        "posti_non_disponibili": 1.0,
+        "totale_detenuti": 420.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.26260324,
+          43.05317525
+        ]
+      },
+      "properties": {
+        "id": "MII179781",
+        "nome": "Perugia",
+        "tipo": "Casa circondariale - Nuovo complesso penitenziario Capanne",
+        "indirizzo": "Strada Pievaiola n.252 - 06132 Perugia",
+        "tasso_affollamento": 159.0,
+        "posti_regolamentari": 363.0,
+        "posti_disponibili": 307.0,
+        "posti_non_disponibili": 56.0,
+        "totale_detenuti": 487.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.85524221,
+          43.8735952
+        ]
+      },
+      "properties": {
+        "id": "MII179818",
+        "nome": "Pesaro",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Strada Fontesecco n.88 - 61122 Pesaro",
+        "tasso_affollamento": 178.0,
+        "posti_regolamentari": 156.0,
+        "posti_disponibili": 144.0,
+        "posti_non_disponibili": 12.0,
+        "totale_detenuti": 256.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.215016,
+          42.4506322
+        ]
+      },
+      "properties": {
+        "id": "MII179830",
+        "nome": "Pescara",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via San Donato n.2-  65129 Pescara",
+        "tasso_affollamento": 164.0,
+        "posti_regolamentari": 276.0,
+        "posti_disponibili": 243.0,
+        "posti_non_disponibili": 33.0,
+        "totale_detenuti": 398.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.6947461,
+          45.0534751
+        ]
+      },
+      "properties": {
+        "id": "MII179842",
+        "nome": "Piacenza",
+        "tipo": "Casa circondariale - San Lazzaro",
+        "indirizzo": "Via delle Novate n.65 - 29122 Piacenza",
+        "tasso_affollamento": 139.0,
+        "posti_regolamentari": 414.0,
+        "posti_disponibili": 411.0,
+        "posti_non_disponibili": 3.0,
+        "totale_detenuti": 572.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.367174,
+          37.385946
+        ]
+      },
+      "properties": {
+        "id": "MII179856",
+        "nome": "Piazza Armerina",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Fabrizio De Andr&eacute; n.1 - 94015 Piazza Armerina",
+        "tasso_affollamento": 136.0,
+        "posti_regolamentari": 48.0,
+        "posti_disponibili": 47.0,
+        "posti_non_disponibili": 1.0,
+        "totale_detenuti": 64.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.860019,
+          43.400337
+        ]
+      },
+      "properties": {
+        "id": "MII179876",
+        "nome": "Volterra",
+        "tipo": "Casa di reclusione",
+        "indirizzo": "Rampa di Castello n.4 -  56048 Volterra",
+        "tasso_affollamento": 96.0,
+        "posti_regolamentari": 189.0,
+        "posti_disponibili": 188.0,
+        "posti_non_disponibili": 1.0,
+        "totale_detenuti": 181.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.91550517,
+          43.93904125
+        ]
+      },
+      "properties": {
+        "id": "MII179896",
+        "nome": "Pistoia",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via dei Macelli n.13 - 51100 Pistoia",
+        "tasso_affollamento": 113.0,
+        "posti_regolamentari": 76.0,
+        "posti_disponibili": 76.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 86.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.66265692,
+          45.9561032
+        ]
+      },
+      "properties": {
+        "id": "MII179913",
+        "nome": "Pordenone",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Piazza della Motta n.10 - 33170 Pordenone",
+        "tasso_affollamento": 138.0,
+        "posti_regolamentari": 37.0,
+        "posti_disponibili": 37.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 51.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.40289057,
+          42.7655212
+        ]
+      },
+      "properties": {
+        "id": "MII179932",
+        "nome": "Porto Azzurro",
+        "tipo": "Casa di reclusione - Pasquale De Santis",
+        "indirizzo": "Forte San Giacomo n.1 57036 - Porto Azzurro",
+        "tasso_affollamento": 123.0,
+        "posti_regolamentari": 334.0,
+        "posti_disponibili": 334.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 412.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.824158,
+          40.6413675
+        ]
+      },
+      "properties": {
+        "id": "MII179938",
+        "nome": "Potenza",
+        "tipo": "Casa circondariale - Antonio Santoro",
+        "indirizzo": "Via Appia n.175 - 85100 Potenza",
+        "tasso_affollamento": 165.0,
+        "posti_regolamentari": 107.0,
+        "posti_disponibili": 107.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 177.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.1210843,
+          40.82861375
+        ]
+      },
+      "properties": {
+        "id": "MII179945",
+        "nome": "Pozzuoli",
+        "tipo": "Casa circondariale femminile",
+        "indirizzo": "Via Pergolesi n.140 - 80078 Pozzuoli",
+        "tasso_affollamento": null,
+        "posti_regolamentari": 98.0,
+        "posti_disponibili": 0.0,
+        "posti_non_disponibili": 98.0,
+        "totale_detenuti": 0.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.0644075,
+          43.9034549
+        ]
+      },
+      "properties": {
+        "id": "MII179958",
+        "nome": "Prato",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via La Montagnola n.76 - 50900 Prato",
+        "tasso_affollamento": 113.0,
+        "posti_regolamentari": 589.0,
+        "posti_disponibili": 542.0,
+        "posti_non_disponibili": 47.0,
+        "totale_detenuti": 615.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.72372512,
+          36.9145799
+        ]
+      },
+      "properties": {
+        "id": "MII179965",
+        "nome": "Ragusa",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via G. di Vittorio n.26 - 97100 Ragusa",
+        "tasso_affollamento": 111.0,
+        "posti_regolamentari": 196.0,
+        "posti_disponibili": 183.0,
+        "posti_non_disponibili": 13.0,
+        "totale_detenuti": 204.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.19213791,
+          44.41458045
+        ]
+      },
+      "properties": {
+        "id": "MII179981",
+        "nome": "Ravenna",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Port'Aurea n.57 - 48121 Ravenna",
+        "tasso_affollamento": 167.0,
+        "posti_regolamentari": 49.0,
+        "posti_disponibili": 49.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 82.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.681926617,
+          38.1929515
+        ]
+      },
+      "properties": {
+        "id": "MII179988",
+        "nome": "Reggio Calabria Arghillà",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Contrada Rugola n. snc - 89135 Reggio Calabria",
+        "tasso_affollamento": 133.0,
+        "posti_regolamentari": 294.0,
+        "posti_disponibili": 275.0,
+        "posti_non_disponibili": 19.0,
+        "totale_detenuti": 367.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.6397556,
+          38.1035389
+        ]
+      },
+      "properties": {
+        "id": "MII179995",
+        "nome": "Reggio Calabria Giuseppe Panzera",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Carcere Nuovo n.15 89129 - Reggio Calabria",
+        "tasso_affollamento": 86.0,
+        "posti_regolamentari": 180.0,
+        "posti_disponibili": 159.0,
+        "posti_non_disponibili": 21.0,
+        "totale_detenuti": 137.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.5684371,
+          44.0593886
+        ]
+      },
+      "properties": {
+        "id": "MII180001",
+        "nome": "Rimini",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Santa Cristina n.19 - 47900 Rimini",
+        "tasso_affollamento": 142.0,
+        "posti_regolamentari": 118.0,
+        "posti_disponibili": 118.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 168.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.57406556,
+          41.93451235
+        ]
+      },
+      "properties": {
+        "id": "MII180348",
+        "nome": "Roma Rebibbia femminile",
+        "tipo": "Casa circondariale - Germana Stefanini",
+        "indirizzo": "Via Bartolo Longo n.92 - 00156 Roma",
+        "tasso_affollamento": 159.0,
+        "posti_regolamentari": 272.0,
+        "posti_disponibili": 234.0,
+        "posti_non_disponibili": 38.0,
+        "totale_detenuti": 371.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.57406556,
+          41.93451235
+        ]
+      },
+      "properties": {
+        "id": "MII180356",
+        "nome": "Roma Rebibbia IIIª casa",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Bartolo Longo n.82 - 00156 Roma",
+        "tasso_affollamento": 77.0,
+        "posti_regolamentari": 172.0,
+        "posti_disponibili": 132.0,
+        "posti_non_disponibili": 40.0,
+        "totale_detenuti": 102.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.57406556,
+          41.93451235
+        ]
+      },
+      "properties": {
+        "id": "MII180370",
+        "nome": "Roma Rebibbia Nuovo Complesso",
+        "tipo": "Casa circondariale - Raffaele Cinotti",
+        "indirizzo": "Via Raffaele Majetti n.70 - 00156 Roma",
+        "tasso_affollamento": 153.0,
+        "posti_regolamentari": 1171.0,
+        "posti_disponibili": 1068.0,
+        "posti_non_disponibili": 103.0,
+        "totale_detenuti": 1636.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.57406556,
+          41.93451235
+        ]
+      },
+      "properties": {
+        "id": "MII180380",
+        "nome": "Roma Rebibbia",
+        "tipo": "Casa di reclusione",
+        "indirizzo": "Via Bartolo Longo n.72 - 00156 Roma",
+        "tasso_affollamento": 111.0,
+        "posti_regolamentari": 445.0,
+        "posti_disponibili": 263.0,
+        "posti_non_disponibili": 182.0,
+        "totale_detenuti": 292.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.46386051,
+          41.8952204
+        ]
+      },
+      "properties": {
+        "id": "MII180401",
+        "nome": "Roma Regina Coeli",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via della Lungara n.29 - 00165 Roma",
+        "tasso_affollamento": 171.0,
+        "posti_regolamentari": 628.0,
+        "posti_disponibili": 572.0,
+        "posti_non_disponibili": 56.0,
+        "totale_detenuti": 976.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.6348647,
+          39.5746821
+        ]
+      },
+      "properties": {
+        "id": "MII180415",
+        "nome": "Rossano",
+        "tipo": "Casa di reclusione - Nuovo Complesso",
+        "indirizzo": "Contrada Ciminata n. snc - 87067 Rossano",
+        "tasso_affollamento": 121.0,
+        "posti_regolamentari": 263.0,
+        "posti_disponibili": 263.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 317.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.81300853,
+          45.0843329
+        ]
+      },
+      "properties": {
+        "id": "MII180424",
+        "nome": "Rovigo",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Strada regionale 443 Dir. n.2 - 45100 Rovigo",
+        "tasso_affollamento": 131.0,
+        "posti_regolamentari": 209.0,
+        "posti_disponibili": 207.0,
+        "posti_non_disponibili": 2.0,
+        "totale_detenuti": 271.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.85032945,
+          40.6521175
+        ]
+      },
+      "properties": {
+        "id": "MII180426",
+        "nome": "Salerno",
+        "tipo": "Casa circondariale - Antonio Caputo",
+        "indirizzo": "Via del Tonnazzo n.1 - 84100 Salerno",
+        "tasso_affollamento": 159.0,
+        "posti_regolamentari": 376.0,
+        "posti_disponibili": 376.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 599.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.4926009,
+          44.6446052
+        ]
+      },
+      "properties": {
+        "id": "MII180437",
+        "nome": "Saluzzo",
+        "tipo": "Casa di reclusione - Rodolfo Morandi",
+        "indirizzo": "Regione Bronda n.19/B - 12037 Saluzzo",
+        "tasso_affollamento": 85.0,
+        "posti_regolamentari": 420.0,
+        "posti_disponibili": 412.0,
+        "posti_non_disponibili": 8.0,
+        "totale_detenuti": 349.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.993065,
+          37.488445
+        ]
+      },
+      "properties": {
+        "id": "MII180451",
+        "nome": "San Cataldo",
+        "tipo": "Casa di reclusione",
+        "indirizzo": "Piazza Marconi n.1 - 93017 San Cataldo",
+        "tasso_affollamento": 88.0,
+        "posti_regolamentari": 135.0,
+        "posti_disponibili": 117.0,
+        "posti_non_disponibili": 18.0,
+        "totale_detenuti": 103.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.02355054,
+          43.4263361
+        ]
+      },
+      "properties": {
+        "id": "MII180458",
+        "nome": "San Gimignano",
+        "tipo": "Casa di reclusione",
+        "indirizzo": "Loc. Ciuciano Ranza n.20 - 53037 San Gimignano",
+        "tasso_affollamento": 148.0,
+        "posti_regolamentari": 243.0,
+        "posti_disponibili": 223.0,
+        "posti_non_disponibili": 20.0,
+        "totale_detenuti": 330.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.7748827,
+          43.8198253
+        ]
+      },
+      "properties": {
+        "id": "MII180465",
+        "nome": "Sanremo",
+        "tipo": "Casa di reclusione - Nuovo Complesso",
+        "indirizzo": "Strada Armea n.144/a - 18038 Sanremo",
+        "tasso_affollamento": 123.0,
+        "posti_regolamentari": 223.0,
+        "posti_disponibili": 219.0,
+        "posti_non_disponibili": 4.0,
+        "totale_detenuti": 269.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.3708272,
+          41.6893215
+        ]
+      },
+      "properties": {
+        "id": "MII180476",
+        "nome": "San Severo",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Emilio Dotoli n.1 - 71016 San Severo",
+        "tasso_affollamento": 144.0,
+        "posti_regolamentari": 61.0,
+        "posti_disponibili": 61.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 88.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.23503914,
+          41.04325675
+        ]
+      },
+      "properties": {
+        "id": "MII180487",
+        "nome": "Santa Maria Capua Vetere",
+        "tipo": "Casa circondariale - Francesco Uccella",
+        "indirizzo": "Strada Statale Appia 7 bis Km. 6+500 n. snc - 81055 Santa Maria Capua Vetere",
+        "tasso_affollamento": 153.0,
+        "posti_regolamentari": 826.0,
+        "posti_disponibili": 676.0,
+        "posti_non_disponibili": 150.0,
+        "totale_detenuti": 1034.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.1892849,
+          40.9101396
+        ]
+      },
+      "properties": {
+        "id": "MII181079",
+        "nome": "Sant'Angelo dei Lombardi",
+        "tipo": "Casa di reclusione - Famiglietti, Forgetta, Bartolo",
+        "indirizzo": "C. da Selvatico n. SNC - 83054 Sant'Angelo dei Lombardi",
+        "tasso_affollamento": 155.0,
+        "posti_regolamentari": 124.0,
+        "posti_disponibili": 115.0,
+        "posti_non_disponibili": 9.0,
+        "totale_detenuti": 178.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.55148315,
+          40.72020106
+        ]
+      },
+      "properties": {
+        "id": "MII181091",
+        "nome": "Sassari",
+        "tipo": "Casa circondariale - Giovanni Bacchiddu",
+        "indirizzo": "Localit&agrave; Bancali - Strada Provinciale 56 n.4 - 07100 Sassari",
+        "tasso_affollamento": 125.0,
+        "posti_regolamentari": 458.0,
+        "posti_disponibili": 458.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 571.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0823323,
+          37.5064786
+        ]
+      },
+      "properties": {
+        "id": "MII181109",
+        "nome": "Sciacca",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Pietro Gerardi n.12 - 92019 Sciacca",
+        "tasso_affollamento": 120.0,
+        "posti_regolamentari": 73.0,
+        "posti_disponibili": 20.0,
+        "posti_non_disponibili": 53.0,
+        "totale_detenuti": 24.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.33794054,
+          43.31814595
+        ]
+      },
+      "properties": {
+        "id": "MII181115",
+        "nome": "Siena",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Piazza Santo Spirito n.3 - 53100 Siena",
+        "tasso_affollamento": 112.0,
+        "posti_regolamentari": 58.0,
+        "posti_disponibili": 58.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 65.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.16261221,
+          37.03487355
+        ]
+      },
+      "properties": {
+        "id": "MII181125",
+        "nome": "Siracusa",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Monasteri n.20 - 96100  Siracusa",
+        "tasso_affollamento": 126.0,
+        "posti_regolamentari": 545.0,
+        "posti_disponibili": 545.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 685.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.25841367,
+          46.32336235
+        ]
+      },
+      "properties": {
+        "id": "MII181346",
+        "nome": "Sondrio",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Antonio Caimi n.80 - 23100 Sondrio",
+        "tasso_affollamento": 167.0,
+        "posti_regolamentari": 26.0,
+        "posti_disponibili": 24.0,
+        "posti_non_disponibili": 2.0,
+        "totale_detenuti": 40.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.72710874,
+          42.78113085
+        ]
+      },
+      "properties": {
+        "id": "MII181358",
+        "nome": "Spoleto",
+        "tipo": "Casa di reclusione",
+        "indirizzo": "Localit&agrave; Maiano n.10 - 06049 Spoleto",
+        "tasso_affollamento": 113.0,
+        "posti_regolamentari": 456.0,
+        "posti_disponibili": 456.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 516.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.9279741,
+          42.0685398
+        ]
+      },
+      "properties": {
+        "id": "MII181371",
+        "nome": "Sulmona",
+        "tipo": "Casa di reclusione",
+        "indirizzo": "Via Lamaccio n. snc - 67039 Sulmona",
+        "tasso_affollamento": 128.0,
+        "posti_regolamentari": 523.0,
+        "posti_disponibili": 523.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 667.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.29388354,
+          40.45574895
+        ]
+      },
+      "properties": {
+        "id": "MII181377",
+        "nome": "Taranto",
+        "tipo": "Casa circondariale - Carmelo Magli",
+        "indirizzo": "Via Carmelo Magli n.1 - 74100 Taranto",
+        "tasso_affollamento": 197.0,
+        "posti_regolamentari": 500.0,
+        "posti_disponibili": 430.0,
+        "posti_non_disponibili": 70.0,
+        "totale_detenuti": 845.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.1035159,
+          40.8973821
+        ]
+      },
+      "properties": {
+        "id": "MII181385",
+        "nome": "Tempio Pausania",
+        "tipo": "Casa di reclusione - Paolo Pittalis",
+        "indirizzo": "Localit&agrave; Nuchis n. snc - 07029 Tempio Pausania",
+        "tasso_affollamento": 104.0,
+        "posti_regolamentari": 163.0,
+        "posti_disponibili": 163.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 170.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.6983524,
+          42.6612893
+        ]
+      },
+      "properties": {
+        "id": "MII181392",
+        "nome": "Teramo",
+        "tipo": "Casa circondariale",
+        "indirizzo": "C.da Ceppata n.1 - 64100 Teramo",
+        "tasso_affollamento": 179.0,
+        "posti_regolamentari": 255.0,
+        "posti_disponibili": 252.0,
+        "posti_non_disponibili": 3.0,
+        "totale_detenuti": 451.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.695554,
+          37.983651
+        ]
+      },
+      "properties": {
+        "id": "MII181401",
+        "nome": "Termini Imerese",
+        "tipo": "Casa circondariale - Antonino Burrafato",
+        "indirizzo": "Via Zara n.28 - 90018 Termini Imerese",
+        "tasso_affollamento": 116.0,
+        "posti_regolamentari": 95.0,
+        "posti_disponibili": 92.0,
+        "posti_non_disponibili": 3.0,
+        "totale_detenuti": 107.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.5982445,
+          42.5545755
+        ]
+      },
+      "properties": {
+        "id": "MII181407",
+        "nome": "Terni",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Strada delle Campore n.32 - 05100 Terni",
+        "tasso_affollamento": 136.0,
+        "posti_regolamentari": 423.0,
+        "posti_disponibili": 423.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 576.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.0180531668208,
+          46.41857068653332
+        ]
+      },
+      "properties": {
+        "id": "MII181417",
+        "nome": "Tolmezzo",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Paluzza n.77 - 33028 Tolmezzo",
+        "tasso_affollamento": 126.0,
+        "posti_regolamentari": 148.0,
+        "posti_disponibili": 148.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 186.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.6199624,
+          45.1013372
+        ]
+      },
+      "properties": {
+        "id": "MII181424",
+        "nome": "Torino",
+        "tipo": "Casa circondariale - Lorusso Cutugno",
+        "indirizzo": "VIa M. Aglietta n.35 - 10151 Torino",
+        "tasso_affollamento": 137.0,
+        "posti_regolamentari": 1119.0,
+        "posti_disponibili": 1092.0,
+        "posti_non_disponibili": 27.0,
+        "totale_detenuti": 1491.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.3959453,
+          41.275354
+        ]
+      },
+      "properties": {
+        "id": "MII181434",
+        "nome": "Trani",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Andria n 300 - 76125 Trani",
+        "tasso_affollamento": 148.0,
+        "posti_regolamentari": 447.0,
+        "posti_disponibili": 297.0,
+        "posti_non_disponibili": 150.0,
+        "totale_detenuti": 440.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.3959453,
+          41.275354
+        ]
+      },
+      "properties": {
+        "id": "MII181440",
+        "nome": "Trani femminile",
+        "tipo": "Casa di reclusione",
+        "indirizzo": "Piazza Plebiscito n.18 - 76125 Trani",
+        "tasso_affollamento": 141.0,
+        "posti_regolamentari": 32.0,
+        "posti_disponibili": 32.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 45.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.5437475,
+          38.0160543
+        ]
+      },
+      "properties": {
+        "id": "MII181625",
+        "nome": "Trapani",
+        "tipo": "Casa circondariale - Pietro Cerulli",
+        "indirizzo": "Via Madonna di Fatima n.222 - 91016 Trapani",
+        "tasso_affollamento": 115.0,
+        "posti_regolamentari": 555.0,
+        "posti_disponibili": 482.0,
+        "posti_non_disponibili": 73.0,
+        "totale_detenuti": 556.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.09424056,
+          46.1268099
+        ]
+      },
+      "properties": {
+        "id": "MII181636",
+        "nome": "Trento",
+        "tipo": "Casa circondariale - Spini di Gardolo",
+        "indirizzo": "Via Cesare Beccaria n.13 - 38121 Trento",
+        "tasso_affollamento": 99.0,
+        "posti_regolamentari": 422.0,
+        "posti_disponibili": 422.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 419.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.23006239,
+          45.67301695
+        ]
+      },
+      "properties": {
+        "id": "MII181645",
+        "nome": "Treviso",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Santa Bona Nuova n.5/B - 31100 Treviso",
+        "tasso_affollamento": 167.0,
+        "posti_regolamentari": 132.0,
+        "posti_disponibili": 132.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 221.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.78073313,
+          45.6556788
+        ]
+      },
+      "properties": {
+        "id": "MII181661",
+        "nome": "Trieste",
+        "tipo": "Casa circondariale - Ernesto Mari",
+        "indirizzo": "Via Coroneo n. 26/28 - 34133 Trieste",
+        "tasso_affollamento": 184.0,
+        "posti_regolamentari": 150.0,
+        "posti_disponibili": 135.0,
+        "posti_non_disponibili": 15.0,
+        "totale_detenuti": 248.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.24805433,
+          46.06711525
+        ]
+      },
+      "properties": {
+        "id": "MII181672",
+        "nome": "Udine",
+        "tipo": "Casa circondariale - Antonio Santoro",
+        "indirizzo": "Via Spalato n. 30 - 33100 Udine",
+        "tasso_affollamento": 197.0,
+        "posti_regolamentari": 89.0,
+        "posti_disponibili": 86.0,
+        "posti_non_disponibili": 3.0,
+        "totale_detenuti": 169.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.8620293,
+          41.1257843
+        ]
+      },
+      "properties": {
+        "id": "MII181678",
+        "nome": "Bari",
+        "tipo": "Casa circondariale - Francesco Rucci",
+        "indirizzo": "Corso Alcide De Gasperi n.307 - 70124 Bari",
+        "tasso_affollamento": 166.0,
+        "posti_regolamentari": 296.0,
+        "posti_disponibili": 259.0,
+        "posti_non_disponibili": 37.0,
+        "totale_detenuti": 429.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          17.01893088,
+          40.91732385
+        ]
+      },
+      "properties": {
+        "id": "MII181681",
+        "nome": "Turi",
+        "tipo": "Casa di reclusione",
+        "indirizzo": "Piazza Aldo Moro n.4 - 70010 Turi",
+        "tasso_affollamento": 169.0,
+        "posti_regolamentari": 108.0,
+        "posti_disponibili": 108.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 182.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          15.26576,
+          40.229704
+        ]
+      },
+      "properties": {
+        "id": "MII181691",
+        "nome": "Vallo della Lucania",
+        "tipo": "Casa circondariale - Alfredo Paragano",
+        "indirizzo": "A.R. Passaro n.39 - 84078  Vallo della Lucania",
+        "tasso_affollamento": 150.0,
+        "posti_regolamentari": 40.0,
+        "posti_disponibili": 40.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 60.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.8263438,
+          45.8175359
+        ]
+      },
+      "properties": {
+        "id": "MII181703",
+        "nome": "Varese",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Felicita Morandi n.5 - 21100 Varese",
+        "tasso_affollamento": 202.0,
+        "posti_regolamentari": 53.0,
+        "posti_disponibili": 53.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 107.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          14.44633484,
+          42.29559582
+        ]
+      },
+      "properties": {
+        "id": "MII181820",
+        "nome": "Vasto",
+        "tipo": "Casa di lavoro",
+        "indirizzo": "Via Torre Sinello n.23 - 66054 Vasto",
+        "tasso_affollamento": 78.0,
+        "posti_regolamentari": 197.0,
+        "posti_disponibili": 195.0,
+        "posti_non_disponibili": 2.0,
+        "totale_detenuti": 153.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.73058684,
+          41.61240705
+        ]
+      },
+      "properties": {
+        "id": "MII181839",
+        "nome": "Velletri",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Campoleone n.97 - 00049 Velletri",
+        "tasso_affollamento": 153.0,
+        "posti_regolamentari": 412.0,
+        "posti_disponibili": 385.0,
+        "posti_non_disponibili": 27.0,
+        "totale_detenuti": 590.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.31826224,
+          45.42608215
+        ]
+      },
+      "properties": {
+        "id": "MII181847",
+        "nome": "Venezia Giudecca",
+        "tipo": "Casa di reclusione femminile",
+        "indirizzo": "S. Eufemia n.712 - 30133 Venezia",
+        "tasso_affollamento": 87.0,
+        "posti_regolamentari": 112.0,
+        "posti_disponibili": 112.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 97.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.31724323,
+          45.435422
+        ]
+      },
+      "properties": {
+        "id": "MII181863",
+        "nome": "Venezia Santa Maria Maggiore",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Santa Croce n.324 - 30135  Venezia",
+        "tasso_affollamento": 168.0,
+        "posti_regolamentari": 159.0,
+        "posti_disponibili": 158.0,
+        "posti_non_disponibili": 1.0,
+        "totale_detenuti": 265.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.5516789,
+          45.9221715
+        ]
+      },
+      "properties": {
+        "id": "MII181870",
+        "nome": "Verbania",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Giuseppe Castelli n.8 - 28922 Verbania",
+        "tasso_affollamento": 158.0,
+        "posti_regolamentari": 53.0,
+        "posti_disponibili": 48.0,
+        "posti_non_disponibili": 5.0,
+        "totale_detenuti": 76.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.42909461,
+          45.3063558
+        ]
+      },
+      "properties": {
+        "id": "MII181880",
+        "nome": "Vercelli",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Strada Vicinale del Rollone n.19 - 13100 Vercelli",
+        "tasso_affollamento": 165.0,
+        "posti_regolamentari": 229.0,
+        "posti_disponibili": 220.0,
+        "posti_non_disponibili": 9.0,
+        "totale_detenuti": 364.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.04808194,
+          45.44345285
+        ]
+      },
+      "properties": {
+        "id": "MII181891",
+        "nome": "Verona",
+        "tipo": "Casa circondariale - Montorio",
+        "indirizzo": "Via San Michele n.15 - 37141 Verona",
+        "tasso_affollamento": 190.0,
+        "posti_regolamentari": 335.0,
+        "posti_disponibili": 334.0,
+        "posti_non_disponibili": 1.0,
+        "totale_detenuti": 635.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          16.0924801,
+          38.677407
+        ]
+      },
+      "properties": {
+        "id": "MII181908",
+        "nome": "Vibo Valentia",
+        "tipo": "Casa circondariale - Nuovo Complesso",
+        "indirizzo": "Contrada Cocari n. snc - 89900 Vibo Valentia",
+        "tasso_affollamento": 116.0,
+        "posti_regolamentari": 406.0,
+        "posti_disponibili": 276.0,
+        "posti_non_disponibili": 130.0,
+        "totale_detenuti": 320.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          11.5780075,
+          45.5518993
+        ]
+      },
+      "properties": {
+        "id": "MII181918",
+        "nome": "Vicenza",
+        "tipo": "Casa circondariale - Filippo Del Papa",
+        "indirizzo": "Via Basilio Dalla Scola n. 150 - 36100 Vicenza",
+        "tasso_affollamento": 134.0,
+        "posti_regolamentari": 276.0,
+        "posti_disponibili": 265.0,
+        "posti_non_disponibili": 11.0,
+        "totale_detenuti": 355.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          8.8114587,
+          45.3211074
+        ]
+      },
+      "properties": {
+        "id": "MII181924",
+        "nome": "Vigevano",
+        "tipo": "Casa di reclusione",
+        "indirizzo": "Via Gravellona n.240 - 27029 Vigevano",
+        "tasso_affollamento": 113.0,
+        "posti_regolamentari": 237.0,
+        "posti_disponibili": 15.0,
+        "posti_non_disponibili": 222.0,
+        "totale_detenuti": 17.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.09423595,
+          42.4525651
+        ]
+      },
+      "properties": {
+        "id": "MII181934",
+        "nome": "Viterbo",
+        "tipo": "Casa circondariale  N.C.  - Nicandro Izzo",
+        "indirizzo": "Strada SS. Salvatore n. 14/b - 01100 Viterbo",
+        "tasso_affollamento": 167.0,
+        "posti_regolamentari": 440.0,
+        "posti_disponibili": 396.0,
+        "posti_non_disponibili": 44.0,
+        "totale_detenuti": 663.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.63973152,
+          44.6639363
+        ]
+      },
+      "properties": {
+        "id": "MII182339",
+        "nome": "Reggio Emilia",
+        "tipo": "Istituti di pena - casa circondariale e di reclusione",
+        "indirizzo": "Via Settembrini n.8 - 42123 Reggio Emilia",
+        "tasso_affollamento": 131.0,
+        "posti_regolamentari": 292.0,
+        "posti_disponibili": 234.0,
+        "posti_non_disponibili": 58.0,
+        "totale_detenuti": 307.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          13.4265048,
+          42.0347963
+        ]
+      },
+      "properties": {
+        "id": "MII182440",
+        "nome": "Avezzano",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via San Francesco n.8 - 67051 Avezzano",
+        "tasso_affollamento": 142.0,
+        "posti_regolamentari": 53.0,
+        "posti_disponibili": 53.0,
+        "posti_non_disponibili": 0.0,
+        "totale_detenuti": 75.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          9.17887325,
+          45.2073703
+        ]
+      },
+      "properties": {
+        "id": "MII182910",
+        "nome": "Pavia",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via Vigentina n.85 - 27100 Pavia",
+        "tasso_affollamento": 145.0,
+        "posti_regolamentari": 515.0,
+        "posti_disponibili": 512.0,
+        "posti_non_disponibili": 3.0,
+        "totale_detenuti": 742.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          10.41402939,
+          43.71851375
+        ]
+      },
+      "properties": {
+        "id": "MII182919",
+        "nome": "Pisa",
+        "tipo": "Casa circondariale",
+        "indirizzo": "Via S. Giovanni Bosco n.43 - 56127 Pisa",
+        "tasso_affollamento": 158.0,
+        "posti_regolamentari": 195.0,
+        "posti_disponibili": 185.0,
+        "posti_non_disponibili": 10.0,
+        "totale_detenuti": 293.0,
+        "aggiornato_al": "2026-05-20"
+      }
+    }
+  ]
+}
