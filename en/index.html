@@ -942,7 +942,7 @@ function setLang(lang) {
   // Rebind all popups with translated content
   for (var key in markerMap) {
     var entry = markerMap[key];
-    entry.marker.bindPopup(makePopup(entry.prison), {maxWidth: 280, minWidth: 220});
+    entry.marker.bindPopup((function(p){ return function(){ return makePopup(p); }; })(entry.prison), {maxWidth: 280, minWidth: 220});
   }
   map.closePopup();
 
@@ -1339,7 +1339,7 @@ for (var pi = 0; pi < PRISONS.length; pi++) {
   marker._prison = prison;
   marker._filteredCats = Object.assign({}, prison.categories);
   marker._filteredTotal = prison.total;
-  marker.bindPopup(makePopup(prison), {maxWidth: 280, minWidth: 220});
+  marker.bindPopup((function(p){ return function(){ return makePopup(p); }; })(prison), {maxWidth: 280, minWidth: 220});
   clusterGroup.addLayer(marker);
   markerMap[pi] = {marker: marker, prison: prison};
 }
