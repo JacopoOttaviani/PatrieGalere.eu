@@ -1502,8 +1502,8 @@ var initTotal = 0;
 for (var pi = 0; pi < PRISONS.length; pi++) initTotal += PRISONS[pi].total;
 document.getElementById('death-count').textContent = initTotal.toLocaleString(currentLang === 'it' ? 'it-IT' : 'en-US');
 
-// Apply language from URL path (after DOM is ready)
-if (_initLang !== 'it') setLang(_initLang);
+// en/index.html is always the English version — apply unconditionally
+setLang('en');
 </script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
