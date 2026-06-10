@@ -1,7 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="12" fill="#0a0c14"/>
-  <rect x="12" y="12" width="7" height="40" rx="3" fill="#ffffff"/>
-  <rect x="24" y="12" width="7" height="40" rx="3" fill="#e74c3c"/>
-  <rect x="36" y="12" width="7" height="40" rx="3" fill="#ffffff"/>
-  <rect x="48" y="12" width="7" height="40" rx="3" fill="#ffffff"/>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a1d2e"/>
+      <stop offset="1" stop-color="#0a0c14"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#c9cede"/>
+    </linearGradient>
+    <linearGradient id="red" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff6b5b"/>
+      <stop offset="1" stop-color="#e74c3c"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+  <rect x="1" y="1" width="62" height="62" rx="13" fill="none" stroke="#3d4778" stroke-width="2" opacity="0.55"/>
+  <rect x="10" y="18" width="44" height="4" rx="2" fill="#6c7390" opacity="0.85"/>
+  <rect x="11" y="10" width="7" height="44" rx="3.5" fill="url(#bar)"/>
+  <rect x="23" y="10" width="7" height="44" rx="3.5" fill="url(#bar)"/>
+  <rect x="35" y="10" width="7" height="44" rx="3.5" fill="url(#red)"/>
+  <rect x="47" y="10" width="7" height="44" rx="3.5" fill="url(#bar)"/>
 </svg>
