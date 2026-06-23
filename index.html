@@ -1223,7 +1223,7 @@ function toggleOvercrowding() {
 // ─── Map init ───────────────────────────────────────────────────────────────
 const map = L.map('map', {
   center: [42.3, 12.8],
-  zoom: 6,
+  zoom: window.innerWidth <= 1024 ? 5 : 6,
   minZoom: window.innerWidth <= 1024 ? 5 : 6,
   zoomControl: true,
   preferCanvas: false
