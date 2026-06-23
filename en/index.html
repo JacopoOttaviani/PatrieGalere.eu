@@ -799,6 +799,7 @@ const UI = {
     popup_deaths: 'decessi',
     chart_total: 'Totale',
     chart_suicides: 'Suicidi',
+    chart_other: 'Altre cause',
     chart_deaths: 'decessi',
     page_title: 'PatrieGalere.eu — Morti in carcere in Italia',
     ovr_btn: 'Sovraffollamento',
@@ -843,6 +844,7 @@ const UI = {
     popup_deaths: 'deaths',
     chart_total: 'Total',
     chart_suicides: 'Suicides',
+    chart_other: 'Other causes',
     chart_deaths: 'deaths',
     page_title: 'PatrieGalere.eu — Deaths in prison in Italy',
     ovr_btn: 'Overcrowding',
@@ -1635,18 +1637,18 @@ function buildCharts() {
 
   // ── 3. Line: deaths per year ───────────────────────────────────────────────
   var YEARLY = [
-    {y:2002,tot:68,sui:36},{y:2003,tot:63,sui:43},
-    {y:2004,tot:97,sui:54},{y:2005,tot:105,sui:55},
-    {y:2006,tot:74,sui:49},{y:2007,tot:80,sui:43},
-    {y:2008,tot:88,sui:36},{y:2009,tot:112,sui:72},
-    {y:2010,tot:102,sui:66},{y:2011,tot:110,sui:56},
-    {y:2012,tot:111,sui:60},{y:2013,tot:100,sui:49},
-    {y:2014,tot:78,sui:44},{y:2015,tot:90,sui:43},
-    {y:2016,tot:75,sui:39},{y:2017,tot:92,sui:52},
-    {y:2018,tot:120,sui:67},{y:2019,tot:95,sui:52},
-    {y:2020,tot:116,sui:53},{y:2021,tot:100,sui:48},
-    {y:2022,tot:141,sui:83},{y:2023,tot:135,sui:69},
-    {y:2024,tot:152,sui:90},{y:2025,tot:153,sui:80},
+    {y:2002,tot:160,sui:52,alt:108},{y:2003,tot:157,sui:57,alt:100},
+    {y:2004,tot:156,sui:52,alt:104},{y:2005,tot:172,sui:57,alt:115},
+    {y:2006,tot:131,sui:50,alt:81},{y:2007,tot:121,sui:45,alt:76},
+    {y:2008,tot:142,sui:46,alt:96},{y:2009,tot:158,sui:58,alt:100},
+    {y:2010,tot:163,sui:55,alt:108},{y:2011,tot:165,sui:63,alt:102},
+    {y:2012,tot:153,sui:56,alt:97},{y:2013,tot:153,sui:42,alt:111},
+    {y:2014,tot:91,sui:43,alt:48},{y:2015,tot:124,sui:39,alt:85},
+    {y:2016,tot:115,sui:40,alt:75},{y:2017,tot:133,sui:50,alt:83},
+    {y:2018,tot:174,sui:64,alt:110},{y:2019,tot:167,sui:54,alt:113},
+    {y:2020,tot:185,sui:62,alt:123},{y:2021,tot:178,sui:59,alt:119},
+    {y:2022,tot:214,sui:84,alt:130},{y:2023,tot:243,sui:68,alt:175},
+    {y:2024,tot:246,sui:91,alt:155},{y:2025,tot:254,sui:80,alt:174},
   ];
 
   chartLine = new Chart(document.getElementById('chart-line'), {
@@ -1667,6 +1669,14 @@ function buildCharts() {
           data: YEARLY.map(function(d){ return d.sui; }),
           borderColor: '#e74c3c',
           backgroundColor: 'rgba(231,76,60,0.10)',
+          fill: true, tension: 0.35,
+          pointRadius: 2, pointHoverRadius: 5, borderWidth: 2,
+        },
+        {
+          label: t('chart_other'),
+          data: YEARLY.map(function(d){ return d.alt; }),
+          borderColor: '#f39c12',
+          backgroundColor: 'rgba(243,156,18,0.08)',
           fill: true, tension: 0.35,
           pointRadius: 2, pointHoverRadius: 5, borderWidth: 2,
         }
