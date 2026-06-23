@@ -258,9 +258,16 @@ html,body{width:100%;height:100%;font-family:-apple-system,BlinkMacSystemFont,'S
 .popup-n{font-size:0.78rem;color:#adb5bd;min-width:24px;text-align:right}
 .popup-pct{font-size:0.7rem;color:#6c757d;min-width:32px;text-align:right}
 
+/* Hide zoom control on desktop */
+@media(min-width:1025px){
+  .leaflet-control-zoom{display:none}
+}
+
 /* Tablet (iPad) adjustments */
 @media(max-width:1024px) and (min-width:601px){
   #legend{right:12px;left:auto;transform:none;top:58px;bottom:auto;width:auto}
+  .leaflet-top.leaflet-left{top:unset!important;bottom:80px!important;left:12px!important}
+  .leaflet-control-zoom{margin:0!important}
 }
 
 /* Mobile adjustments */
@@ -271,6 +278,8 @@ html,body{width:100%;height:100%;font-family:-apple-system,BlinkMacSystemFont,'S
   #controls{width:calc(100vw - 24px);bottom:72px}
   #legend{right:12px;left:auto;transform:none;top:58px;bottom:auto;width:auto}
   #footer{display:none}
+  .leaflet-top.leaflet-left{top:unset!important;bottom:68px!important;left:12px!important}
+  .leaflet-control-zoom{margin:0!important}
 }
 
 /* Footer */
@@ -1215,8 +1224,8 @@ function toggleOvercrowding() {
 const map = L.map('map', {
   center: [42.3, 12.8],
   zoom: 6,
-  minZoom: 6,
-  zoomControl: false,
+  minZoom: window.innerWidth <= 1024 ? 5 : 6,
+  zoomControl: true,
   preferCanvas: false
 });
 
