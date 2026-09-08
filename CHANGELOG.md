@@ -4,6 +4,13 @@ All notable changes to this project are documented here, in reverse chronologica
 
 ---
 
+## 2026-09-08
+
+### Fixed
+- **Basemap** — CARTO stopped serving its Positron basemap anonymously and now stamps every tile with an "API KEY REQUIRED" watermark. Replaced with [OpenFreeMap](https://openfreemap.org/) Positron vector tiles (MapLibre GL via `maplibre-gl-leaflet`), which keep the same light-grey cartography with no API key, no account and no usage cap. Falls back to OpenStreetMap raster tiles where WebGL is unavailable.
+
+---
+
 ## 2026-05-21
 
 ### Added

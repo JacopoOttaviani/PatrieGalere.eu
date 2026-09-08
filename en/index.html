@@ -119,6 +119,7 @@
 <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/5.24.0/maplibre-gl.css">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{width:100%;height:100%;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;overflow:hidden}
@@ -798,6 +799,8 @@ html,body{width:100%;height:100%;font-family:-apple-system,BlinkMacSystemFont,'S
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/5.24.0/maplibre-gl.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@maplibre/maplibre-gl-leaflet@0.1.4/leaflet-maplibre-gl.js"></script>
 <script>
 // ─── i18n ────────────────────────────────────────────────────────────────────
 // ─── Language + base path init ───────────────────────────────────────────────
@@ -1219,15 +1222,40 @@ const map = L.map('map', {
   center: [42.3, 12.8],
   zoom: window.innerWidth <= 1024 ? 5 : 6,
   minZoom: window.innerWidth <= 1024 ? 5 : 6,
+  maxZoom: 18,
   zoomControl: true,
   preferCanvas: false
 });
 
-L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a> | Data: <a href="https://www.ristretti.it">Ristretti Orizzonti</a>',
-  subdomains: 'abcd',
-  maxZoom: 18
-}).addTo(map);
+// Basemap: OpenFreeMap "Positron" vector tiles — free, no API key, no usage cap.
+// Falls back to OpenStreetMap raster tiles where WebGL is unavailable.
+var OSM_CREDIT = '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>';
+var DATA_CREDIT = 'Data: <a href="https://www.ristretti.it">Ristretti Orizzonti</a>';
+
+function hasWebGL() {
+  try {
+    var c = document.createElement('canvas');
+    return !!(window.WebGLRenderingContext && (c.getContext('webgl') || c.getContext('experimental-webgl')));
+  } catch (e) {
+    return false;
+  }
+}
+
+if (window.maplibregl && L.maplibreGL && hasWebGL()) {
+  // maplibre-gl-leaflet reads credits from attributionControl.customAttribution,
+  // not from the usual Leaflet `attribution` option.
+  L.maplibreGL({
+    style: 'https://tiles.openfreemap.org/styles/positron',
+    attributionControl: {
+      customAttribution: OSM_CREDIT + ' | <a href="https://openfreemap.org/">OpenFreeMap</a> &copy; <a href="https://www.openmaptiles.org/copyright">OpenMapTiles</a> | ' + DATA_CREDIT
+    }
+  }).addTo(map);
+} else {
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: OSM_CREDIT + ' contributors | ' + DATA_CREDIT,
+    maxZoom: 18
+  }).addTo(map);
+}
 
 // ─── Dark mask over non-Italy areas ─────────────────────────────────────────
 fetch(_basePath + 'italy.geojson')
